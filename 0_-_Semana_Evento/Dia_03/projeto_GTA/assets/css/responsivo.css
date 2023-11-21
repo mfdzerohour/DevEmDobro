@@ -1,0 +1,23 @@
+@media (max-width: 1024px) {
+  body .cabecalho {
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 15px;
+  }
+  body .cabecalho .menu li a {
+    padding: 15px;
+  }
+  body .home .informacoes {
+    padding: 30px;
+  }
+  body .home .informacoes img {
+    max-width: 100px;
+  }
+  body .home .informacoes .titulo {
+    font-size: 40px;
+  }
+  body .compre-ja .cartao {
+    width: 70%;
+  }
+}/*# sourceMappingURL=responsivo.css.map */

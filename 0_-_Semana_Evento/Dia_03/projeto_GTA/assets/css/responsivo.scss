@@ -1,0 +1,44 @@
+@media (max-width: 1024px){
+    body{
+        .cabecalho{
+            //background-color: blue;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px 0;
+            gap: 15px;
+
+            .menu{
+                li{
+                    a{
+                        //background-color: blue;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    body{
+        .home{
+            .informacoes{
+                padding: 30px;
+
+                img{
+                    max-width: 100px;
+                }
+
+                .titulo{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    body{
+        .compre-ja{
+            .cartao{
+                width: 70%;
+            }
+        }
+    }
+}

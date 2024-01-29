@@ -88,7 +88,7 @@ body {
   align-items: center;
   padding: 20px 40px;
   text-transform: uppercase;
-  width: 50%;
+  width: 80%;
   transition: all 0.3s ease-in;
 }
 .home .informacoes .btn-comprar:hover {
@@ -134,7 +134,7 @@ body {
   text-align: center;
   padding: 20px 40px;
   text-transform: uppercase;
-  width: 50%;
+  width: 100%;
   transition: all 0.3s ease-in;
 }
 .compre-ja .btn-plataforma:hover {

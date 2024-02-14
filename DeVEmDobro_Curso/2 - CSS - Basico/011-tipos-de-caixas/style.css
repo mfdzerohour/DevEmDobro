@@ -1,0 +1,17 @@
+/* h1{
+    display: inline;
+}
+
+p{
+    display: inline;
+} */
+
+span{
+    color: coral;
+    background-color: cornflowerblue;
+
+    display: block;
+
+    height: 200px;
+    width: 200px;
+}

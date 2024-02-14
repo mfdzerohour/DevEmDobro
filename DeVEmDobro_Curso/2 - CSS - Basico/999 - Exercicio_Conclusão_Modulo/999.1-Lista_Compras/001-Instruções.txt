@@ -1,0 +1,7 @@
+Exercícios HTML e CSS Básico - Lista de Compras
+
+Esse é o primeiro exercício para você praticar o que aprendeu até aqui!
+Use os conhecimentos que aprendeu no módulo de HTML pra resolvê-lo da melhor forma, leia atentamente a descrição do exercício que está no PDF abaixo.
+Baixe o PDF com a explicação do exercício abaixo e nele vai ter o que deve ser feito.
+Tente realizar o exercício sozinho(a), e depois verifique a solução na aula gravada.
+Boa sorte!

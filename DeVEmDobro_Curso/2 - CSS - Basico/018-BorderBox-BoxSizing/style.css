@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 div{
     width: 100px;
     height: 100px;
@@ -12,4 +13,20 @@ div{
 
 .sem-border-box{
     background-color: brown;
+=======
+div{
+    width: 100px;
+    height: 100px;
+    padding: 100px;
+    border: 10px solid green;
+}
+
+.com-border-box{
+    background-color: aquamarine;
+    box-sizing: border-box;
+}
+
+.sem-border-box{
+    background-color: brown;
+>>>>>>> 71bf3764689bf5a24f6e7870cd88e892f4e25bbf
 }

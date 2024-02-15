@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
     background-color: #cccccc;
     font-size: 16px;
@@ -22,4 +23,30 @@ body{
     width: 50%;
     /* font-size: 1.5em; */
     font-size: 0.5rem;
+=======
+html{
+    background-color: #cccccc;
+    font-size: 16px;
+}
+
+body{
+    background-color: blueviolet;
+    width: 50%;
+    /* font-size: 3em; */
+    font-size: 3rem;
+}
+
+.pai{    
+    background-color: #ea80fc;
+    width: 50%;
+    /* font-size: 1.5em; */
+    font-size: 1.5rem;
+}
+
+.filha{
+    background-color: #1de9b6;
+    width: 50%;
+    /* font-size: 1.5em; */
+    font-size: 0.5rem;
+>>>>>>> 71bf3764689bf5a24f6e7870cd88e892f4e25bbf
 }

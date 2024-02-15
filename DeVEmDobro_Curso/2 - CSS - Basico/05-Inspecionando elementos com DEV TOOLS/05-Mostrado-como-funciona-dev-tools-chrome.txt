@@ -1,0 +1,1 @@
+Foi dado a aula explicando como funciona o Dev Tools no chrome, citou outros navegadores também, é sugerido que se use o chrome como navegador para o curso, porque será este o que eles vão usar, mas não proibiram de usar qualquer outro.

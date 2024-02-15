@@ -1,0 +1,22 @@
+span{  
+    font-weight: bold;
+}
+
+thead td{
+    background-color: black;
+    color: white;
+}
+
+.linhas{
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+}
+
+.texto-direita{
+    text-align: right;
+    background-color: black;
+    color: white;
+}

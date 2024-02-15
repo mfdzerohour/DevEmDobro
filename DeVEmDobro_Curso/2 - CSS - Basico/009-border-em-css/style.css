@@ -1,0 +1,22 @@
+p{
+    margin: 30px 10px;
+    padding: 10px;
+    background-color: aquamarine;
+
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: red; */
+
+    border: 2px solid red;
+}
+
+h1{
+    border: 10px solid;
+
+    /* border-top-color: blue;
+    border-right-color: purple;
+    border-bottom-color: orangered;
+    border-left-color: green; */
+
+    border-color: blue purple orangered green;
+}

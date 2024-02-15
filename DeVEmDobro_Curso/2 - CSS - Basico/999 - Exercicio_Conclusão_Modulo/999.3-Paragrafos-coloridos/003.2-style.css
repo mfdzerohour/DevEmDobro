@@ -1,7 +1,12 @@
-.paragrafo1{
-    background-color: burlywood;
+.paragrafo{
+    padding: 20px;
+    margin: 40px;
 }
 
-.paragrafo2{
-    background-color: aquamarine;
+.cor1{
+    background-color: #F5F5F5;
+}
+
+.cor2{
+    background-color: #F0CCE2;
 }

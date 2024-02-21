@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Netto Brush';
+    src:    url('fonts/Netto\ Brushes.otf'),
+            url('fonts/Swashes.otf');
+}
+
+h1{
+    font-family: 'Netto Brush';
+    font-weight: 100;
+}

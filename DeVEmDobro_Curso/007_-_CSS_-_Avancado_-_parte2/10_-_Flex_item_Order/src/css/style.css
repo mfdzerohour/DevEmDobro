@@ -1,0 +1,11 @@
+.order .item3 {
+  order: 1;
+}
+
+.order .item2 {
+  order: 2;
+}
+
+.align-self .item5 {
+  align-self: auto;
+}

@@ -1,0 +1,13 @@
+.flex{
+    height: 300px;
+    width: 100%;
+    background-color: violet;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex h3{
+    font-size: 60px;
+}

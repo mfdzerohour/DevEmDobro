@@ -17,6 +17,9 @@ hr{
     align-items: center;
     justify-content: center;
     height: 100%;
+    background-image: url('../img/bg-pattern-top.svg');
+    background-image: url('../img/bg-pattern-bottom.svg');
+    background-size: contain;
 }
 
 .card{
@@ -30,7 +33,10 @@ hr{
     margin: 20px;
     width: 330px;
     height: 350px;
-    box-shadow: 8px 5px 8px rgb(13, 101, 82);;
+    box-shadow: 8px 5px 8px rgb(13, 101, 82);
+
+    background-image: url('../img/bg-pattern-card.svg');
+    background-repeat: no-repeat;
 }
 
 .card .profile-informations{
@@ -44,7 +50,7 @@ hr{
 
 .card .profile-informations img{
     border-radius: 50%;
-    margin-top: 20px;
+    margin-top: 90px;
 }
 
 .card .profile-numbers{

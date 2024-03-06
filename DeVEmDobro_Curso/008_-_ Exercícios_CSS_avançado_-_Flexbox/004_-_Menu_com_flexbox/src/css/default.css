@@ -1,0 +1,66 @@
+html{
+    /* font-size: 62.5%; */
+}
+
+body{
+    font-family: "Public Sans", sans-serif;
+    font-weight: 400;
+    color: var(--cor-texto-padrao);
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo h1{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+li{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.menu li a{
+    padding: 10px 10px;
+    transition: 0.3s ease-in-out;
+    margin: 2px;
+}
+
+.menu li a:hover{
+    background-color: var(--cor-fundo-menu);
+    color: var(--cor-fonte-menu-hover);
+    /* border-radius: 10px; */
+}
+
+.menu li a.btn{
+    background-color: var(--cor-fundo-menu);
+    color: var(--cor-fonte-menu-hover);
+    border-radius: 10px;
+    /* margin-left: 5px; */
+    padding: 10px 20px;
+}
+
+.menu li a.btn:hover{
+    background-color: var(--cor-fundo-menu);
+    color: var(--cor-fonte-botao-hover);
+}

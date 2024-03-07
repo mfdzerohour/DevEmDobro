@@ -9,5 +9,16 @@ body{
 }
 
 .imagens{
-    
+    background-color: var(--cor-fundo-pinturas);
+    padding: 45px 20px;
 }
+
+/* .pintura{
+    display: flex;
+} */
+
+.pintura img{
+
+}
+
+.pintura

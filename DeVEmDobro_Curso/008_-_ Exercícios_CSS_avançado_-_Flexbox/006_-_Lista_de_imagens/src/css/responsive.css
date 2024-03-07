@@ -1,0 +1,13 @@
+body{
+    background-color: var(--cor-background-pagina);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagens{
+    
+}

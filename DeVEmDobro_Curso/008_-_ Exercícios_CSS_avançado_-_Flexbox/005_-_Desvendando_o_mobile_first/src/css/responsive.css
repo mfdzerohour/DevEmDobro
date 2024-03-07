@@ -16,5 +16,45 @@ body{
     align-items: center;
     gap: 8px;
     margin-top: 47px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+.logo h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a{
+    font-size: 40px;
+    font-weight: 400;
+    padding: 17px 38px;
+}
+
+.menu a:hover{
+    color: var(--cor-menu-letra-hover);
+    background-color: var(--cor-menu-background-hover);
+}
+
+.menu .btn{
+    
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--cor-menu-botao-letra);
+    background-color: var(--cor-menu-botao-background);
+    border-radius: 8px;
+}
+
+.menu .btn:hover{
+    color: var(--cor-botao-texto-hover);
+    background-color: var(--cor-botao-background-hover);
+    
 }

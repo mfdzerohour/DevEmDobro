@@ -5,17 +5,24 @@
     justify-content: center;
 }
 
+.imagens{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10%; */
+    padding: 35px 20px;
+    background-color: var(--cor-fundo-pinturas);
+}
+
 .pintura{
     display: inline-block;
     position:relative;
-    padding: 45px 20px;
-    background-color: var(--cor-fundo-pinturas);
+    /* padding: 45px 20px; */
 }
 
 figcaption{
     position: absolute;
-    bottom: 65px;
-    left: 40px;
+    bottom: 25px;
+    left: 20px;
 }
 
 .nome-pintura{

@@ -16,7 +16,7 @@
 
 @media(min-width: 768px){
     .container{
-        
+        height: 100vh;        
     }
 
     .imagens{
@@ -28,11 +28,25 @@
         height: 97%;
         width: 97%;
     }
+
+    .nome-pintura{
+        font-size: 1.5rem;    
+    }
+    
+    .nome-autor{
+        font-size: 1rem;
+    }
 }
 
-/* @media(min-width: 1024px){
+@media(min-width: 1024px){
+    .nome-pintura{
+        font-size: 2rem;   
+    }
     
-} */
+    .nome-autor{
+        font-size: 1.1rem;
+    }
+}
 
 /* @media(min-width: 1280px){
 

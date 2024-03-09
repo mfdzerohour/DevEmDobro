@@ -21,6 +21,14 @@ body{
     display: inline-block;
     position:relative;
     /* padding: 45px 20px; */
+    width: 335px;
+    height: 431px;
+    width: 100%;
+    
+}
+
+.pintura img{
+    gap: 20px;
 }
 
 figcaption{
@@ -32,10 +40,12 @@ figcaption{
 .nome-pintura{
     font-size: 2rem;
     color: var(--cor-nome-pintura);
+    margin-bottom: 5px;
 
 }
 
 .nome-autor{
     color: var(--cor-nome-autor);
+    font-weight: 300;
     font-size: 1.1rem;
 }

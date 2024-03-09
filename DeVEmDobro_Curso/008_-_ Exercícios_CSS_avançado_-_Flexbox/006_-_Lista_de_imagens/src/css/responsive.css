@@ -1,3 +1,7 @@
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
 .container{
     background-color: var(--cor-background-pagina);
     display: flex;
@@ -27,7 +31,6 @@ figcaption{
 
 .nome-pintura{
     font-size: 2rem;
-    font-weight: 800;
     color: var(--cor-nome-pintura);
 
 }

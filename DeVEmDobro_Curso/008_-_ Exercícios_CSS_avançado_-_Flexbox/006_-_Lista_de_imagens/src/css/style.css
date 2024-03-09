@@ -1,4 +1,4 @@
-@media(min-width: 320px){
+/* @media(min-width: 320px){
     
 }
 
@@ -12,17 +12,29 @@
 
 @media(min-width: 650px){
 
-}
+} */
 
 @media(min-width: 768px){
+    .container{
+        
+    }
 
+    .imagens{
+        flex-direction: row;
+
+    }
+
+    img{
+        height: 97%;
+        width: 97%;
+    }
 }
 
-@media(min-width: 1024px){
+/* @media(min-width: 1024px){
+    
+} */
 
-}
-
-@media(min-width: 1280px){
+/* @media(min-width: 1280px){
 
 }
 
@@ -40,4 +52,4 @@
 
 @media(min-width: 2580px){
 
-}
+} */

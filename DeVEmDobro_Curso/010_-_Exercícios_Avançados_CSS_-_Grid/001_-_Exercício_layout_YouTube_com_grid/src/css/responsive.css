@@ -1,0 +1,17 @@
+body{
+    grid-template-areas: ;
+}
+.esquerda img{
+    grid-area: esquerda;
+    /* background-color: red; */
+    height: 48px;
+    width: 32px;
+}
+
+.centro{
+    background-color: red;
+    grid-area: centro;
+    width: 900px;
+    height: 415px;
+
+}

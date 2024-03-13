@@ -32,7 +32,7 @@ hr{
     border-radius: 10px;
     margin: 20px;
     width: 330px;
-    height: 350px;
+    height: 380px;
     box-shadow: 8px 5px 8px rgb(13, 101, 82);
 
     background-image: url('../img/bg-pattern-card.svg');
@@ -50,18 +50,12 @@ hr{
 
 .card .profile-informations img{
     border-radius: 50%;
-    margin-top: 90px;
-}
-
-.card .profile-informations .fundo {
-    display: flex;
-    justify-content: center;
-    /* z-index: -1; */
+    margin-top: 85px;
 }
 
 .card .profile-informations .profile {
-    align-self: center;
-    /* z-index: 1; */
+    
+    border: 8px solid white;
 }
 
 .card .profile-numbers{

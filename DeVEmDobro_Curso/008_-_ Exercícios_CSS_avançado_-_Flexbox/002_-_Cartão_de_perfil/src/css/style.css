@@ -53,6 +53,17 @@ hr{
     margin-top: 90px;
 }
 
+.card .profile-informations .fundo {
+    display: flex;
+    justify-content: center;
+    /* z-index: -1; */
+}
+
+.card .profile-informations .profile {
+    align-self: center;
+    /* z-index: 1; */
+}
+
 .card .profile-numbers{
     display: flex;
     align-items: center;

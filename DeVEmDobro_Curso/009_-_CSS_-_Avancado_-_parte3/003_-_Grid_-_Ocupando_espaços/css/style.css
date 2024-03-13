@@ -1,25 +1,31 @@
 .verde-claro{
     background-color: #4ac2aa;
+    border-radius: 5px;
 }
 
 .azul{
     background-color: #68c6e0;
+    border-radius: 5px;
 }
 
 .rosa{
     background-color: #d15a45;
+    border-radius: 5px;
 }
 
 .laranja-escuro{
     background-color: rgb(27, 81, 23);
+    border-radius: 5px;
 }
 
 .verde-forte{
     background-color: rgb(243, 106, 140);
+    border-radius: 5px;
 }
 
 .marrom{
     background-color: burlywood;
+    border-radius: 5px;
 }
 
 .container{

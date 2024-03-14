@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*
+Mixins de Fonts
+*/
+@mixin font-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+@mixin font-subtitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@mixin font-paragraf {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@mixin font-visualizacoes{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+@mixin font-titlesvideos{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+@mixin font-videos-descricoes{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+}

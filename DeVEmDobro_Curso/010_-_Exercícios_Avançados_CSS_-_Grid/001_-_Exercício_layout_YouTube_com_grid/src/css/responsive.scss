@@ -1,0 +1,13 @@
+.container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.esquerda{
+    background-color: red;
+    
+}
+
+.direita{
+    background-color: green;
+}

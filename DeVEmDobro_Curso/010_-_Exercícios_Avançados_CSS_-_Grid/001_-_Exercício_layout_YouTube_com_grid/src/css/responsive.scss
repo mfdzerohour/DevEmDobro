@@ -25,6 +25,8 @@ h1{
     .descricao-titulo{
         // background-color: red;
         @include font-title;
+        margin-top: 12px;
+        margin-bottom: 7px;
     }
 
     .descricao-views{
@@ -34,6 +36,7 @@ h1{
     .descricao-video{
         @include font-paragraf;
         text-align: justify;
+        margin-top: 7px;
     }
 }
 

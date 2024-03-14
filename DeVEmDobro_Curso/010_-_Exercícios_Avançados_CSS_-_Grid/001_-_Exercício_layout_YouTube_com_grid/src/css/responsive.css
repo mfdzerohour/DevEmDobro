@@ -1,12 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*
+Mixins de Fonts
+*/
+h1 {
+  text-align: center;
+}
+
 .container {
   display: grid;
   grid-template-columns: 4fr 1fr;
+  margin: 38px;
+  border: 1px solid #667799;
+  width: 900px;
+  margin: 0 auto;
 }
 
 .esquerda {
-  background-color: red;
+  padding: 35px;
+  padding-right: 8.5px;
+  width: 590px;
+  height: 415px;
+}
+
+.esquerda .descricao-titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+}
+.esquerda .descricao-views {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+}
+.esquerda .descricao-video {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: justify;
 }
 
 .direita {
-  background-color: green;
+  padding: 35px;
+  padding-left: 8.5px;
+}
+
+.direita .video {
+  display: flex;
+  padding-top: 15px;
+}
+
+.direita .titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 4px;
+}
+.direita .autor, .direita .views, .direita .tempo {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 100;
+  padding-top: 5px;
+  padding-left: 4px;
 }/*# sourceMappingURL=responsive.css.map */

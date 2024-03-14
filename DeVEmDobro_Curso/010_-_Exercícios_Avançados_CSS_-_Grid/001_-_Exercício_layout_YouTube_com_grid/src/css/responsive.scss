@@ -1,13 +1,68 @@
+@import "./fonts.scss";
+
+h1{
+    text-align: center;
+}
+
 .container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    margin: 38px;
+    border: 1px solid #667799;
+    width: 900px;
+    margin: 0 auto;
 }
 
 .esquerda{
-    background-color: red;
+    // background-color: red;
+    padding: 35px;
+    padding-right: 8.5px;
+    width: 590px;
+    height: 415px;
+}
+
+.esquerda{
+    .descricao-titulo{
+        // background-color: red;
+        @include font-title;
+    }
+
+    .descricao-views{
+        @include font-visualizacoes;
+    }
+
+    .descricao-video{
+        @include font-paragraf;
+        text-align: justify;
+    }
+}
+
+.direita{
+    // background-color: green;
+    padding: 35px;
+    padding-left: 8.5px;
+    // width: 180px;
+    // height: 415px;
     
 }
 
 .direita{
-    background-color: green;
+    .video{
+        display: flex;
+        padding-top: 15px;
+    }
+}
+
+.direita{
+    .titulo{
+        @include font-subtitle;
+        // padding-top: 7px;
+        padding-left: 4px
+    }
+
+    .autor, .views, .tempo{
+        @include font-videos-descricoes;
+        padding-top: 5px;
+        padding-left: 4px
+    }
 }

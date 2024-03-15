@@ -11,7 +11,7 @@ h1 {
   grid-template-columns: 4fr 1fr;
   margin: 38px;
   border: 1px solid #667799;
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
 }
 

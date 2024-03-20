@@ -126,10 +126,15 @@ body{
     font-size: 1.6rem;
     align-self: flex-start;
     background-color: rgb(234, 234, 129);
+    padding: 15px;
+    align-self: center;
+    border-radius: 10px;
 }
 
 .about .item .btn-know-more:hover{
     font-weight: 700;
+    background-color: transparent;
+    border: 2px solid rgb(232, 232, 82);
 }
 
 .about .image{
@@ -162,17 +167,59 @@ body{
 /* SERVICES */
 .services{
     grid-area: services;
-    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
+
+.services .service{
+    padding: 70px 20px;
+}
+
+.services .service img{
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.services .service h3{
+    font-size: 1.8rem;
+    font-weight:  700;
+}
+
+.services .service p{
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    margin: 20px auto 0;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.services .service:nth-child(1){
+    background-color: lightskyblue;
+}
+
+.services .service:nth-child(2){
+    background-color: lightpink;
+}
+
+@media(max-width: 485px){
+    .services{
+        grid-template-columns: 1fr;
+    }
+}
+/* SERVICES */
 
 /* PROJECTS */
 .projects{
     grid-area: projects;
     background-color: blueviolet
 }
+/* PROJECTS */
 
 /* FOOTER */
 .footer{
     grid-area: footer;
     background-color: gray;
 }
+/* FOOTER */

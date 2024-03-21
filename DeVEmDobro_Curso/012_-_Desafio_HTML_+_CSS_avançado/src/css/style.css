@@ -34,15 +34,15 @@ body{
 
 /* FIGURA*/
 .figura-texto{
-    background-color: orange;
+    /* background-color: orange; */
     grid-area: figura-texto;
     display: flex;
     color: var(--color-white);
-    padding: 28px;
+    padding: 5.3rem 3rem;
 }
 
 .figura-texto .figura{
-    background-color: rgb(0, 238, 255);
+    /* background-color: aqua; */
     width: 100%;
 }
 
@@ -51,7 +51,7 @@ body{
 }
 
 .figura-texto .texto{
-    background-color: blue;
+    /* background-color: blue; */
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     padding: 10rem;

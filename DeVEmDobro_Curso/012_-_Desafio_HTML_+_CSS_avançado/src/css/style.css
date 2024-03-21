@@ -21,14 +21,14 @@ body{
 
 /* HEADER */
 .header{
-    background-color: green;
+    /* background-color: green; */
     grid-area: header;
-    height: 97%;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .header img{
     margin: 2.8rem;
-    width: 11%;
+    width: 9.5%;
 }
 /* HEADER */
 
@@ -36,27 +36,26 @@ body{
 .figura-texto{
     background-color: orange;
     grid-area: figura-texto;
-    margin-top: 2.1%;
     display: flex;
     color: var(--color-white);
+    padding: 28px;
 }
 
 .figura-texto .figura{
     background-color: rgb(0, 238, 255);
-    /* margin-left: 2rem; */
-    /* width: 50%; */
-    align-self: center;
-    justify-content: center;
+    width: 100%;
 }
 
 .figura-texto .figura img{
-    width: 530px;
+    width: 100%;
 }
 
 .figura-texto .texto{
     background-color: blue;
-    width: 50%;
     font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    padding: 10rem;
+    width: 100%;
 }
 
 .figura-texto .texto h2{
@@ -68,16 +67,16 @@ body{
 .figura-texto .texto p{
     font-size: 1.5rem;
     line-height: 2.5rem;
-    
 }
 
 .figura-texto .texto .btn{
+    margin-top: 2rem;
     padding: 1rem;
     width: 15rem;
     color: var(--color-violet);
-    margin-top: 10px;
-    margin-left: 15px;
     border-radius: 20px;
+    justify-content: center;
+    align-items: center;
 }
 /* FIGURA*/
 
@@ -85,6 +84,7 @@ body{
     .footer{
         grid-area: footer;
         /* background-color: greenyellow; */
+        color: var(--color-white);
     }
 
     .footer .network-social{
@@ -95,10 +95,15 @@ body{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
+        color: var(--color-white);
+        
+        
     }
 
     .footer .network-social .fa-brands{
         /* background-color: greenyellow; */
         /* margin: 3rem; */
+        color: var(--color-white);
+        
     }
 /* FOOTER */

@@ -7,31 +7,97 @@ html{
 body{
     display: grid;
     grid-template-areas:    "header header"
-                            "figura info"
+                            "figura-texto figura-texto"
                             "footer footer";
     grid-template-columns: repeat(2, 1fr);
 
     font-family: "Poppins", sans-serif;
     font-weight: 400;
 
-    background-image: "./src/img/bg-desktop.svg";
     background-color: var(--color-violet);
+    background-image: url('../img/bg-desktop.svg');
+
 }
 
 /* HEADER */
 .header{
+    background-color: green;
     grid-area: header;
-    background-color: red;
-    height: 100px;
+    height: 97%;
 }
 
 .header img{
-    margin-top: 33px;
-    margin-left: 50px;
-    width: 152px;
+    margin: 2.8rem;
+    width: 11%;
 }
 /* HEADER */
 
 /* FIGURA*/
+.figura-texto{
+    background-color: orange;
+    grid-area: figura-texto;
+    margin-top: 2.1%;
+    display: flex;
+    color: var(--color-white);
+}
 
+.figura-texto .figura{
+    background-color: rgb(0, 238, 255);
+    /* margin-left: 2rem; */
+    /* width: 50%; */
+    align-self: center;
+    justify-content: center;
+}
+
+.figura-texto .figura img{
+    width: 530px;
+}
+
+.figura-texto .texto{
+    background-color: blue;
+    width: 50%;
+    font-family: "Open Sans", sans-serif;
+}
+
+.figura-texto .texto h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.figura-texto .texto p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    
+}
+
+.figura-texto .texto .btn{
+    padding: 1rem;
+    width: 15rem;
+    color: var(--color-violet);
+    margin-top: 10px;
+    margin-left: 15px;
+}
 /* FIGURA*/
+
+/* FOOTER */
+    .footer{
+        grid-area: footer;
+        /* background-color: greenyellow; */
+    }
+
+    .footer .network-social{
+        background-color: greenyellow;
+        font-size: 35px;
+        padding-right: 5rem;
+        height: 5.5rem;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .footer .network-social .fa-brands{
+        /* background-color: greenyellow; */
+        /* margin: 3rem; */
+    }
+/* FOOTER */

@@ -2,6 +2,8 @@
 
 html{
     font-size: 62.5%;
+    /* height: 100vh; */
+
 }
 
 body{
@@ -10,69 +12,112 @@ body{
     color: var(--color-white);
     background-color: var(--color-violet);
     background-image: url('../img/bg-desktop.svg');
+    background-repeat: no-repeat;
 
 }
 
 /* HEADER */
 .header{
-    background-color: red;
+    /* background-color: red; */
     padding: 20px;
 }
 
 .header img{
     width: 150px;
-    margin-top: 20px;
-    margin-left: 32px;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.header img:hover{
+    opacity: 0.6
 }
 /* HEADER */
 
 /* FIGURA*/
 .figura-texto{
-    background-color: orange;
-    display: grid;
+    /* background-color: orange; */
+    display: flex;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 460px; */
 }
 
 .figura-texto .figura{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .figura-texto .figura img{
-    
+    /* background-color: blue; */
+    width: 65%;
 }
 
 .figura-texto .texto{
-    background-color: black;
+    /* background-color: black; */
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .figura-texto .texto h2{
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 380px;
 }
 
 .figura-texto .texto p{
-
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 330px;
 }
 
 .figura-texto .texto .btn{
     color: var(--color-violet);
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.figura-texto .texto .btn:hover{
+    color: var(--color-soft);
+    opacity: 0.8;
 }
 /* FIGURA*/
 
 /* FOOTER */
 .footer{
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     color: var(--color-white);
-    height: 50px;
+    height: 70px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .footer .network-social{
-    align-items: self-end;
+    padding-right: 30px;
 }
 
-a{
+.footer .network-social a{
     color: var(--color-white);
     font-size: 40px;
+    padding-right: 5px;
+}
+
+.footer .network-social a:hover{
+    opacity: 0.6;
 }
 /* FOOTER */

@@ -12,3 +12,7 @@ html {
     font-family:      var(--fonte-primaria);
     font-size:        var(--fonte-normal);
   }
+
+  .row{
+    display: flex;
+  }

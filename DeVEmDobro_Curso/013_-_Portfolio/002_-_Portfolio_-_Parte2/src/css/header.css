@@ -26,12 +26,18 @@
 }
 
 .header nav li a{
+    display: flex;
+    text-align: center;
     text-transform: capitalize;
     font-size: 2rem;
-    font-size: 500;
+    font-weight: 500;
     padding: 10px 20px;
     transform: 0.2s;
     border-radius: 50px;
     letter-spacing: 1px;
     user-select: none;
+}
+
+.header nav ul li a:hover{
+    background-color: var(--cor-primaria);
 }

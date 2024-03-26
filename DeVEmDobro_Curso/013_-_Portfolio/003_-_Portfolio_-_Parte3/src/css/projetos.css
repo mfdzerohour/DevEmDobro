@@ -13,6 +13,7 @@
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     position: relative;
+    border: 2px solid transparent;
 }
 
 .projetos .container-projetos .projeto:hover,
@@ -42,11 +43,16 @@
     /* position: relative; */
 }
 
+.projetos .container-projetos .projeto .informacoes-projeto p:nth-child(1){
+    text-align: justify;
+}
+
 .projetos .container-projetos .projeto .informacoes-projeto p:nth-child(2){
     /* background-color: red; */
     font-weight: 700;
     margin-top: 10px;
     font-size: 1.4rem;
+    text-align: center;
 }
 
 .projetos .container-projetos .projeto h3{

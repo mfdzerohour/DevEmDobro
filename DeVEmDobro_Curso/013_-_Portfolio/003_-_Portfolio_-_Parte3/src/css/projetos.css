@@ -19,7 +19,6 @@
 .projetos .container-projetos .projeto:hover .informacoes-projeto{
     opacity: 0.8;
     border: 2px solid var(--cor-primaria);
-    font-size: 1.4rem;
 }
 
 .projetos .container-projetos .projeto img{

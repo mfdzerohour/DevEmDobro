@@ -9,7 +9,7 @@
 }
 
 .habilidades .container-habilidades .habilidade:hover{
-    color: var(--cor-primaria);
+    /* color: var(--cor-primaria); */
 }
 
 .habilidades .container-habilidades .habilidade p,

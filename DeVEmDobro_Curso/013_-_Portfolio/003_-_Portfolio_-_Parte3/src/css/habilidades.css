@@ -8,7 +8,7 @@
     padding: 40px 20px;
 }
 
-.habilidades .container-habilidades .habilidade{
+.habilidades .container-habilidades .habilidade:hover{
     color: var(--cor-primaria);
 }
 

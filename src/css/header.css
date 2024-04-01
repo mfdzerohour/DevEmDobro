@@ -122,6 +122,8 @@
     }
 
     .header nav input:checked ~ ul{
+        background-color: var(--cor-fundo-cinza-claro);
+        border-radius: 10px;
         display: block;
     }
 

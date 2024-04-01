@@ -44,7 +44,9 @@
 }
 
 .projetos .container-projetos .projeto .informacoes-projeto p:nth-child(1){
+    /* background-color: red; */
     text-align: justify;
+    font-weight: 500;
 }
 
 .projetos .container-projetos .projeto .informacoes-projeto p:nth-child(2){
@@ -66,6 +68,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
     opacity: 0.7;
+    text-align: center;
 }
 
 @media (max-width: 980px){

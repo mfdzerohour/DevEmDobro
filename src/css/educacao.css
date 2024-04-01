@@ -1,0 +1,45 @@
+.educacao{
+    
+}
+.container-educacao .educacao{
+    /* background-color: turquoise; */
+    padding: 0 25px;
+}
+
+.container-educacao .educacao ul{
+    list-style: inside;
+}
+
+.container-educacao .educacao h3{
+    text-align: center;
+}
+
+.container-educacao .educacao p{
+    /* background-color: red; */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 980px){
+    .container-educacao .row{
+        justify-content: center;
+    }
+
+    .container-educacao .img-sobre-mim{
+        max-width: 100%;
+        padding: 0 var(--mobile-padding);
+        margin-bottom: 50px;
+    }
+    .container-educacao .informacoes-sobre-mim{
+        padding: 0 var(--mobile-padding);
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .container-educacao .informacoes-sobre-mim{
+        max-width: 100%;
+    }
+}

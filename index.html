@@ -1,45 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos Dev em Dobro</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcelo F. Duarte - Desenvolvedor Frontend</title>
+    
+    <link rel="stylesheet" href="./src/css/font-awesome.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+
+    <link rel="stylesheet" href="./src/css/variaveis.css">
+
+    <!-- Global -->
+    <link rel="stylesheet" href="./src/css/globais.css">
+
+    <!-- Seções -->
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/home.css">
+    <link rel="stylesheet" href="./src/css/sobre.css">
+    <link rel="stylesheet" href="./src/css/habilidades.css">
+    <link rel="stylesheet" href="./src/css/projetos.css">
+    <link rel="stylesheet" href="./src/css/experiencias-prossionais.css">
+    <link rel="stylesheet" href="./src/css/educacao.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+
+    <!-- Icones DevIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="./src/css/all.min.css">
 </head>
+
 <body>
-    <h1>Projetos Dev em Dobro</h1>
-    <h3>Semana do Evento projeto GTA</h3>
-    <a href="0_-_Semana_Evento/Dia_03/index.html"  target="_blank">Projeto GTA</a>
+    <header class="header">
+        <div class="container">
+            <div class="row justify-content-between alinhar-itens-no-centro">
+                <a href="#">
+                    <h1 class="logo">MFD</h1>
+                </a>
 
-    <h3>Projetos HTML + CSS</h3>
-    <a href="./DeVEmDobro_Curso/002_-_CSS_-_Basico/999 - Exercicio_Conclusão_Modulo/999.1-Lista_Compras/index.html" target="_blank">Compras</a>
-    
-    <br>
-    
-    <a href="DeVEmDobro_Curso/002_-_CSS_-_Basico/999 - Exercicio_Conclusão_Modulo/999.2-Imagem_com_Link/index.html" target="_blank">Imagem com link</a>
-    
-    <br>
+                <nav>
+                    <input id="menu-hamburguer" type="checkbox">
+                    <label for="menu-hamburguer">
+                        <div class="menu">
+                            <span class="hamburguer"></span>
+                        </div>
+                    </label>
 
-    <a href="./DeVEmDobro_Curso/002_-_CSS_-_Basico/999 - Exercicio_Conclusão_Modulo/999.3-Paragrafos-coloridos/index.html" target="_blank">Parágrafos coloridos</a>
-    
-    <br>
+                    <ul>
+                        <li><a href="#sobre-mim">Sobre mim</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#projetos">Meus Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-    <a href="./DeVEmDobro_Curso/002_-_CSS_-_Basico/999 - Exercicio_Conclusão_Modulo/999.4-Tabela-estilizada/index.html" target="_blank">Tabela Estilizada</a>
-    
-    <br>
+    <section class="home">
+        <div class="container">
+            <div class="row full-screen alinhar-itens-no-centro">
+                <div class="texto-home">
+                    <p>Olá 🖖🐧,</p>
+                    <h1>Sou o Marcelo F. Duarte</h1>
+                    <h2>Desenvolvedor Front-end</h2>
 
-    <a href="./DeVEmDobro_Curso/010_-_Exercícios_Avançados_CSS_-_Grid/002_-_Como_criar_um_projeto_do_zero_sem_travar/index.html">Como criar um projeto do zero sem travar</a>
-    
-    <br>
+                    <div class="redes-sociais">
+                        <a class="outter-shadow" href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a class="outter-shadow" href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="outter-shadow" href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
 
-    <a href="./DeVEmDobro_Curso/011_-_Projeto_Landing_Page_com_Grid_e_Flex/9999 - landing-page-com-grid-agencia-xyz-main/index.html">landing page com grid agencia xyz main</a>
+                </div>
 
-    <br>
+                <div class="img-home">
+                    <div class="img-box inner-shadow">
+                        <img src="./src/imagens/Perfil_facebook_350x350_sem_fundo.png" alt="" class="outter-shadow">
+                    </div>
+                </div>
+            </div>
 
-    <a href="./DeVEmDobro_Curso/012_-_Desafio_HTML_+_CSS_avançado/index.html">Huddle</a>
+            
 
-    <br>
+        </div>
+    </section>
 
-    <a href="./DeVEmDobro_Curso/013_-_Portfolio/003_-_Portfolio_-_Parte3/index.html">Portfólio</a>
+    <section class="sobre-mim section" id="sobre-mim">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Sobre mim</h2>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="img-sobre-mim">
+                    <div class="img-box inner-shadow">
+                        <img class="outter-shadow" src="./src/imagens/Perfil_facebook_350x350_sem_fundo.png" alt="Foto perfil">
+                    </div>
+                </div>
+                <div class="informacoes-sobre-mim">
+                    <p>
+                        Trabalho com informática a muito tempo, é algo que sempre gostei de fazer, estive trabalhando relacionado a atendimento de usuários, manutenção e suporte. Já mexi com programação anteriormente, mas estou retornando a área como <strong>Desenvolvedor Web</strong>, procuro uma vaga de desenvolvedor.
+                    </p>
+
+                    <p>
+                        Sou apaixonado por tecnologia, gosto de novos desafios e aprender coisas novas.
+                    </p>
+                    
+                    <div class="botoes">
+                        <a class="botao outter-shadow" href="./src/arquivos/cv.pdf" target="_blank">Veja meu CV</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="habilidades section" id="habilidades">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Habilidades</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row container-habilidades">
+
+            <div class="habilidade">
+                <div class="logo">
+                    <i class="devicon devicon-html5-plain-wordmark" ></i>
+                </div>
+                <h3>HTML5</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat delectus cum soluta repellat praesentium.</p>
+            </div>
+
+            <div class="habilidade">
+                <div class="logo">
+                    <i class="devicon devicon-css3-plain-wordmark" ></i>
+                </div>
+                <h3>CSS3</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat delectus cum soluta repellat praesentium.</p>
+            </div>
+
+            <div class="habilidade">
+                <div class="logo">
+                    <i class="devicon-sass-original" ></i>
+                </div>
+                <h3>SASS</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat delectus cum soluta repellat praesentium.</p>
+            </div>
+
+            <!-- <div class="habilidade">
+                <div class="logo">
+                    <i class="devicon devicon-javascript-plain" ></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat delectus cum soluta repellat praesentium.</p>
+            </div> -->
+
+            <div class="habilidade">
+                <div class="logo">
+                    <i class="devicon devicon-git-plain" ></i>
+                </div>
+                <h3>Git</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat delectus cum soluta repellat praesentium.</p>
+            </div>
+
+            <div class="habilidade">
+                <div class="logo">
+                    <i class="devicon devicon-github-original" ></i>
+                </div>
+                <h3>GitHub</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat delectus cum soluta repellat praesentium.</p>
+            </div>
+            <div class="habilidade">
+                <div class="logo">
+                    <i class="fa-solid fa-code" ></i>
+                </div>
+                <h3>CodeClean</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat delectus cum soluta repellat praesentium.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Projetos Pessoais</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-projetos container">
+            <div class="projeto">
+                <a href="https://mfdzerohour.github.io/DevEmDobro/DeVEmDobro_Curso/010_-_Exerc%C3%ADcios_Avan%C3%A7ados_CSS_-_Grid/002_-_Como_criar_um_projeto_do_zero_sem_travar/index.html" target="_blank">
+                    <img src="./src/imagens/Como_criar_um_projeto_do_zero_sem_travar.png" alt="Nome do Projeto 1">
+                    <h3>NFT Card</h3>
+                    <div class="informacoes-projeto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, reiciendis dolorum numquam voluptatibus similique praesentium reprehenderit sed quaerat officiis nobis quos ipsam sunt maxime, dolore odit sit nihil pariatur quia?
+                        </p>
+                        <p>🔗Github Pages <a href="https://mfdzerohour.github.io/DevEmDobro/DeVEmDobro_Curso/010_-_Exerc%C3%ADcios_Avan%C3%A7ados_CSS_-_Grid/002_-_Como_criar_um_projeto_do_zero_sem_travar/index.html" target="_blank"></a></p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="projeto">
+                <a href="https://mfdzerohour.github.io/DevEmDobro/DeVEmDobro_Curso/011_-_Projeto_Landing_Page_com_Grid_e_Flex/9999%20-%20landing-page-com-grid-agencia-xyz-main/index.html" target="_blank">
+                    <img src="./src/imagens/landing-page-com-grid-agencia-xyz-main.png" alt="Nome do Projeto 2">
+                    <h3>Agência XYZ</h3>
+                    <div class="informacoes-projeto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, reiciendis dolorum numquam voluptatibus similique praesentium reprehenderit sed quaerat officiis nobis quos ipsam sunt maxime, dolore odit sit nihil pariatur quia?
+                        </p>
+                        <p>🔗Github Pages <a href="https://mfdzerohour.github.io/DevEmDobro/DeVEmDobro_Curso/011_-_Projeto_Landing_Page_com_Grid_e_Flex/9999%20-%20landing-page-com-grid-agencia-xyz-main/index.html" target="_blank"></a></p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="projeto">
+                <a href="https://mfdzerohour.github.io/DevEmDobro/DeVEmDobro_Curso/012_-_Desafio_HTML_+_CSS_avan%C3%A7ado/index.html" target="_blank"">
+                    <img src="./src/imagens/Desafio_HTML_+_CSS_avançado_Huddle.png" alt="Nome do Projeto 3">
+                    <h3>Huddle</h3>
+                    <div class="informacoes-projeto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, reiciendis dolorum numquam voluptatibus similique praesentium reprehenderit sed quaerat officiis nobis quos ipsam sunt maxime, dolore odit sit nihil pariatur quia?
+                        </p>
+                        <p>🔗Github Pages <a href="https://mfdzerohour.github.io/DevEmDobro/DeVEmDobro_Curso/012_-_Desafio_HTML_+_CSS_avan%C3%A7ado/index.html" target="_blank"></a></p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="projeto">
+                <a href="#">
+                    <img src="https://via.placeholder.com/515x700" alt="Nome do Projeto 4">
+                    <h3>Reservado - Projeto 4</h3>
+                    <div class="informacoes-projeto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, reiciendis dolorum numquam voluptatibus similique praesentium reprehenderit sed quaerat officiis nobis quos ipsam sunt maxime, dolore odit sit nihil pariatur quia?
+                        </p>
+                        <p>🔗Ver no github Pages</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="experiencias-profissionais" id="experiencias-profissionais">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Experiência Profissional</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-experiencia-profissional container">
+            <div class="experiencia-prossional">
+                <h3>Analista de Suporte - N2</h3>
+                <p>Realizava suporte ao sistema de telefonia Asterisk* e alterações pontuais na aplicação para adaptar as funcionalidades que os clientes necessitam, por ser customizavel a solução VOIP.</p>
+                </p>
+            </div>
+
+            <div class="experiencia-prossional">
+                <h3>Trabalho setor publico RH - Folha de pagamento</h3>
+                    <p>Realizei trabalho com público em folha da pagamento de Órgão do Governo de Mato Grosso do Sul, implementando rotinas e criando sistema proprio para agilizar o tempo de extração da informação para evitar atrasos de documentação importantes que não poderiam perder o prazo.</p>
+            </div>
+    </section>
+
+    <section class="educacao" id="educacao">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Educação</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-educacao container">
+            <div class="educacao">
+                <h3>2023 - 2024 | Estácio de Sá - Em andamento</h3>
+                <p>
+                    Análise e Desenvolvimento de Sistemas
+                </p>
+            </div>
+
+            <div class="educacao">
+                <h3>2024 | Dev Em Dobro</h3>
+                <p>
+                    Front-end
+                </p>
+                <ul >
+                    <li>
+                        HTML (básico, avançado e intermediário)
+                    </li>
+                    <ul>
+                        <li>Teste</li>
+                    </ul>
+                    <li>
+                        CSS(básico, avançado e intermediário)
+                    </li>
+                </ul>
+                <p>
+                    <strong>Back-end</strong> - Ainda não cursado
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h2>Me envie uma mensagem!</h2>
+            <div class="redes-sociais">
+                <a class="outter-shadow" href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a class="outter-shadow" href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="outter-shadow" href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

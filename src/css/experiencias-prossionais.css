@@ -10,6 +10,10 @@
 }
 
 .container-experiencia-profissional .experiencia-prossional h3{
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
     text-align: center;
 }
 

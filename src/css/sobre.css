@@ -1,10 +1,11 @@
 .sobre-mim .img-sobre-mim{
     /* background-color: blueviolet; */
-    max-width: 40%;
+    max-width: 30%;
     padding: 0 15px;
 }
 
 .sobre-mim .img-sobre-mim .img-box{
+    /* background-color: blueviolet; */
     padding: 15px;
     border-radius: 5px;
     text-align: center;

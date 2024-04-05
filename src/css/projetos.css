@@ -1,9 +1,13 @@
 .projetos .container-projetos{
     /* background-color: aqua; */
-    padding: 0 10px;
+    /* padding: 0 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 20px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;   /* estica a altura dos cards para serem todos iguais */
+    gap: 20px;
 }
 
 .projetos .container-projetos .projeto{
@@ -15,6 +19,7 @@
     -webkit-transition: all 0.3s ease;
     position: relative;
     border: 2px solid transparent;
+    max-width: 360px;   /* todos os cards com a mesma largura */
 }
 
 .projetos .container-projetos .projeto:hover,
@@ -57,6 +62,10 @@
     margin-top: 10px;
     font-size: 1.4rem;
     text-align: center;
+}
+
+.projetos .container-projetos:nth-child(2n){
+    justify-content: center;   /* A partir do terceiro projeto, quero que alinhe no meio os seguintes*/
 }
 
 .projetos .container-projetos .projeto h3{

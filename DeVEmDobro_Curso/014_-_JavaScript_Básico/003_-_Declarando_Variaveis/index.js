@@ -1,9 +1,9 @@
 {
-var nomePessoa = "Marcelo"
+    var nomePessoa = "Marcelo"
 
-const emailPessoa = "marcelo@gmail.com"
+    const emailPessoa = "marcelo@gmail.com"
 
-let telefonePessoa = "6798523546"
+    let telefonePessoa = "6798523546"
 }
 
 /* Usando variaveis para pegar informações */

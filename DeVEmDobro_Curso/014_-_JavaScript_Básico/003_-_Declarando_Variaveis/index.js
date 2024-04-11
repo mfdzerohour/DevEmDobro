@@ -10,8 +10,8 @@ let telefonePessoa = "6798523546"
 
 let retornoDoUsuario = confirm("Deseja Continuar")
 
-alert (retornoDoUsuario)
+console.log (retornoDoUsuario)
 
 let idade = prompt ("Digite sua idade: ")
 
-alert(idade)
+console.log (idade)

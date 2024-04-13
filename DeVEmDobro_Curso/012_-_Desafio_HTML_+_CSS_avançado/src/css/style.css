@@ -4,7 +4,6 @@ html{
     font-size: 62.5%;
     max-width: 1440px;
     margin: 0 auto;
-
 }
 
 body{
@@ -88,12 +87,14 @@ body{
     height: 45px;
     border-radius: 30px;
     cursor: pointer;
+    box-shadow: 2px 2px 1px var(--color-soft);
 }
 
 .figura-texto .texto .btn:hover{
-    color: var(--color-violet);
-    background-color: var(--color-soft);
     opacity: 0.8;
+    /* color: var(--color-violet); */
+    background-color: var(--color-soft);
+    box-shadow: 2px 2px 1px transparent;
 }
 /* FIGURA*/
 
@@ -129,8 +130,9 @@ body{
 }
 
 .footer .network-social a:hover{
-    opacity: 0.6;
+    /* opacity: 0.6; */
     color: var(--color-soft);
     border: 3px solid var(--color-soft);
+    /* box-shadow: 2px 2px 1px var(--color-soft); */
 }
 /* FOOTER */

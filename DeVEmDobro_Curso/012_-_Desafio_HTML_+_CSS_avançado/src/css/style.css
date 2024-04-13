@@ -2,7 +2,8 @@
 
 html{
     font-size: 62.5%;
-    /* height: 100vh; */
+    max-width: 1440px;
+    margin: 0 auto;
 
 }
 
@@ -29,7 +30,7 @@ body{
 }
 
 .header img:hover{
-    opacity: 0.6
+    opacity: 0.6;
 }
 /* HEADER */
 
@@ -37,22 +38,20 @@ body{
 .figura-texto{
     /* background-color: orange; */
     display: flex;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 460px; */
 }
 
 .figura-texto .figura{
     /* background-color: greenyellow; */
     width: 50%;
     display: flex;
+    margin-left: 3%;
     align-items: center;
     justify-content: center;
 }
 
 .figura-texto .figura img{
     /* background-color: blue; */
-    width: 65%;
+    width: 80%;
 }
 
 .figura-texto .texto{
@@ -85,14 +84,15 @@ body{
 
 .figura-texto .texto .btn{
     color: var(--color-violet);
-    width: 150px;
+    width: 230px;
     height: 45px;
     border-radius: 30px;
     cursor: pointer;
 }
 
 .figura-texto .texto .btn:hover{
-    color: var(--color-soft);
+    color: var(--color-violet);
+    background-color: var(--color-soft);
     opacity: 0.8;
 }
 /* FIGURA*/
@@ -114,10 +114,6 @@ body{
     margin-bottom: 30px;
 }
 
-/* .footer .network-social li{
-    border-radius: 50px;
-    border: 3px solid var(--color-white);
-} */
 .footer .network-social a{
     color: var(--color-white);
     position: relative;
@@ -134,5 +130,7 @@ body{
 
 .footer .network-social a:hover{
     opacity: 0.6;
+    color: var(--color-soft);
+    border: 3px solid var(--color-soft);
 }
 /* FOOTER */

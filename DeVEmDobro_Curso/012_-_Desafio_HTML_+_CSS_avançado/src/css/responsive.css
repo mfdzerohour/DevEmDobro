@@ -3,6 +3,7 @@
         position: fixed;
         bottom: 0;
         right: 0;
+        align-items: center;
     }
 }
 
@@ -17,6 +18,17 @@
 
     .figura-texto .figura{
         height: 300px;
+    }
+
+    .footer {
+        justify-content: center;
+        margin-left: 6%;
+    }
+
+    .footer .network-social a{
+        font-size: 20px;
+        width: 45px;
+        height: 45px;
     }
 }
 
@@ -88,9 +100,5 @@
     .figura-texto .texto h2{
         font-size: 25px;
         width: 270px;
-    }
-
-    .figura-texto .texto p{
-        
     }
 }

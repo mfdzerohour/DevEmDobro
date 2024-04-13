@@ -39,12 +39,12 @@ function incentivarQuester(nomeQuester = 'Quester'){
     alert("Muito bem " + nomeQuester + " você chegou ao JavaScript (JS), continue assim!");
 }
 
-// var nome = prompt("Informe o seu nome")
+var nomeQuester = prompt("Informe o seu nome")
 
-// if(nomeQuester == ""){
-//     incentivarQuester(nome)
-// }else{
-//     incentivarQuester()
-// }
+if(nomeQuester != ""){
+    incentivarQuester(`${nomeQuester}`)
+}else{
+    incentivarQuester()
+}
 
-incentivarQuester()
+// incentivarQuester()

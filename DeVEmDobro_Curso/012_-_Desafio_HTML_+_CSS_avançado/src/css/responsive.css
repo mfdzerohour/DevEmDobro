@@ -1,3 +1,21 @@
+@media(min-width: 1100px){
+    .figura-texto .texto h2{
+        /* background-color: red; */
+        font-size: 35px;
+        font-weight: 700;
+        width: 100px;
+        margin-right: 5%;
+    }
+
+    .figura-texto .texto p{
+        /* background-color: red; */
+        font-size: 20px;
+        width: 350px;
+        margin-right: 5%;
+        line-height: 35px;
+    }
+}
+
 @media(min-width: 1025px){
     .figura-texto{
         display: flex;
@@ -15,7 +33,7 @@
 
     .figura-texto .figura img{
         /* background-color: blue; */
-        width: 90%;
+        width: 80%;
     }
 
     .figura-texto .texto{
@@ -25,20 +43,19 @@
     }
 
     .figura-texto .texto h2{
-        font-size: 40px;
+        font-size: 35px;
         font-weight: 700;
-        width: 450px;
+        width: 550px;
     }
 
     .figura-texto .texto p{
-        width: 500px;
-        font-size: 30px;
-        width: 450px;
+        font-size: 20px;
+        width: 550px;
         line-height: 35px;
     }
 
     .figura-texto .texto .btn{
-        margin-top: 10%;
+        /* margin-top: 10%; */
         width: 300px;
         height: 60px;
         font-size: 20px;
@@ -47,17 +64,17 @@
     .footer {
         justify-content: flex-end;
         margin-left: 6%;
-        margin-top: 5%;
+        margin-top: 3%;
     }
 
     .footer .network-social a{
-        font-size: 50px;
-        width: 75px;
-        height: 75px;
+        font-size: 30px;
+        width: 55px;
+        height: 55px;
     }
 }
 
-@media(max-width: 1024px){
+@media(max-width: 1100px){
     .figura-texto{
         display: flex;
         flex-direction: row;
@@ -84,14 +101,16 @@
     }
 
     .figura-texto .texto h2{
-        font-size: 40px;
+        /* background-color: red; */
+        font-size: 30px;
         font-weight: 700;
         width: 450px;
     }
 
     .figura-texto .texto p{
+        /* background-color: red; */
         width: 500px;
-        font-size: 30px;
+        font-size: 20px;
         width: 450px;
         line-height: 35px;
     }
@@ -106,13 +125,13 @@
     .footer {
         justify-content: flex-end;
         margin-left: 6%;
-        margin-top: 5%;
+        margin-top: 0%;
     }
 
     .footer .network-social a{
-        font-size: 50px;
-        width: 75px;
-        height: 75px;
+        font-size: 30px;
+        width: 55px;
+        height: 55px;
     }
 }
 
@@ -133,7 +152,7 @@
 
     .figura-texto .figura img{
         /* background-color: blue; */
-        width: 100%;
+        width: 70%;
     }
 
     .figura-texto .texto{
@@ -142,16 +161,25 @@
     }
 
     .figura-texto .texto h2{
-        font-size: 40px;
+        margin: 0;
+        font-size: 30px;
         font-weight: 700;
-        width: 600px;
+        width: 800px;
     }
 
     .figura-texto .texto p{
+        margin: 0;
         width: 500px;
-        font-size: 30px;
-        width: 600px;
+        font-size: 20px;
+        width: 800px;
         line-height: 35px;
+    }
+
+    .figura-texto .texto .btn{
+        margin-top: 0;
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
     }
 
     .footer {
@@ -161,67 +189,55 @@
     }
 
     .footer .network-social a{
-        font-size: 35px;
-        width: 70px;
-        height: 70px;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
     }
 }
 
-@media(max-width: 680px){
-    .figura-texto{
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .figura-texto .figura{
-        /* height: 300px;
-        width: 450px; */
-        width: 80%;
-    }
-
-    .figura-texto .figura img{
-        /* background-color: blue; */
-        width: 100%;
-    }
-
-    .figura-texto .texto{
-        width: 50%;
-        /* width: 400px; */
-    }
-
+@media(max-width: 825px){
     .figura-texto .texto h2{
         font-size: 25px;
+        font-weight: 650;
+        width: 800px;
+    }
+
+    .figura-texto .texto p{
+        margin: 0;
         width: 500px;
+        font-size: 18px;
+        width: 650px;
+        line-height: 35px;
     }
 
-    .figura-texto .texto p{
-        font-size: 19px;
-        width: 450px;
-    }
-
-.footer .network-social a{
-        font-size: 35px;
-        width: 70px;
-        height: 70px;
-    }
-}
-
-@media(max-width: 525px){
-    .figura-texto .texto h2{
-        width: 400px;
-    }
-
-    .figura-texto .texto p{
-        width: 400px;
+    .figura-texto .texto .btn{
+        margin-top: 20px;
     }
 
     .footer .network-social a{
-        font-size: 35px;
-        width: 70px;
-        height: 70px;
+        margin-top: -10px;
+    }
+}
+
+
+
+@media(max-width: 680px){
+    .figura-texto .texto h2{
+        font-size: 20px;
+        font-weight: 700;
+        width: 450px;
+        margin-bottom: 10px;
+    }
+
+    .figura-texto .texto p{
+        font-size: 16px;
+        width: 450px;
+    }
+
+    .footer .network-social a{
+        font-size: 30px;
+        width: 55px;
+        height: 55px;
     }
 }
 
@@ -274,6 +290,7 @@
 }
 
 @media(max-width: 320px){
+
     .figura-texto .figura{
         /* height: 300px;
         width: 450px; */
@@ -299,9 +316,10 @@
         width: 230px;
         height: 45px;
         font-size: 16px;
+        margin-bottom: 0;
     }
 
-    .footer .network-social a{
+        .footer .network-social a{
         font-size: 30px;
         width: 55px;
         height: 55px;

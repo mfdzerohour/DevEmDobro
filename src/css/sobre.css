@@ -1,7 +1,16 @@
+.center{
+    margin: 0 auto;
+}
+
+.sobre-mim{
+    justify-content: center;
+}
+
 .sobre-mim .img-sobre-mim{
     /* background-color: blueviolet; */
     max-width: 30%;
     padding: 0 15px;
+    margin-left: 90px;
 }
 
 .sobre-mim .img-sobre-mim .img-box{
@@ -12,6 +21,7 @@
 }
 
 .sobre-mim .img-sobre-mim img{
+    /* background-color: blueviolet; */
     border: 10px solid transparent;
     border-radius: 5px;
 }
@@ -23,6 +33,7 @@
 }
 
 .sobre-mim .informacoes-sobre-mim .botoes{
+    /* background-color: turquoise; */
     margin-top: 50px;
     font-weight: 500;
 }

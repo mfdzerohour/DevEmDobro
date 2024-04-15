@@ -1,137 +1,9 @@
-@media(min-width: 1100px){
-    .figura-texto .texto h2{
-        /* background-color: red; */
-        font-size: 35px;
-        font-weight: 700;
-        width: 100px;
-        margin-right: 5%;
-    }
 
-    .figura-texto .texto p{
-        /* background-color: red; */
-        font-size: 20px;
-        width: 350px;
-        margin-right: 5%;
-        line-height: 35px;
-    }
-}
-
-@media(min-width: 1025px){
-    .figura-texto{
-        display: flex;
-        flex-direction: row;
-
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .figura-texto .figura{
-        /* height: 300px;
-        width: 450px; */
-        width: 50%;
-    }
-
-    .figura-texto .figura img{
-        /* background-color: blue; */
-        width: 80%;
-    }
-
-    .figura-texto .texto{
-        
-        width: 50%;
-        /* width: 400px; */
-    }
-
-    .figura-texto .texto h2{
-        font-size: 35px;
-        font-weight: 700;
-        width: 550px;
-    }
-
-    .figura-texto .texto p{
-        font-size: 20px;
-        width: 550px;
-        line-height: 35px;
-    }
-
-    .figura-texto .texto .btn{
-        /* margin-top: 10%; */
-        width: 300px;
-        height: 60px;
-        font-size: 20px;
-    }
-
+@media(min-width: 981px){
     .footer {
-        justify-content: flex-end;
-        margin-left: 6%;
-        margin-top: 3%;
-    }
-
-    .footer .network-social a{
-        font-size: 30px;
-        width: 55px;
-        height: 55px;
-    }
-}
-
-@media(max-width: 1100px){
-    .figura-texto{
-        display: flex;
-        flex-direction: row;
-
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .figura-texto .figura{
-        /* height: 300px;
-        width: 450px; */
-        width: 50%;
-    }
-
-    .figura-texto .figura img{
-        /* background-color: blue; */
-        width: 90%;
-    }
-
-    .figura-texto .texto{
-
-        width: 50%;
-        /* width: 400px; */
-    }
-
-    .figura-texto .texto h2{
         /* background-color: red; */
-        font-size: 30px;
-        font-weight: 700;
-        width: 450px;
-    }
-
-    .figura-texto .texto p{
-        /* background-color: red; */
-        width: 500px;
-        font-size: 20px;
-        width: 450px;
-        line-height: 35px;
-    }
-
-    .figura-texto .texto .btn{
-        margin-top: 10%;
-        width: 300px;
-        height: 60px;
-        font-size: 20px;
-    }
-
-    .footer {
-        justify-content: flex-end;
         margin-left: 6%;
-        margin-top: 0%;
-    }
-
-    .footer .network-social a{
-        font-size: 30px;
-        width: 55px;
-        height: 55px;
+        margin-top: -1%;
     }
 }
 
@@ -162,7 +34,7 @@
 
     .figura-texto .texto h2{
         margin: 0;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 700;
         width: 800px;
     }
@@ -170,7 +42,7 @@
     .figura-texto .texto p{
         margin: 0;
         width: 500px;
-        font-size: 20px;
+        font-size: 16px;
         width: 800px;
         line-height: 35px;
     }
@@ -183,9 +55,10 @@
     }
 
     .footer {
+        /* background-color: red; */
         justify-content: center;
         margin-left: 6%;
-        margin-top: 0%;
+        margin-top: -3%;
     }
 
     .footer .network-social a{
@@ -211,15 +84,13 @@
     }
 
     .figura-texto .texto .btn{
-        margin-top: 20px;
+        margin-top: 5px;
     }
 
     .footer .network-social a{
         margin-top: -10px;
     }
 }
-
-
 
 @media(max-width: 680px){
     .figura-texto .texto h2{
@@ -234,10 +105,28 @@
         width: 450px;
     }
 
-    .footer .network-social a{
+    /* .footer .network-social a{
         font-size: 30px;
         width: 55px;
         height: 55px;
+    } */
+}
+
+@media(max-width: 530px){
+    .figura-texto .texto h2{
+        font-size: 20px;
+        font-weight: 700;
+        width: 450px;
+        margin-bottom: 10px;
+    }
+
+    .figura-texto .texto p{
+        font-size: 16px;
+        width: 450px;
+    }
+
+    .figura-texto .texto .btn{
+        margin: 0;
     }
 }
 
@@ -281,12 +170,6 @@
         height: 45px;
         font-size: 16px;
     }
-
-    .footer .network-social a{
-        font-size: 30px;
-        width: 55px;
-        height: 55px;
-    }
 }
 
 @media(max-width: 320px){
@@ -317,11 +200,5 @@
         height: 45px;
         font-size: 16px;
         margin-bottom: 0;
-    }
-
-        .footer .network-social a{
-        font-size: 30px;
-        width: 55px;
-        height: 55px;
     }
 }

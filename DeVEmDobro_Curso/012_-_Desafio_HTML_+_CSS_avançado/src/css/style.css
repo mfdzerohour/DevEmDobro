@@ -7,13 +7,14 @@ html{
 }
 
 body{
+    /* background-color: red; */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: var(--color-white);
     background-color: var(--color-violet);
     background-image: url('../img/bg-desktop.svg');
     background-repeat: no-repeat;
-
+    height: 100vh;
 }
 
 /* HEADER */
@@ -106,6 +107,7 @@ body{
     height: 70px;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 10%;
 }
 
 .footer .network-social{
@@ -117,9 +119,10 @@ body{
 
 .footer .network-social a{
     color: var(--color-white);
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
+    /* justify-content: flex-end; */
     align-items: center;
     font-size: 30px;
     width: 60px;

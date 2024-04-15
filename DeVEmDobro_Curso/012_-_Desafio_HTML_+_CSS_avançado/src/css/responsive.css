@@ -1,9 +1,118 @@
-@media(min-width: 981px){
-    .footer{
-        position: fixed;
-        bottom: 0;
-        right: 0;
+@media(min-width: 1025px){
+    .figura-texto{
+        display: flex;
+        flex-direction: row;
+
         align-items: center;
+        justify-content: center;
+    }
+    
+    .figura-texto .figura{
+        /* height: 300px;
+        width: 450px; */
+        width: 50%;
+    }
+
+    .figura-texto .figura img{
+        /* background-color: blue; */
+        width: 90%;
+    }
+
+    .figura-texto .texto{
+        
+        width: 50%;
+        /* width: 400px; */
+    }
+
+    .figura-texto .texto h2{
+        font-size: 40px;
+        font-weight: 700;
+        width: 450px;
+    }
+
+    .figura-texto .texto p{
+        width: 500px;
+        font-size: 30px;
+        width: 450px;
+        line-height: 35px;
+    }
+
+    .figura-texto .texto .btn{
+        margin-top: 10%;
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .footer {
+        justify-content: flex-end;
+        margin-left: 6%;
+        margin-top: 5%;
+    }
+
+    .footer .network-social a{
+        font-size: 50px;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media(max-width: 1024px){
+    .figura-texto{
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .figura-texto .figura{
+        /* height: 300px;
+        width: 450px; */
+        width: 50%;
+    }
+
+    .figura-texto .figura img{
+        /* background-color: blue; */
+        width: 90%;
+    }
+
+    .figura-texto .texto{
+
+        width: 50%;
+        /* width: 400px; */
+    }
+
+    .figura-texto .texto h2{
+        font-size: 40px;
+        font-weight: 700;
+        width: 450px;
+    }
+
+    .figura-texto .texto p{
+        width: 500px;
+        font-size: 30px;
+        width: 450px;
+        line-height: 35px;
+    }
+
+    .figura-texto .texto .btn{
+        margin-top: 10%;
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .footer {
+        justify-content: flex-end;
+        margin-left: 6%;
+        margin-top: 5%;
+    }
+
+    .footer .network-social a{
+        font-size: 50px;
+        width: 75px;
+        height: 75px;
     }
 }
 
@@ -15,20 +124,46 @@
         align-items: center;
         justify-content: center;
     }
-
+    
     .figura-texto .figura{
-        height: 300px;
+        /* height: 300px;
+        width: 450px; */
+        width: 50%;
+    }
+
+    .figura-texto .figura img{
+        /* background-color: blue; */
+        width: 100%;
+    }
+
+    .figura-texto .texto{
+        width: 50%;
+        /* width: 400px; */
+    }
+
+    .figura-texto .texto h2{
+        font-size: 40px;
+        font-weight: 700;
+        width: 600px;
+    }
+
+    .figura-texto .texto p{
+        width: 500px;
+        font-size: 30px;
+        width: 600px;
+        line-height: 35px;
     }
 
     .footer {
         justify-content: center;
         margin-left: 6%;
+        margin-top: 0%;
     }
 
     .footer .network-social a{
-        font-size: 20px;
-        width: 45px;
-        height: 45px;
+        font-size: 35px;
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -40,52 +175,15 @@
         align-items: center;
         justify-content: center;
     }
-
-    .figura-texto .figura{
-        height: 300px;
-        width: 500px;
-    }
-
-    .figura-texto .texto{
-        /* height: 50%; */
-        width: 500px;
-    }
-
-}
-
-@media(max-width: 485px){
-    .figura-texto{
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-    .figura-texto .figura{
-        height: 300px;
-        width: 500px;
-    }
-
-    .figura-texto .texto{
-        /* height: 50%; */
-        width: 500px;
-    }
-
-}
-
-@media(max-width: 360px){
-    .figura-texto{
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-    }
-
+    
     .figura-texto .figura{
         /* height: 300px;
         width: 450px; */
+        width: 80%;
+    }
+
+    .figura-texto .figura img{
+        /* background-color: blue; */
         width: 100%;
     }
 
@@ -94,11 +192,118 @@
         /* width: 400px; */
     }
 
+    .figura-texto .texto h2{
+        font-size: 25px;
+        width: 500px;
+    }
+
+    .figura-texto .texto p{
+        font-size: 19px;
+        width: 450px;
+    }
+
+.footer .network-social a{
+        font-size: 35px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media(max-width: 525px){
+    .figura-texto .texto h2{
+        width: 400px;
+    }
+
+    .figura-texto .texto p{
+        width: 400px;
+    }
+
+    .footer .network-social a{
+        font-size: 35px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media(max-width: 425px){
+    .figura-texto{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .figura-texto .figura{
+        /* height: 300px;
+        width: 450px; */
+        width: 80%;
+    }
+
+    .figura-texto .figura img{
+        /* background-color: blue; */
+        width: 100%;
+    }
+
+    .figura-texto .texto{
+        width: 50%;
+        /* width: 400px; */
+    }
+
+    .figura-texto .texto h2{
+        font-size: 25px;
+        width: 320px;
+    }
+
+    .figura-texto .texto p{
+        font-size: 19px;
+        width: 320px;
+    }
+
+    .figura-texto .texto .btn{
+        width: 230px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .footer .network-social a{
+        font-size: 30px;
+        width: 55px;
+        height: 55px;
+    }
 }
 
 @media(max-width: 320px){
+    .figura-texto .figura{
+        /* height: 300px;
+        width: 450px; */
+        width: 80%;
+    }
+
+    .figura-texto .figura img{
+        /* background-color: blue; */
+        width: 100%;
+    }
+
     .figura-texto .texto h2{
-        font-size: 25px;
+        font-size: 20px;
         width: 270px;
+    }
+
+    .figura-texto .texto p{
+        font-size: 16px;
+        width: 270px;
+    }
+
+    .figura-texto .texto .btn{
+        width: 230px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .footer .network-social a{
+        font-size: 30px;
+        width: 55px;
+        height: 55px;
     }
 }

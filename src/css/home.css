@@ -2,7 +2,6 @@
     /* background-color: tomato; */
     min-width: 86vh;
     padding: 50px 0;
-    justify-content: center;
 }
 
 .home .texto-home{
@@ -58,8 +57,30 @@
     .home .texto-home,
     .home .img-home{
         flex: 0 0 100%;
+        flex-direction: column;
         max-width: 50%;
         text-align: center;
         padding: var(--mobile-padding);
+    }
+}
+
+@media(max-width: 980px){
+    .sobre-mim .img-sobre-mim{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre-mim .img-sobre-mim .img-box{
+        /* background-color: red; */
+        max-width: 60%;
+        object-fit: cover;
+    }
+}
+
+@media(max-width: 930px){
+    .home .full-screen{
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
     }
 }

@@ -72,8 +72,7 @@
     }
     .sobre-mim .img-sobre-mim .img-box{
         /* background-color: red; */
-        max-width: 60%;
-        object-fit: cover;
+        max-width: 278px;
     }
 }
 
@@ -82,5 +81,19 @@
         flex-direction: column;
         justify-items: center;
         align-items: center;
+    }
+}
+
+@media(max-width: 700px){
+    .sobre-mim .img-sobre-mim .img-box{
+        /* background-color: red; */
+        max-width: 230px;
+    }
+}
+
+@media(max-width: 600px){
+    .sobre-mim .img-sobre-mim .img-box{
+        /* background-color: red; */
+        max-width: 200px;
     }
 }

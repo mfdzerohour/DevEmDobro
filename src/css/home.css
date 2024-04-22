@@ -41,6 +41,7 @@
 }
 
 .home .texto-home h1{
+    /* background-color: tomato; */
     font-family: var(--fonte-secundaria);
     font-size: var(--fonte-gigante);
     font-weight: 700;
@@ -70,7 +71,7 @@
     .home .img-home{
         flex: 0 0 100%;
         flex-direction: column;
-        max-width: 50%;
+        max-width: 100%;
         text-align: center;
         padding: var(--mobile-padding);
     }
@@ -104,6 +105,17 @@
 }
 
 @media(max-width: 600px){
+    .home .full-screen{
+        /* background-color: tomato; */
+        min-width: 16vh;
+        padding: 50px 0;
+    }
+
+    .home .texto-home{
+        background-color: tomato;
+        width: 300px;
+    }
+
     .sobre-mim .img-sobre-mim .img-box{
         /* background-color: red; */
         max-width: 200px;

@@ -23,6 +23,7 @@
     position: relative;
     border: 2px solid transparent;
     max-width: 360px;   /* todos os cards com a mesma largura */
+    height: 575.34px;
 }
 
 .projetos .container-projetos .projeto:hover,

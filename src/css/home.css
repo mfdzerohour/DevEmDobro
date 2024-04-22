@@ -67,6 +67,12 @@
 }
 
 @media(max-width: 1024px){
+    .home .full-screen{
+        /* background-color: tomato; */
+        min-width: 16vh;
+        padding: 50px 0;
+    }
+    
     .home .texto-home,
     .home .img-home{
         flex: 0 0 100%;
@@ -94,10 +100,18 @@
         flex-direction: column;
         justify-items: center;
         text-align: center;
+        min-width: 16vh;
+        padding: 50px 0;
     }
 }
 
 @media(max-width: 700px){
+    .home .full-screen{
+        /* background-color: tomato; */
+        min-width: 16vh;
+        padding: 50px 0;
+    }
+
     .sobre-mim .img-sobre-mim .img-box{
         /* background-color: red; */
         max-width: 230px;
@@ -111,10 +125,10 @@
         padding: 50px 0;
     }
 
-    .home .texto-home{
+    /* .home .texto-home{
         background-color: tomato;
         width: 300px;
-    }
+    } */
 
     .sobre-mim .img-sobre-mim .img-box{
         /* background-color: red; */

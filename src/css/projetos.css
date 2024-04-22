@@ -88,12 +88,13 @@
     text-align: center;
 }
 
-/* @media (max-width: 1170px){
+@media (max-width: 1200px){
     .projetos .container-projetos{
-        background-color: red
-        
+        /* background-color: red; */
+        display: flex;
+        flex-wrap: wrap;
     }
-} */
+}
 
 @media (max-width: 982px){
     .projetos .container-projetos{

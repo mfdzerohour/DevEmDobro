@@ -1,16 +1,26 @@
+.center{
+    margin: 0 auto;
+}
+
+.sobre-mim{
+    justify-content: center;
+}
+
 .sobre-mim .img-sobre-mim{
     /* background-color: blueviolet; */
-    max-width: 40%;
+    max-width: 30%;
     padding: 0 15px;
 }
 
 .sobre-mim .img-sobre-mim .img-box{
+    /* background-color: blueviolet; */
     padding: 15px;
     border-radius: 5px;
     text-align: center;
 }
 
 .sobre-mim .img-sobre-mim img{
+    /* background-color: blueviolet; */
     border: 10px solid transparent;
     border-radius: 5px;
 }
@@ -22,7 +32,9 @@
 }
 
 .sobre-mim .informacoes-sobre-mim .botoes{
+    /* background-color: turquoise; */
     margin-top: 50px;
+    font-weight: 500;
 }
 
 .sobre-mim .informacoes-sobre-mim p{

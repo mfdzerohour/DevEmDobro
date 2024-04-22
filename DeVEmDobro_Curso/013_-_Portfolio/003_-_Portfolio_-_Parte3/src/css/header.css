@@ -35,7 +35,7 @@
     text-transform: capitalize;
     font-size: 2rem;
     font-weight: 500;
-    padding: 10px 20px;
+    padding: 8px 16px;
     transform: 0.2s;
     border-radius: 50px;
     letter-spacing: 1px;
@@ -112,6 +112,7 @@
 
 @media(max-width: 1280px){
     .header{
+        /* background-color: blueviolet; */
         padding: var(--mobile-padding);
     }
 }
@@ -122,6 +123,8 @@
     }
 
     .header nav input:checked ~ ul{
+        background-color: var(--cor-fundo-cinza-claro);
+        border-radius: 10px;
         display: block;
     }
 

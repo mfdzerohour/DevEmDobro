@@ -2,10 +2,10 @@
 let nome = "Marcelo";
 
 //Tipo Number
-let number = 0.6666666;
+let numero = 0.6666666;
 
 //Tipo Boolean
-let usuarioVerificado = false;
+let usuarioVerificado = true;
 
 //Tipo Null
 let pessoa = null;

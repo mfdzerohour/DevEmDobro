@@ -20,5 +20,8 @@ function imprimirFatorial(numero){
     }
 }
 
-const numero = -5;
+//let numero = prompt("Informe o um numero positivo")
+
+const numero = 5;
+
 imprimirFatorial(numero);

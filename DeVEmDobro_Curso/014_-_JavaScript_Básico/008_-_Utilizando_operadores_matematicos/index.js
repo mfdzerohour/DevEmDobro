@@ -3,20 +3,20 @@ let segundoValor = 3;
 
 let resultadoSoma = primeiroValor + segundoValor;
 
-console.log(resultadoSoma);
+window.alert('A soma do primeiroValor ('+primeiroValor+') + segundovalor ('+segundoValor+') = ' + resultadoSoma);
 
 let resultadoSubtracao = primeiroValor - segundoValor;
 
-console.log(resultadoSubtracao);
+window.alert('A subtração do primeiroValor ('+primeiroValor+') - segundovalor ('+segundoValor+') = ' + resultadoSubtracao);
 
 let resultadoDivisao = primeiroValor / segundoValor;
 
-console.log(resultadoDivisao);
+window.alert('A divisão do primeiroValor ('+primeiroValor+') / segundovalor ('+segundoValor+') = ' + resultadoDivisao);
 
 let resultadoMultiplicacao = primeiroValor * segundoValor;
 
-console.log(resultadoMultiplicacao);
+window.alert('A multiplicação do primeiroValor ('+primeiroValor+') * segundovalor ('+segundoValor+') = ' + resultadoMultiplicacao);
 
 let resultadoResto = primeiroValor % segundoValor;
 
-console.log(resultadoResto);
+window.alert('A resto do primeiroValor ('+primeiroValor+') % segundovalor ('+segundoValor+') = ' + resultadoResto);

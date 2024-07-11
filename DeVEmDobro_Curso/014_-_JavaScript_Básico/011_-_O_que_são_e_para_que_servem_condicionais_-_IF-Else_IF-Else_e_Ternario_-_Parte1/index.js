@@ -1,6 +1,6 @@
-let nomeFilme = "Alice no País das Maravilhas"
+let nomeFilme = "vingadores"
 
-if (nomeFilme === 'Vingadores') {
+if (nomeFilme == 'Vingadores') {
     console.log("É o filme dos Vingadores")
 }else if(nomeFilme === "Batman vs Superman"){
     console.log("É o filme do Batman vs Superman")
@@ -16,6 +16,6 @@ if (nomeFilme === 'Vingadores') {
     condicao ? (Valor quando Verdadeiro) : (Valor quando Falso)
 */
 
-nomeFilme = 'Vingadores'
+//nomeFilme = 'Vingadores'
 
-nomeFilme === 'Vingadores' ? console.log("É o filme dos vingadores") : console.log("É outro filme")
+//nomeFilme === 'Vingadores' ? console.log("É o filme dos vingadores") : console.log("É outro filme")

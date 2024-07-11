@@ -2,7 +2,7 @@
     WHILE - Como usar - o teste de condição é no inicio
 
     while(condicao){
-        <Faça isto>
+        <bloco de execucao>
     }
 */
 

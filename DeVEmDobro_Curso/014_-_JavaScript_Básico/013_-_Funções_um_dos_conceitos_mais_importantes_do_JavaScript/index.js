@@ -15,7 +15,7 @@
 */
 
 // function incentivarQuester(){
-//     alert("Você chegou ao JavaScript (JS), continue assim!");
+//     alert("Você chegou ao JavaScript(JS), continue assim!");
 // }
 
 // incentivarQuester();

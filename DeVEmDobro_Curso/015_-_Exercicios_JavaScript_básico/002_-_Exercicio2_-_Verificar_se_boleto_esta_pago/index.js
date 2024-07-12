@@ -1,4 +1,4 @@
-const boletoPago = false
+let boletoPago = false
 
 alert('boletoPago: ' + boletoPago)
 

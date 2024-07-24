@@ -1,15 +1,37 @@
-// let filmes =    [
-//                     ['Vingadores', 4.5, true],
-//                     ['Mulher Maravilha', 4.6, true],
-//                     ['Spider-Man', 4.8, true]
-//                 ]
-// console.table(filmes)
+let frutas = ['Banana', 'Maça', 'Laranja', 'Pêra']
 
+// console.log(frutas.length)
 
-let filmes =    [
-    ['Vingadores', 4.5, true, ['Hulk', 54]],
-    ['Mulher Maravilha', 4.6, false, ['Gal Gadot', 25]],
-    ['Spider-Man', 4.8, true, ['Tom Holland', 28]]
-]
-// console.table(filmes[0])
-console.table(filmes[1][3][0],filmes[1][3][1], filmes[1][0])
+// for (let i = 0; i < frutas.length; i++) {
+//     console.log('Fruta: ' + frutas[i])
+// }
+
+// frutas.forEach(function(item){
+//     console.log('Fruta: '+ item)
+// })
+
+//Trabalhando com arrays
+//push - adiciona um item no final do array
+// frutas.push('manga')
+
+// console.log(frutas)
+
+//pop - exclui o ultimo item do array
+// frutas.pop()
+
+// console.log(frutas)
+
+//shift - exclui o primeiro item do array
+// frutas.shift()
+
+// console.log(frutas)
+
+//unshift - Inclui um item no array no inicio dele
+// frutas.unshift('Morango')
+
+// console.log(frutas)
+
+//indexof - Acha a posição de um objeto no array
+let posicaoFruta = frutas.indexOf('Laranja')
+
+console.log(posicaoFruta)

@@ -1,4 +1,4 @@
-// let filmes = ['Vingadores ', 'Mulher Maravilha ']
+// let filmes = ['Vingadores', ' Mulher Maravilha ']
 // alert(filmes)
 
 // let descricaoFilmes = ['Vingadores',4.5,true]

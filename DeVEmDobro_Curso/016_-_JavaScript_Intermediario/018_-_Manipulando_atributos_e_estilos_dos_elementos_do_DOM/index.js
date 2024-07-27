@@ -9,19 +9,19 @@ function alterarCorDeFundoPrimeiroPost(){
 function aumentarFonteSegundoPost(){
     let textoPosts = document.getElementsByClassName("texto-post");
 
-    console.log(textoPosts[1].classList)
+    console.log(textoPosts[1].classList);
 
     textoPosts[1].classList.add('font-grande');
 }
 
 function marcarRadio(genero){
-    console.log(genero)
-    let radioFeminino = document.getElementById('genero-feminino');
-    let radioMasculino = document.getElementById('genero-masculino');
-    
+    //console.log(genero);
+    let radioFeminino = document.getElementById("genero-feminino");
+    let radioMasculino = document.getElementById("genero-masculino");
+
     if(genero === 'F'){
-        radioFeminino.ariaChecked;
+        radioFeminino.checked = true
+    } else if(genero === 'M'){
+        radioMasculino.checked = true
     }
 }
-
-//14:44

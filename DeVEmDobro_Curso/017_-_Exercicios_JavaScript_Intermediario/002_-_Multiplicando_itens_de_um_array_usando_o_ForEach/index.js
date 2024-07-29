@@ -23,13 +23,13 @@ const numeros = [65, 44, 12, 4];
 let resultadoFinal = ""; // Variável para armazenar o resultado final
 
 numeros.forEach(
-				(item) => {
+				(numero) => {
 					// Passo 3 - No  ForEach, utlizamos uma variável para iterar cada elemento da array.
-					let resultado = item * 10;
+					let resultado = numero * 10;
 					//console.log(item * 10);
 					// Passo 4 - Concatenar os resultados em uma única string
-					resultadoFinal += item + " * 10 = " + resultado + "<br>";
-					console.log(item, ' * 10 = ',  resultado = item * 10);
+					resultadoFinal += numero + " * 10 = " + resultado + "<br>";
+					console.log(numero, ' * 10 = ',  resultado = numero * 10);
 					//document.getElementById("multiplicacao").innerHTML += item, ' * 10 = ',  resultado = item * 10;
 				}
 );

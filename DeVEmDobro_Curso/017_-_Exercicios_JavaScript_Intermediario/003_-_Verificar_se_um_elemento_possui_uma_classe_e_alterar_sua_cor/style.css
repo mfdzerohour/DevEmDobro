@@ -1,0 +1,16 @@
+.quadrado{
+    height: 100px;
+    width: 100px;
+}
+
+.preto{
+    background-color: black;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.larguraQuadrado{
+    width: 100px;
+}

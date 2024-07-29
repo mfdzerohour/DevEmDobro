@@ -14,3 +14,8 @@
 .amarelo{
 	background-color: yellow;
 }
+
+#btn-troca-cor{
+	width: 100px;
+	font-weight: 900;
+}

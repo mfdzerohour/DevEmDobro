@@ -22,7 +22,8 @@
 */
 
 //Passo 1 - Pegar todos os inputs que tenham a mesma classe.
-const inputText = document.querySelectorAll(".input-text");
+// const inputText = document.querySelectorAll(".input-text");
+const inputText = document.querySelectorAll("input");
 
 // Passo 2 - Dar um jeito de percorrer cada input - vamos utilizar o laço de repetição forEach para percorrer cada input.
 inputText.forEach(

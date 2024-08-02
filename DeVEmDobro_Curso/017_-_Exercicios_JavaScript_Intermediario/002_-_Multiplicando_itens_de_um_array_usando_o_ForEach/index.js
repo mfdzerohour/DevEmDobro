@@ -30,7 +30,7 @@ numeros.forEach(
 					// Passo 4 - Concatenar os resultados em uma única string
 					resultadoFinal += numero + " * 10 = " + resultado + "<br>";
 					console.log(numero, ' * 10 = ',  resultado = numero * 10);
-					document.getElementById("multiplicacao").innerHTML = resultadoFinal
-					//document.getElementById("multiplicacao").innerHTML = numero, ' * 10 = ',  resultado = numero * 10
+					//document.getElementById("multiplicacao").innerHTML = resultadoFinal
+					document.getElementById("multiplicacao").innerHTML += numero + ' * 10 = ',  resultado = numero * 10 + "<br>"
 				}
 );

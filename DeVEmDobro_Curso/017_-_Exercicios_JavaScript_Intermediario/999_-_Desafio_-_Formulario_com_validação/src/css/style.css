@@ -5,7 +5,6 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-
 }
 
 main{
@@ -51,8 +50,9 @@ input{
 
     height: 35px;
     width: 298px;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 21.9px;
+    margin-bottom: -5px;
     border-radius: 5px;
     border: 1px solid #000000;
 }
@@ -62,20 +62,20 @@ input{
     margin-top: 20px;
 }
 
-#telefone{
-    /* background-color: red; */
-}
-
 #email {
     /* background-color: red; */
 }
 
-textarea{
+#telefone{
+    /* background-color: red; */
+}
+
+#mensagem{
     height: 100px;
     width: 298px;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 21.9px;
-    margin-bottom: 10px;
+    margin-bottom: -5px;
     border-radius: 5px;
     border: 1px solid #000000;
     resize: none;
@@ -88,16 +88,26 @@ textarea{
     background-color: white;
     height: 378px;
     width: 340px;
+
+    position: relative;
 }
 
 .campo_obrigatorio{
+    margin-left: 21px;
+    margin-bottom: 15px;
+    font-size: 9px;
+    color: #F52E2E;
+    /* visibility: hidden; */
+}
+.observacao_campo_obrigatorio{
     margin-left: 14px;
 }
 
 #btn{
+    cursor: pointer;
     height: 42px;
     width: 298px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
     background-color: #3CCC87;
     border-color: #3CCC87;
@@ -109,6 +119,16 @@ textarea{
     color: white;
 
     font-family: "Roboto", sans-serif;
-    /* font-weight: 400; */
     font-size: 18px;
+}
+
+#btn:hover{
+    background-color: #33b174;
+}
+.preenchido{
+    border: 1px solid #3CCC87;
+}
+
+.naoPreenchido{
+    border: 1px solid #F52E2E;
 }

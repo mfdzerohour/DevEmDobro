@@ -55,7 +55,7 @@ input{
 
     height: 35px;
     width: 298px;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-left: 21.9px;
     margin-bottom: -5px;
     border-radius: 5px;
@@ -78,9 +78,8 @@ input{
 .mensagem{
     height: 100px;
     width: 298px;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-left: 21.9px;
-    margin-bottom: -5px;
     border-radius: 5px;
     resize: none;
 
@@ -100,6 +99,7 @@ textarea{
 }
 
 .campo_obrigatorio{
+    display: none;
     margin-left: 21px;
     margin-bottom: 15px;
     font-size: 9px;
@@ -114,7 +114,7 @@ textarea{
     cursor: pointer;
     height: 42px;
     width: 298px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 20px;
     background-color: #3CCC87;
     border-color: #3CCC87;
@@ -133,9 +133,9 @@ textarea{
     background-color: #33b174;
 }
 .preenchido{
-    border: 1px solid #3CCC87;
+    border: 2px solid #3CCC87;
 }
 
 .naoPreenchido{
-    border: 1px solid #F52E2E;
+    border: 2px solid #F52E2E;
 }

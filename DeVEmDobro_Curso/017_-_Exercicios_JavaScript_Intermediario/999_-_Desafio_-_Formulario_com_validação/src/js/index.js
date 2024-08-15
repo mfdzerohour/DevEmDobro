@@ -1,24 +1,18 @@
-const btnEnviar = document.getElementById('btn');
-const preenchido = document.getElementsByClassName("formularioPreenchimento");
+const campos = document.querySelectorAll('.campoFormulario');
+const enviar = document.getElementById('btn');
 
-function verificarCampoPreenchido(){
-    if (preenchido.value.trim() !== '') {
-        preenchido.classList.add('preenchido');
-    } else {
-        preenchido.classList.remove('preenchido');
-    }
-}
+enviar.addEventListener('click', function(){
+    verificarPreenchimento();
+});
 
-
-
-// // Iterar sobre cada elemento preenchido
-// Array.from(preenchidos).forEach(preenchido => {
-//     btnEnviar.addEventListener("click", function() {
-//         alert("Funcionou!");
-//         // if (preenchido.value.trim() !== '') {
-//         //     preenchido.classList.add('preenchido');
-//         // } else {
-//         //     preenchido.classList.remove('preenchido');
-//         // }
-//     });
-// });
+function verificarPreenchimento(){
+    campos.forEach(function(item){   
+        if (item.value.trim() !== '') {
+            item.classList.add("preenchido");
+            item.classList.remove("naoPreenchido");
+        } else {
+            item.classList.add("naoPreenchido");
+            item.classList.remove("Preenchido");
+        }
+    });
+};

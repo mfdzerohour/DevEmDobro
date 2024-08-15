@@ -62,33 +62,35 @@ input{
     border: 1px solid #000000;
 }
 
-#nome{
+.nome{
     /* background-color: red; */
     margin-top: 20px;
 }
 
-#email {
+.email {
     /* background-color: red; */
 }
 
-#telefone{
+.telefone{
     /* background-color: red; */
 }
 
-#mensagem{
+.mensagem{
     height: 100px;
     width: 298px;
     margin-top: 5px;
     margin-left: 21.9px;
     margin-bottom: -5px;
     border-radius: 5px;
-    border: 1px solid #000000;
     resize: none;
 
     font-family: "Roboto", sans-serif;
     font-weight: 300;
 }
 
+textarea{
+    border: 1px solid #000000;
+}
 .formulario{
     background-color: white;
     height: 378px;

@@ -15,4 +15,4 @@ function verificarPreenchimento(){
             item.classList.remove("Preenchido");
         }
     });
-};
+}

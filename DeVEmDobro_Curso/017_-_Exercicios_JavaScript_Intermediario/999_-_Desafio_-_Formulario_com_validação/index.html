@@ -15,16 +15,20 @@
             <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
         </section>
         <section class="formulario">            
-            <form>
-                <input type="text" name="nome" class="nome campoFormulario" placeholder="   Nome completo *">
-                <label class="campo_obrigatorio nome">campo obrigatório</label>
-                <input type="email" name="email" class="email campoFormulario" placeholder="   Email *">
-                <label class="campo_obrigatorio email">campo obrigatório</label>
-                <input type="tel" name="telefone" class="telefone campoFormulario" placeholder="   Telefone *">
-                <label class="campo_obrigatorio telefone">campo obrigatório</label>
-                <textarea name="mensagem" class="mensagem campoFormulario" cols="30" rows="6" placeholder="   Mensagem *" maxlength="165"></textarea>
-                <label class="campo_obrigatorio mensagem">campo obrigatório</label> <br>
-                <label class="observacao_campo_obrigatorio">*campos obrigatórios</label>
+            <form id="meu-Formulario">
+                <input type="text" name="nome" class="nome campo-Formulario" title="Informe o seu nome" placeholder="   Nome completo *">
+                <label class="campo-obrigatorio nome">campo obrigatório</label>
+
+                <input type="email" name="email" class="email campo-Formulario" title="Informe um endereço de e-mail" placeholder="   Email *">
+                <label class="campo-obrigatorio email">campo obrigatório</label>
+
+                <input type="tel" name="telefone" class="telefone campo-Formulario" minlength="10" maxlength="11" title="Informe um telefone ou celular" pattern="[0-9]{10,11}" placeholder="   Telefone *">
+                <label class="campo-obrigatorio telefone">campo obrigatório</label>
+
+                <textarea name="mensagem" class="mensagem campo-Formulario" cols="30" rows="6" maxlength="165" title="Informe uma mensagem" placeholder="   Mensagem *"></textarea>
+                <label class="campo-obrigatorio mensagem">campo obrigatório</label> <br>
+
+                <label class="observacao-campo-obrigatorio">*campos obrigatórios</label>
                 <button type="button" id="btn">Enviar</button>
             </form>
         </section>
@@ -32,4 +36,4 @@
 </body>
 </html>
 
-<script src="./src/js/index.js"></script>
+<script type="text/javascript" src="./src/js/index.js"></script>

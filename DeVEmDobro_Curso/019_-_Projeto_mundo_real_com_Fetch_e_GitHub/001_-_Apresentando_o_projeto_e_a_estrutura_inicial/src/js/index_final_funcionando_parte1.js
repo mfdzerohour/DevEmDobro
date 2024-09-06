@@ -1,5 +1,5 @@
 /*
-    parte2 - será refatorado da parte 1 e adicionado novas funcionalidades
+    Este código foi feito para funcionar, a outra parte parte2, será ele refatorado com modificações para melhorar ele e deixar mais legivel
 */
 
 document.getElementById('btn-search').addEventListener('click', () => {

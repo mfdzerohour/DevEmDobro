@@ -1,12 +1,15 @@
 /*
     Na parte 2 foi feito refatoração do código, da maioria dele, neste agora ainda irei melhorar o mesmo.
 */
-import { user } from "./services/user.js";
-import { repositories } from "./services/repositories.js";
+import { getUser } from "./services/user.js";
+import { getRepositories } from "./services/repositories.js";
+
+import { user } from "./objects/user.js";
+import { screen } from "./objects/screen.js";
 
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value;
-    getUserProfile(userName);
+    getUserData(userName);
 });
 
 document.getElementById('input-search').addEventListener('keyup', (e) => {
@@ -15,40 +18,18 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
     const isEnterKeyPressed = key === 13;
 
     if(isEnterKeyPressed){
-        getUserProfile(userName);
+        getUserData(userName);
     }
 });
 
-async function getUserProfile(userName) {
-    user(userName).then(userData => {
-        let userInfo = `<div class="info">
-                            <img src="${userData.avatar_url}" alt=""Foto do perfil do usuário"/>
-                            <div class="data">
-                                <h1>${userData.name ?? 'Não possui nome cadastrado 😢'}</h1>
-                                <p>${userData.bio ?? 'Não possui bio cadastrado 😢'}</p>
-                            </div>
-                        </div>`;
-        
-        document.querySelector('.profile-data').innerHTML = userInfo;
+async function getUserData(userName) {
 
-        getUserRepositories(userName)
-    })
-}
+    const userResponse = await getUser(userName);
+    const repositoriesResponse = await getRepositories(userName);
 
-function getUserRepositories(userName) {
-    repositories(userName).then(reposData => {
-        let  repositoriesItens = "";
-        
-        //html_url
-        //name
-        reposData.forEach(repo => {
-            repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
-        });
+    user.setInfo(userResponse);
+    user.setRepositories(repositoriesResponse);
 
-        document.querySelector('.profile-data').innerHTML += `  <div class="repositories section">
-                                                                    <h2>Repostorios</h2>
-                                                                    <ul>${repositoriesItens}</ul>
-                                                                </div>`
-            
-    });
+    screen.renderUser(user);
+    
 }

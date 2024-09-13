@@ -44,7 +44,8 @@ async function getUserData(userName) {
 
 function validateEmptyInput(userName) {
     if(userName.length === 0){
-        alert('Preencha o campo com nome do usuário do gitHub')
-        return true
+        alert('Preencha o campo com nome do usuário do gitHub');
+        screen.renderClean();
+        return true;
     }
 }

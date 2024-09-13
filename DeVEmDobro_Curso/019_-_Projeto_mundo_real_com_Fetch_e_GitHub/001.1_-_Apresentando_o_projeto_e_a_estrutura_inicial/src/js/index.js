@@ -1,5 +1,5 @@
 /*
-    Na parte 2 foi feito refatoração do código, da maioria dele, neste agora ainda irei melhorar o mesmo.
+    Código JavaScript para funcionar
 */
 
 document.getElementById('btn-search').addEventListener('click', () => {

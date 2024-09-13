@@ -1,5 +1,5 @@
 /*
-    parte2 - será refatorado da parte 1 e adicionado novas funcionalidades
+    Na parte 2 foi feito refatoração do código, da maioria dele, neste agora ainda irei melhorar o mesmo.
 */
 import { user } from "./services/user.js";
 import { repositories } from "./services/repositories.js";

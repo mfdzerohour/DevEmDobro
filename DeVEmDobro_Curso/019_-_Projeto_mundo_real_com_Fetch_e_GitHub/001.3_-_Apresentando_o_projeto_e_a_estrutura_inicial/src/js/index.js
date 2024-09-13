@@ -1,8 +1,8 @@
 /*
     parte2 - será refatorado da parte 1 e adicionado novas funcionalidades
 */
-import { user } from "/src/js/services/user.js";
-import { repositories } from "/src/js/services/repositories.js";
+import { user } from "./services/user.js";
+import { repositories } from "./services/repositories.js";
 
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value;

@@ -1,6 +1,8 @@
 /*
-    Este código foi feito para funcionar, a outra parte parte2, será ele refatorado com modificações para melhorar ele e deixar mais legivel
+    parte2 - será refatorado da parte 1 e adicionado novas funcionalidades
 */
+import { user } from "./services/user.js";
+import { repositories } from "./services/repositories.js";
 
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value;
@@ -16,16 +18,6 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
         getUserProfile(userName);
     }
 });
-
-async function user(userName){
-    const reponse = await fetch(`https://api.github.com/users/${userName}`);
-    return await reponse.json();
-}
-
-async function repos(userName){
-    const reponse = await fetch(`https://api.github.com/users/${userName}/repos`);
-    return await reponse.json();
-}
 
 async function getUserProfile(userName) {
     user(userName).then(userData => {
@@ -44,7 +36,7 @@ async function getUserProfile(userName) {
 }
 
 function getUserRepositories(userName) {
-    repos(userName).then(reposData => {
+    repositories(userName).then(reposData => {
         let  repositoriesItens = "";
         
         //html_url

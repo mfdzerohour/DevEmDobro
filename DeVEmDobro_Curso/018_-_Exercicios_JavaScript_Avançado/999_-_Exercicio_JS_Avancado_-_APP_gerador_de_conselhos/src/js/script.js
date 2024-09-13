@@ -2,8 +2,8 @@ const adviceID = document.getElementsByClassName("advice-id")[0];
 const adviceDescription = document.getElementsByClassName("advice-description")[0];
 const btn = document.getElementById('btn');
 
-function getAdvice() {
-    fetch('https://api.adviceslip.com/advice')
+async function getAdvice() {
+    await fetch('https://api.adviceslip.com/advice')
         .then(response => response.json())
         .then(data => {
             const advice = data.slip.advice;
@@ -11,10 +11,10 @@ function getAdvice() {
             adviceDescription.textContent = advice;
         })
         .catch(error => console.error(error));
-        mensagemBotaoPressionado();
+        await mensagemBotaoPressionado();
 }
 
-function mensagemBotaoPressionado(){
+async function mensagemBotaoPressionado(){
     alert("Pressionei o botão");
 }
 

@@ -1,4 +1,4 @@
-import { baseUrl, repositoriesQuantity } from '/src/js/variables.js';
+import { baseUrl, repositoriesQuantity } from '../variables.js';
 
 export { repositories };
 

@@ -3,6 +3,7 @@
 */
 import { getUser } from "./services/user.js";
 import { getRepositories } from "./services/repositories.js";
+import { getEvents } from "./services/events.js";
 
 import { user } from "./objects/user.js";
 import { screen } from "./objects/screen.js";
@@ -27,6 +28,7 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
 async function getUserData(userName) {
 
     const userResponse = await getUser(userName);
+    const eventsResponse = await getEvents(userName);
 
     if(userResponse.message === 'Not Found'){
         screen.renderNotFound();
@@ -37,9 +39,9 @@ async function getUserData(userName) {
 
     user.setInfo(userResponse);
     user.setRepositories(repositoriesResponse);
+    user.setEvents(eventsResponse);
 
     screen.renderUser(user);
-    
 }
 
 function validateEmptyInput(userName) {

@@ -50,13 +50,16 @@ const screen = {
             displayEvents += `  <li>
                                     <a href="https://github.com/${eventName}" target="_blank">
                                         ${eventName}
-                                    </a> - ${eventMessage}</li>`
+                                    </a> - ${eventMessage}
+                                </li>`
         });
         
 
-        this.userProfile.innerHTML += ` <div class="events">
+        this.userProfile.innerHTML += ` <div class="events section">
                                             <h2>Eventos</h2>
-                                            <ul>${displayEvents}</ul>
+                                            <ul>
+                                                ${displayEvents}
+                                            </ul>
                                         </div>`
     },
 

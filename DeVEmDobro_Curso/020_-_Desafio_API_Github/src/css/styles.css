@@ -149,6 +149,21 @@ main {
   color: #fff
 }
 
+.container .profile-data .repositories ul li a .languages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.container .profile-data .repositories ul li a .languages .info_repo {
+  padding: 3px;
+  color: #ffffff;
+  background-color: rgb(24, 206, 118);;
+  border-radius: 5px;
+}
+
 .container .profile-data.hide{
   display: none;
 }

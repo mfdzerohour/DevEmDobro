@@ -17,10 +17,23 @@ const screen = {
         user.repositories.forEach(repo => repositoriesItens += `<li>
                                                                     <a href="${repo.html_url}" target="_blank">
                                                                         ${repo.name}
+                                                                        <br>
+                                                                        <div class="languages">
+                                                                            <p class="info_repo">
+                                                                                🍴 ${repo.forks}
+                                                                            </p>
+                                                                            <p class="info_repo">
+                                                                                ⭐ ${repo.stargazers_count}
+                                                                            </p>
+                                                                            <p class="info_repo">
+                                                                                👀 ${repo.watchers}
+                                                                            </p>
+                                                                            <p class="info_repo">
+                                                                                👨🏽‍💻 ${repo.languages}
+                                                                            </p>
+                                                                        </div>
                                                                     </a>
-                                                                </li>`);
-                                                                console.log(repositoriesItens);
-                                                                
+                                                                </li>`);                                                                
         
         if(user.repositories.length > 0){
             this.userProfile.innerHTML += ` <div class="repositories section">
@@ -52,7 +65,7 @@ const screen = {
                                         ${eventName}
                                     </a> - ${eventMessage}
                                 </li>
-                                <hr> <br>`
+                                <hr>`
         });
         
 

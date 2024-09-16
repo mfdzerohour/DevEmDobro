@@ -51,7 +51,8 @@ const screen = {
                                     <a href="https://github.com/${eventName}" target="_blank">
                                         ${eventName}
                                     </a> - ${eventMessage}
-                                </li>`
+                                </li>
+                                <hr> <br>`
         });
         
 

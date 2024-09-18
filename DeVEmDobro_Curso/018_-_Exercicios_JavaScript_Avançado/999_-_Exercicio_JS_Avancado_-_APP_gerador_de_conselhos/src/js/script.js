@@ -3,7 +3,7 @@ const adviceDescription = document.getElementsByClassName("advice-description")[
 const btn = document.getElementById('btn');
 
 async function getAdvice() {
-    await fetch('https://api.adviceslip.com/advice')
+    await fetch('https://api.adviceslip.com/advice',{cache: "no-cache"})
         .then(response => response.json())
         .then(data => {
             const advice = data.slip.advice;

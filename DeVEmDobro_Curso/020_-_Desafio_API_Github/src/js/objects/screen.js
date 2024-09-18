@@ -8,15 +8,15 @@ const screen = {
                             <div class="data">
                                 <h1>${user.name ?? 'Não possui nome cadastrado 😢'}</h1>
                                 <p>${user.bio ?? 'Não possui bio cadastrado 😢'}</p>
-                                <p>${user.followers !== null ? `Segue ${user.followers} pessoa(s)` : 'Usuário não segue ninguem 😢'}</p>
-                                <p>${user.following !== null ? `Está seguindo ${user.following} pessoa(s)` : 'Não esta seguindo ninguem 😢'}</p>
+                                <p>${user.followers !== null ? `🔎 Segue <strong>${user.followers}</strong> pessoa(s)` : 'Usuário não segue ninguem 😢'}</p>
+                                <p>${user.following !== null ? `🕵️‍♂️ Está seguindo <strong>${user.following}</strong> pessoa(s)` : 'Não esta seguindo ninguem 😢'}</p>
                             </div>
                         </div>`;
         
         let repositoriesItens = '';
         user.repositories.forEach(repo => repositoriesItens += `<li>
                                                                     <a href="${repo.html_url}" target="_blank">
-                                                                        ${repo.name}
+                                                                        <strong>${repo.name}</strong>
                                                                         <br>
                                                                         <div class="languages">
                                                                             <p class="info_repo">
@@ -29,7 +29,7 @@ const screen = {
                                                                                 👀 ${repo.watchers}
                                                                             </p>
                                                                             <p class="info_repo">
-                                                                                👨🏽‍💻 ${repo.languages}
+                                                                                👨🏽‍💻 ${repo.language}
                                                                             </p>
                                                                         </div>
                                                                     </a>
@@ -65,7 +65,8 @@ const screen = {
                                         ${eventName}
                                     </a> - ${eventMessage}
                                 </li>
-                                <hr>`
+                                <hr>
+                                <br>`
         });
         
 

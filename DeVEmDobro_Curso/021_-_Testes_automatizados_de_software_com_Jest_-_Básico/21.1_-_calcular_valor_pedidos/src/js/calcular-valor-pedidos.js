@@ -1,14 +1,10 @@
 const meuPedido = {
     itens: [
                 { nome: 'Poção de vida', valor: 100 },
-                { nome: 'Espada de prata', valor: 1000 },
+                { nome: 'Espada de prata', valor: 200 },
                 { nome: 'Entrega', valor: 40, entrega: true }
             ]
 }
-
-// const calcularValorPedido = pedido => 
-//         pedido.itens.reduce((totalPdidos, pedidoAtual) => 
-//                 total + pedidoAtual.valor, 0);
 
 const calcularValorPedido = pedido => {
     const valorProdutos = pedido.itens
@@ -20,7 +16,7 @@ const calcularValorPedido = pedido => {
     if (valorProdutos > 500) {
         return valorProdutos;
     } else {
-        return valorProdutos + entrega.valor;
+        return valorProdutos + entrega[0].valor;
     }
 }
 

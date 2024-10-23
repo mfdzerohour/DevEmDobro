@@ -1,0 +1,10 @@
+console.log('Olá mundo!');
+
+/*
+    COMENTARIO EM BLOCO
+    COMENTARIO EM BLOCO
+    COMENTARIO EM BLOCO
+    COMENTARIO EM BLOCO
+*/
+
+// COMENTARIO EM LINHA

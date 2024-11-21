@@ -17,3 +17,7 @@ if(nomeFilme == "Vingadores"){
 } else {
     console.log("É outro filme");
 }
+
+//If Ternario
+//condicao ? console.log("verdadeiro") : console.log("falso");
+true ? console.log("verdadeiro") : console.log("falso");

@@ -44,14 +44,14 @@
 //         break;
 // }
 
-let avaliacao = 3.5;
+let avaliacao = 5;
 
 switch (true) {
-    case avaliacao >= 1 && avaliacao < 2.99:
+    case avaliacao >= 1 && avaliacao < 3:
     
         console.log("Filme ruim");
         break;
-    case avaliacao >= 3 && avaliacao <= 4.99:
+    case avaliacao >= 3 && avaliacao < 5:
         console.log("Filme mediano");
         break;
     case avaliacao == 5:

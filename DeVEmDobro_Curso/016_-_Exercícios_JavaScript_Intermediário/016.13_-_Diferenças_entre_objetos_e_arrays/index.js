@@ -23,5 +23,6 @@ let videoGames = [videoGame, videoGame2]
 //Vendo o que esta dentro do array
 console.log(videoGames)
 
-//Pegando o nome do videoGame[POSICAO_ARRAY].propriedade
+//Pegando o nome do ARRAY[POSICAO_ARRAY].propriedade_do_objeto 
+//dentro array
 console.log(videoGames[1].nome)

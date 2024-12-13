@@ -8,11 +8,12 @@ function alterarCorDeFundoPrimeiroPost() {
     primeiroPost.style.backgroundColor = 'lightgreen';
 }
 
-function alterarCorDeFundoSegundoPost() {
-    let posts = document.getElementsByClassName('post');
-    //Arqui armazernar o valor posts[0] na varaivel segundoPost
-    let segundoPost = posts[1];
-    segundoPost.style.backgroundColor = 'lightblue';
+function aumentarAFonteDoSegundoPost() {
+    let textoPosts = document.getElementsByClassName('texto-post');
+
+    //console.log(textoPosts)
+    // textoPosts[1].classList.add("fonte-grande");
+    console.log(textoPosts[1].classList);
 }
 
-// Minuto 05:24
+// Minuto 06:00

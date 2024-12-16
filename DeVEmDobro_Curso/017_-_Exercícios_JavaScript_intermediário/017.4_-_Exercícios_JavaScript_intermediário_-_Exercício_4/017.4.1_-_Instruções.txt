@@ -1,0 +1,9 @@
+Exercícios JavaScript intermediário - Exercício 4
+
+Você está prestes fazer mais um exercício de JavaScript intermediário para praticar o que aprendeu até aqui!
+Use os conhecimentos que aprendeu pra resolvê-lo da melhor forma, leia atentamente a descrição de cada tarefa.
+Tente realizar o exercício sozinho(a), e depois verifique a solução proposta nas anotações.
+Boa sorte!
+Link para o exercício: https://veiled-package-bfe.notion.site/4-Validando-o-preenchimento-das-informa-es-de-um-input-57c020841f4b4a8f97f3fd92ded40866
+ATENÇÃO
+A resolução do exercício se encontra ao final do Notion.

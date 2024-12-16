@@ -10,10 +10,52 @@ function alterarCorDeFundoPrimeiroPost() {
 
 function aumentarAFonteDoSegundoPost() {
     let textoPosts = document.getElementsByClassName('texto-post');
-
     //console.log(textoPosts)
-    // textoPosts[1].classList.add("fonte-grande");
-    console.log(textoPosts[1].classList);
+    
+    // console.log(textoPosts[1].classList);
+    textoPosts[1].classList.add("fonte-grande");   
 }
 
-// Minuto 06:00
+// function marcarRadio(genero){
+//     //verificar se esta puxando o M e o F do botão
+//     //console.log(genero); //Sim esta chegando
+
+//     let radioMasculino = document.getElementsById('genero-masculino');
+//     let radioFeminino = document.getElementsById('genero-feminino');
+//     console.log(radioMasculino)
+//     console.log(radioFeminino)
+//     // if(genero === 'M'){
+//     //     radioMasculino.checked = true;
+//     // }else if(genero === 'F'){
+//     //     radioFeminino.checked = true;
+//     // }
+// }
+
+function marcarRadio(genero){
+    //verificar se esta puxando o M e o F do botão
+    //console.log(genero); //Sim esta chegando
+
+    //Aqui da erro
+    // let radioMasculino = document.getElementsById('genero-masculino');
+    // let radioFeminino = document.getElementsById('genero-feminino');
+
+    //Aqui Funciona
+    let generoMasculino = document.getElementById("genero-masculino");
+    let generoFeminino = document.getElementById("genero-feminino");
+    // console.log(radioMasculino)
+    // console.log(radioFeminino)
+    
+    // Porque o erro AQUI
+    // if(genero === 'M'){
+    //     radioMasculino.checked = true;
+    // }else if(genero === 'F'){
+    //     radioFeminino.checked = true;
+    // }
+
+    //Aqui Funciona
+    if (genero === "M") {
+        generoMasculino.checked = true;
+    } else if (genero === "F") {
+        generoFeminino.checked = true;
+    }
+}

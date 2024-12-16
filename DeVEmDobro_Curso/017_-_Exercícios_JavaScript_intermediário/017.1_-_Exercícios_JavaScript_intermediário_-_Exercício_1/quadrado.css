@@ -1,0 +1,19 @@
+/* Como todos os  quadrados vão ter o mesmo tamanho fazer uma classe
+para o tamanho que comporta todos os quadrados*/
+.quadrado{
+    width: 100px;
+    height: 100px;
+}
+
+/* Definir a cor de fundo de cada quadrado */
+.azul {
+    background-color: blue;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.amarelo {
+    background-color: yellow;
+}

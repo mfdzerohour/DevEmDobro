@@ -1,0 +1,9 @@
+Exercícios JavaScript intermediário - Exercício 1
+
+Você está prestes fazer um exercício de JavaScript intermediário para praticar o que aprendeu até aqui!
+Use os conhecimentos que aprendeu pra resolvê-lo da melhor forma, leia atentamente a descrição de cada tarefa.
+Tente realizar o exercício sozinho(a), e depois verifique a solução proposta nas anotações.
+Boa sorte!
+Link para o exercício: https://veiled-package-bfe.notion.site/1-Alterando-estilos-de-elementos-usando-Eventos-do-JS-6fa2a7a4280143b489ead383a380de3a
+ATENÇÃO
+A resolução do exercício se encontra ao final do Notion.

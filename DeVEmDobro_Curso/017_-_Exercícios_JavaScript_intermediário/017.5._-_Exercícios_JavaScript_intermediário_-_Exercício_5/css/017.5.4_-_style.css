@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.imagens-slider .slide{
+.imagens-slider .slide {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,94 +14,93 @@
     position: absolute;
     opacity: 0;
     transition: 0.5s ease-out;
-    /* font-size: 20px; */
+    font-size: 20px;
     display: flex;
     align-items: center;
 }
 
-.imagens-slider .slide.mostrar{
+.imagens-slider .slide.mostrar {
     opacity: 1;
 }
 
-.slide-rosa{
-    background-image: url(../img/017.5.6_-_imagem_01.svg)
+.slide-rosa {
+    background-image: url("../img/017.5.6_-_imagem_01.svg");
 }
 
-.slide-verde{
-    background-image: url(../img/017.5.6_-_imagem_02.svg)
+.slide-verde {
+    background-image: url("../img/017.5.6_-_imagem_02.svg");
 }
 
-.slide-laranja{
-    background-image: url(../img/017.5.6_-_imagem_03.svg)
+.slide-laranja {
+    background-image: url("../img/017.5.6_-_imagem_03.svg");
 }
 
-.slide-azul{
-    background-image: url(../img/017.5.6_-_imagem_04.svg)
+.slide-azul {
+    background-image: url("../img/017.5.6_-_imagem_04.svg");
 }
 
-.seta-voltar, .seta-avancar{
+.seta-voltar, .seta-avancar {
     position: absolute;
     z-index: 1;
 }
 
-.seta-voltar{
+.seta-voltar {
     left: 4%;
-    
+    transform: rotateZ(180deg)
 }
 
-.seta-avancar{
+.seta-avancar {
     right: 4%;
-    transform: rotateY(180deg);
 }
 
-.seta-voltar .imagem-seta, .seta-avancar .imagem-seta{
+.seta-voltar .imagem-seta, .seta-avancar .imagem-seta {
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 
-.opacidade{
+.opacidade {
     opacity: 0.6;
     cursor: default;
 }
 
-.conteudo{
-    display: block;
-    background-color: #FFF;
+.conteudo {
+    background-color: #fff;
     margin-left: 180px;
     padding: 65px 60px;
     width: 620px;
     border-radius: 10px;
 }
 
-.conteudo .titulo{
+.conteudo .titulo {
     margin-bottom: 80px;
     font-size: 5rem;
     font-weight: 400;
 }
 
-.conteudo .texto{
+.conteudo .texto {
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 50px;
 }
 
-.conteudo .botao{
+.conteudo .botao {
     font-size: 3rem;
     font-weight: 700;
 }
 
-.botao.rosa{
-    color:#C50000;
+.botao.rosa {
+    color: #C50000;
 }
 
-.botao.verde{
-    color:#D9DD10;
+.botao.verde {
+    color: #D9DD10;
 }
 
-.botao.laranja{
-    color:#A63A17;
+.botao.laranja {
+    color: #A63A17;
 }
 
-.botao.azul{
-    color:#10ACDD;
+.botao.azul {
+    color: #10ACDD;
 }

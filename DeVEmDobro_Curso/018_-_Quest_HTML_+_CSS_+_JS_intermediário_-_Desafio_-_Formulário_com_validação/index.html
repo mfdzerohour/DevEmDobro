@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="default:," type="image/x-icon">
+    <title>Exercicio final de JS Intermediário</title>
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <main>
+        <section class="duvida">
+            <h1>FICOU COM DÚVIDA? <br> NOS MANDE UMA MENSAGEM!</h1>
+            <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
+        </section>
+        <section class="formulario">            
+            <form id="meu-Formulario">
+                <input type="text" name="nome" class="nome campo-Formulario" title="Informe o seu nome" placeholder="   Nome completo *">
+                <label class="campo-obrigatorio nome">campo obrigatório</label>
+
+                <input type="email" name="email" class="email campo-Formulario" title="Informe um endereço de e-mail" placeholder="   Email *">
+                <label class="campo-obrigatorio email">campo obrigatório</label>
+
+                <input type="tel" name="telefone" class="telefone campo-Formulario" minlength="10" maxlength="11" title="Informe um telefone ou celular" pattern="[0-9]{10,11}" placeholder="   Telefone *">
+                <label class="campo-obrigatorio telefone">campo obrigatório</label>
+
+                <textarea name="mensagem" class="mensagem campo-Formulario" cols="30" rows="6" maxlength="165" title="Informe uma mensagem" placeholder="   Mensagem *"></textarea>
+                <label class="campo-obrigatorio mensagem">campo obrigatório</label> <br>
+
+                <label class="observacao-campo-obrigatorio">*campos obrigatórios</label>
+                <button type="button" id="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+
+<script type="text/javascript" src="./src/js/index.js"></script>

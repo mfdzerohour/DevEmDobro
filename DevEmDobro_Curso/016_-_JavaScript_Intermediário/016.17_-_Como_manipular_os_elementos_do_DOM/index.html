@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="default:," type="image/x-icon">
+    <title>Como manipular os elementos do DOM</title>
+</head>
+<body>
+    <h1>Como manipular os elementos do DOM</h1>
+
+    <p>
+        Como já aprendemos a selecionar os elementos, agora vamos manipular através do JS. Ela é importante por que várias das interações que nós vemos nos sites hoje me dia são feitas a partir desses métodos.
+    </p>
+    <p>
+        <strong>IMPORTANTE:</strong> A partir do minuto <strong>12:10</strong> é importante que use o acento grave (`) para o funcionamento do código corretamente. Não se deve usar aspas simples e nem duplas. Uma das formas de se verificar se deu certo é que quando digitarmos ${} ele ficará colorido
+    </p>
+    
+    <hr>
+
+    <h1>Posts do Teitter</h1>
+
+    <article>
+        <article class="post">
+            <p><strong>Marcelo Duarte</strong> <span>@mfdzerohour - 10 min</span></p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tempora repellat maiores error corporis! Numquam magni, nihil inventore perspiciatis est illo eos eaque quae aliquam magnam minus, dolores placeat expedita!
+            </p>
+
+            <br>
+
+            <div class="comentarios">
+                <h3>Comentários:</h3>
+                <input type="text" name="novo-comentario" placeholder="Digite o seu comentário">
+                <button onclick="adicionarComentario()">Adicionar comentário</button>
+
+                <br>
+
+                <div id="novos-comentarios"></div>
+            </div>
+        </article>
+    </article>
+
+    <hr>
+
+    <h2>Documentação</h2>
+    <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">innerHTML</a>
+</body>
+</html>
+
+<script type="text/javascript" src="index.js"></script>

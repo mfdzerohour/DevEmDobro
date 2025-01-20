@@ -1,0 +1,29 @@
+.nivel-1{
+    color: blue;
+    list-style: circle; 
+    margin-left: 20px;
+}
+
+.nivel-2{
+    color: red;
+    list-style: disc; 
+    /* margin-left: 10px; */
+}
+
+.nivel-3{
+    color: green;
+    list-style-type: "\1F44D";
+    /* margin-left: 20px; */
+}
+
+.nivel-4{
+    color: orange;
+    list-style: square; 
+    /* margin-left: 20px; */
+}
+
+ul li ul {
+    border-left: 2px solid #007BFF; 
+    padding-left: 20px; 
+    margin-top: 5px; 
+}

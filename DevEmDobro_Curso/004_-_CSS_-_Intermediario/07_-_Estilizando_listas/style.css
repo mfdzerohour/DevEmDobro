@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    /* Para desabilitar os bullet */
+    /* list-style-type: none; */
+
+    /* Usa o list-style-image para colocar um bullet personalizado */
+    /* list-style-image: url('img/icon.png') ; */
+
+    /* Para deixar um bullet em caso de não carregar a imagem, caso a imagem não carregue ele vai colocar circle */
+    /* list-style: circle url('img/icon.png'); */
+
+    /* A opção inside foi colocado para deixar ele dentro do local ocupado pelo li */
+    list-style: circle inside url('img/icon.png');
+    background-color: aliceblue;
+}
+
+ul li{
+    border: 1px solid black;
+    padding: 20px;
+}
+
+ol{
+    background-color: aquamarine;
+    list-style: decimal-leading-zero inside;
+}
+
+ol li{
+    border: 1px solid black;
+    padding: 20px;
+}

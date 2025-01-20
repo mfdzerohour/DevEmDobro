@@ -1,0 +1,39 @@
+.flex-0{
+    /* flex-grow, flex-shirink, flex-basis */
+    flex: 0;
+    /*
+    É o mesmo de usar estas propriedades nesta ordem:
+
+    flex-grow: 0;
+    flex-shirink: 1;
+    flex-basis: 0;
+    */
+}
+
+.flex-1{
+    /* flex-grow, flex-shirink, flex-basis */
+    flex: 1;
+    /*
+    É o mesmo de usar estas propriedades nesta ordem:
+
+    flex-grow: 1;
+    flex-shirink: 1;
+    flex-basis: 0;
+    */
+}
+
+.flex-1_1_100px{
+    /* flex-grow, flex-shirink, flex-basis */
+    flex: 1 1 100px;
+    /*
+    É o mesmo de usar estas propriedades nesta ordem:
+
+    flex-grow: 1;
+    flex-shirink: 1;
+    flex-basis: 100px;
+    */
+}
+
+.wrap{
+    flex-wrap: wrap;
+}

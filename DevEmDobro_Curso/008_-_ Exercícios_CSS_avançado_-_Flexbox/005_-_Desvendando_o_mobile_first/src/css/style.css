@@ -1,0 +1,33 @@
+@media(min-width: 768px){
+    .header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .logo{
+        margin: 0;
+        gap: 5px;
+    }
+
+    .logo h1{
+        font-size: 25px;
+    }
+
+    .menu{
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .menu a{
+        background-color: red;
+        font-size: 18px;
+        padding: 11px 1px;
+    }
+
+    .menu .btn{
+        padding: 10px 21px;
+        font-size: 15px;
+    }
+}

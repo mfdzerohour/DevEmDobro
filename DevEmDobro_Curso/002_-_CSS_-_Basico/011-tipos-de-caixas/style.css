@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+/* h1{
+    display: inline;
+}
+
+p{
+    display: inline;
+} */
+
+span{
+    color: coral;
+    background-color: cornflowerblue;
+
+    display: block;
+
+    height: 200px;
+    width: 200px;
+=======
+/* h1{
+    display: inline;
+}
+
+p{
+    display: inline;
+} */
+
+span{
+    color: coral;
+    background-color: cornflowerblue;
+
+    display: block;
+
+    height: 200px;
+    width: 200px;
+>>>>>>> 71bf3764689bf5a24f6e7870cd88e892f4e25bbf
+}

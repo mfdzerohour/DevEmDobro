@@ -1,0 +1,82 @@
+/* Como funciona as pseudo-classes?
+
+Funciona assim: */
+/* 
+seletor:pseudo-classe{
+    propriedade: valor;
+} 
+*/
+
+/* Formata o primeiro filho que seja um paragrafo */
+p:first-child{
+    color: aquamarine;
+}
+
+/* Formata o último filho que seja um paragrafo */
+p:last-child{
+    color: blueviolet;
+}
+
+/* Formata o paragrafo que não tenha (o que esta dentro de not) a classe padrão */
+/* p:not(.padrao){
+    color: yellowgreen;
+} */
+
+/* Formata os elementos irmão a partir da posição deles, por exemplo da para deixar uma tebela zebrada ou alternar as cores do posição.
+
+Ex:
+seletor:nth-child(OPÇÃO)
+
+Valores de opção:
+odd     -   impares
+even    -   pares 
+Xn      -   onde X quer dizer que estiliza de X linhas em X linhas
+NUMERO  -   Se colocar o numero ele estiliza só aquela linha
+
+Estlizar uma range de numero
+seletor:nth-child(n+PosicaoInicial):nth-child(-n+5)
+*/
+
+/* Inicio de estilização da tabela */
+tbody tr:nth-child(odd) {
+    background-color: rgb(161, 180, 161);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+body {
+    font-family: Verdana;
+}
+
+table {
+    width: 100%;
+}
+
+thead tr {
+    background-color: green;
+    color: #FFFFFF;
+}
+
+th, td {
+    padding:0.5em;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* Fim de estilização da tabela */
+
+/* Estliza o seletor de baixo para cima, do último para o primeiro se colocar um numero igual esta. */
+li:nth-last-child(5){
+    color: red;
+}
+
+/* Estiliza o seletor sem irmão */
+seletor:only-child{
+
+}
+

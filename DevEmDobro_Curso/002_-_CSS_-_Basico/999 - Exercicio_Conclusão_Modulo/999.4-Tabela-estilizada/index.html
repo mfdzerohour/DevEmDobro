@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link de imagem Placeholder</title>
+    <link rel="stylesheet" href="003.2-style.css">
+</head>
+<body>
+    <h1>Instruções:</h1>
+
+    <h2>Tabela estilizada</h2>
+    
+    <ul>
+        <li>Faça uma tabela de roupas com tamanho e valor da peça descrito em cada linha.</li>
+        <li>Não esqueça de adicionar um cabeçalho em cada coluna.</li>
+        <li>Cor de fundo do cabeçalho moda - #BB86FC</li>
+        <li>Cor de fundo do cabeçalho casa - #00C4B4</li>
+        <li>Cor de fundo dos valores da tabela - #424250</li>
+    </ul>
+
+    <span>Regra: não estilize usando as tags HTML, crie classes para estilizar sua tabela.
+    EX: .produtos-casa th { … }
+    </span>
+        
+
+    <hr>
+    
+    <h2>Moda</h2>
+    <table>
+        <thead class="moda_cabecalho">
+            <tr>
+                <th>Produto</th>
+                <th>Tamanho</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Camiseta</td>
+                <td>M</td>
+                <td>R$49,00</td>
+            </tr>
+            <tr>
+                <td>Tênis</td>
+                <td>42</td>
+                <td>R$89,00</td>
+            </tr>
+        </tbody>
+        <tfoot class="rodape">
+            <tr>
+                <td colspan="3">Total: 138,00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Casa</h2>
+    <table>
+        <thead class="casa_cabecalho">
+            <tr>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sofá</td>
+                <td>R$ 1.200,00</td>
+            </tr>
+            <tr>
+                <td>Televisão</td>
+                <td>R$ 5.000,00</td>
+            </tr>
+        </tbody>
+        <tfoot class="rodape">
+            <tr>
+                <td colspan="2">Total: 6.200,00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><br>
+</body>
+</html>

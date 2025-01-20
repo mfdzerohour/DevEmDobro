@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="default:," type="image/x-icon">
+    <title>Manipulando atributos e estilos dos elementos do DOM</title>
+
+    <!-- Adicionando um estilo para ser usado no JavaScript -->
+    <style>
+        .fonte-grande{
+        font-size: 30px;
+        font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Manipulando atributos e estilos dos elementos do DOM</h1>
+
+    <p>
+        Além de modificar o DOM adicionando elementos, também é possível mudar os atributos e nos estilos dos elementos na tela.
+    </p>
+
+    <hr>
+    
+    <h1>Manipulando estilos</h1>
+
+    <button onclick="alterarCorDeFundoPrimeiroPost()">
+        Alterar cor de fundo do primeiro post
+    </button>
+
+    <article class="post">
+        <p><strong>Marcelo Duarte</strong> <span>@mfdzerohour - 10 min</span></p>
+        <p class="texto-post">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quibusdam molestiae sit nostrum temporibus, aperiam, harum eos ipsa porro saepe nesciunt quod debitis non assumenda voluptatibus explicabo consequuntur praesentium provident?
+        </p>
+    </article>
+
+
+    <button onclick="aumentarAFonteDoSegundoPost()">
+        Aumentar a fonte do segundo post
+    </button>
+
+    <article class="post">
+        <p><strong>Marcelo Duarte</strong> <span>@mfdzerohour - 10 min</span></p>
+        <p class="texto-post">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quibusdam molestiae sit nostrum temporibus, aperiam, harum eos ipsa porro saepe nesciunt quod debitis non assumenda voluptatibus explicabo consequuntur praesentium provident?
+        </p>
+    </article>
+
+    <h2>Manipulando atributos:</h2>
+    
+    <button onclick="marcarRadio('M')">Marcar radio masculino</button>
+    <button onclick="marcarRadio('F')">Marcar radio feminino</button>
+
+    <br>
+
+    Masculino: <input type="radio" name="genero" id="genero-masculino">   
+    Feminimo: <input type="radio" name="genero" id="genero-feminino">   
+
+    <hr>
+
+    <h2>Documentação:</h2>
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_style.asp">DOM style object</a> <br>
+    <a href="https://javascript.info/dom-attributes-and-properties">Estilos e atributos do DOM</a>
+
+</body>
+</html>
+
+<script type="text/javascript" src="index.js"></script>

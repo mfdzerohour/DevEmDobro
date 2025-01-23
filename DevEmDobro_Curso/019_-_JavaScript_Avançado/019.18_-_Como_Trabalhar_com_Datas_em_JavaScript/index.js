@@ -61,3 +61,5 @@ const formato = new Intl.DateTimeFormat('pt-BR', {weekday: 'long', year: 'numeri
 const dataFormatadaIntl = formato.format(dataAtual);
 console.log(dataFormatadaIntl);
 /* *************************************************************************** */
+
+//continuar 04:09

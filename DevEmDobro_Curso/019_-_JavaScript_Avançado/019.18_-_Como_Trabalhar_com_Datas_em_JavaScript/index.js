@@ -51,15 +51,66 @@
 /* *************************************************************************** */
 //Formatar data usando API do JavaScript Intl
 
-const dataAtual = new Date();
+// const dataAtual = new Date();
 
 //Forma curta 21/01/2025
 // const formato = new Intl.DateTimeFormat('pt-BR')
 
 //Forma Longa 21/01/2025
-const formato = new Intl.DateTimeFormat('pt-BR', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
-const dataFormatadaIntl = formato.format(dataAtual);
-console.log(dataFormatadaIntl);
+// const formato = new Intl.DateTimeFormat('pt-BR', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
+// const dataFormatadaIntl = formato.format(dataAtual);
+// console.log(dataFormatadaIntl);
+
 /* *************************************************************************** */
 
-//continuar 04:09
+// const dataAtual = new Date();
+// console.log(dataAtual);
+
+//Trabalhando com datas = DIAS
+// const umDiaDepois = new Date(dataAtual)
+
+// umDiaDepois.setDate(dataAtual.getDate() + 1)
+// console.log(umDiaDepois);
+
+
+
+//Trabalhando com datas = MESES
+// const dataAtual = new Date();
+// console.log(dataAtual);
+
+// const umMesAtras = new Date(dataAtual)
+// const umMesDepois = new Date(dataAtual)
+
+// umMesAtras.setMonth(dataAtual.getMonth() - 1)
+// umMesDepois.setMonth(dataAtual.getMonth() + 1)
+// console.log(umMesAtras);
+// console.log(umMesDepois);
+
+
+
+
+// const dataAtual = new Date();
+// const opcoes = {
+//     year: 'numeric',
+//     month: 'long',
+//     day: 'numeric'
+// }
+
+// const dataFormatada = dataAtual.toLocaleDateString('pt-BR', opcoes)
+// console.log(dataFormatada)
+
+
+
+const dataAtual = new Date();
+const opcoes = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+}
+
+const formatador = new Intl.DateTimeFormat('pt-BR', opcoes)
+
+const dataFormatada = formatador.format(dataAtual)
+
+console.log(dataFormatada)

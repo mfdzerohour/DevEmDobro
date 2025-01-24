@@ -1,0 +1,6 @@
+https://docs.github.com/pt/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user
+https://docs.github.com/pt/free-pro-team@latest/rest/activity/events?apiVersion=2022-11-28#list-events-for-the-authenticated-user
+
+Exemplo para ser feito no fetch de eventos:
+
+${baseUrl}/${userName}/events?per_page=${maxItems}

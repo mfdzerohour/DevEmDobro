@@ -1,6 +1,19 @@
+//Adiciona o evento click ao botão
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value;
     getUserProfile(userName);
+})
+
+
+//Adiciona o evento keyup ao input
+document.getElementById('input-search').addEventListener('keyup', (e) => {
+    const userName = e.target.value;
+    const key = e.witch || e.keycode;
+    const isEnterKeyPressed = key === 13;
+
+    if(isEnterKeyPressed){
+        getUserProfile(userName);
+    }
 })
 
 async function user(userName){

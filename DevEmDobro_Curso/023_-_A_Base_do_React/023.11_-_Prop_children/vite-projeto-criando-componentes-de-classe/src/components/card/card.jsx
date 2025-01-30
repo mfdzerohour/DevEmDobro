@@ -23,10 +23,11 @@ import './card.css'
 // }
 
 //Usando funções de classe
-const Card = (props) => {
+const Card = ({ title }) => {
     return (
         <div className="card">
-            {props.children}
+            <h3>{title}</h3>
+            <p>Esse é um texto do card</p>
         </div>
     )
 }

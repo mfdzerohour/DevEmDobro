@@ -19,6 +19,7 @@ function App() {
                 <p>Esse é um texto do card 3</p>
             </Card> */}
             <Button label = "Baixar CV"/>
+            <Button />
         </>
     );
 }

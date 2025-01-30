@@ -1,5 +1,6 @@
 //Classe tem que ter esta propriedade
-import React, {Component} from 'react'
+// import React from 'react'
+import React from 'react'
 import './button.css'
 
 //Botão normal
@@ -13,7 +14,7 @@ import './button.css'
 // }
 
 //Botão com props de classe
-class Button extends Component{
+class Button extends React.Component{
     //Quando usa classe tem que usar o this.
     //E tem que ter:
     // import React from 'react'

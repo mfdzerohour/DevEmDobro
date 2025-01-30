@@ -1,35 +1,21 @@
-// import React from 'react'
-import './card.css'
+//import { Component } from "react";
+import PropTypes from 'prop-types';
+import './card.css';
 
-// class Card extends React.Component{
-//     render(){
-//         return (
-//             <div className="card">
-//                 <h3>{this.props.title}</h3>
-//                 <p>Esse é um texto do card</p>
-//             </div>
-//         )
-//     }
-// }
 
-//Usando funções de classe
-// const card = (props) => {
-//     return (
-//         <div className="card">
-//             <h3>{props.title}</h3>
-//             <p>Esse é um texto do card</p>
-//         </div>
-//     )
-// }
 
-//Usando funções de classe
-const Card = ({ title }) => {
-    return (
-        <div className="card">
-            <h3>{title}</h3>
-            <p>Esse é um texto do card</p>
-        </div>
-    )
+const Card = ({children}) => {
+  return (
+    <div className="card">
+      {children}
+    </div>
+  )
+}
+
+
+// Aqui é só uma validação para garantir que o componente seja usado corretamente, não é obrigatório
+Card.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default Card;

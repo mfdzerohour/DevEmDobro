@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import './card.css'
 
 // class Card extends React.Component{
@@ -23,11 +23,13 @@ import './card.css'
 // }
 
 //Usando funções de classe
-const card = (props) => {
+const card = (title) => {
     return (
         <div className="card">
-            <h3>{props.title}</h3>
+            <h3>{title}</h3>
             <p>Esse é um texto do card</p>
         </div>
     )
 }
+
+export default card;

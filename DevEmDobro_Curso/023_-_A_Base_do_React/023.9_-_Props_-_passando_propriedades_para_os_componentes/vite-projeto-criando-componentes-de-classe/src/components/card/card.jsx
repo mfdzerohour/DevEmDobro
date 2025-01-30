@@ -23,7 +23,7 @@ import './card.css'
 // }
 
 //Usando funções de classe
-const card = (title) => {
+const Card = ({ title }) => {
     return (
         <div className="card">
             <h3>{title}</h3>
@@ -32,4 +32,4 @@ const card = (title) => {
     )
 }
 
-export default card;
+export default Card;

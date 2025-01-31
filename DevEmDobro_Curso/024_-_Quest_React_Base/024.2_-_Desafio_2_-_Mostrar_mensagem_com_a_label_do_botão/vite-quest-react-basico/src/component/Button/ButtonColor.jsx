@@ -1,5 +1,5 @@
 import "./ButtonColor.css";
-import React from 'react';
+// import React from 'react';
 
 function ButtonColor({onClick}){
     return(

@@ -1,4 +1,3 @@
-import "./ButtonColor.css";
 // import ButtonViewNameLabel from "./ButtonViewNameLabel.jsx";
 
 const ButtonViewNameLabel = ({ label }) => {
@@ -8,7 +7,7 @@ const ButtonViewNameLabel = ({ label }) => {
 
     return (
         <>
-            <button onClick={handleClick} className="btn">
+            <button onClick={handleClick} className="btn2">
                 {label}
             </button>
         </>

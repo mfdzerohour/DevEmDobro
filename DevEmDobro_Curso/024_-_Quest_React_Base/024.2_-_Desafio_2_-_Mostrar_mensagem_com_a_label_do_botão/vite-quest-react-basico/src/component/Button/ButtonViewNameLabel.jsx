@@ -1,14 +1,14 @@
 import "./ButtonColor.css";
-import ButtonViewNameLabel from "./ButtonViewNameLabel.jsx";
+// import ButtonViewNameLabel from "./ButtonViewNameLabel.jsx";
 
-const ButtonViewNameLabel = ({ label, onClick }) => {
+const ButtonViewNameLabel = ({ label }) => {
     const handleClick = () => {
-        alert(`A label desse botão é ${label}`);
+        alert(`A label desse botão é: ${label}`);
     };
 
     return (
         <>
-            <button onClick={onClick}>
+            <button onClick={handleClick} className="btn">
                 {label}
             </button>
         </>

@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <h1>Desafio 1</h1>
+      <h3>React Básico</h3>
 
       <Paragraph isMaiusculo={isMaiusculo} />
 
@@ -21,7 +22,10 @@ function App() {
 
       <hr />
 
-      <ButtonViewNameLabel label="Clique aqui vai exibir o relatório " />
+      <h1>Desafio 2</h1>
+      <h3>React Básico</h3>
+
+      <ButtonViewNameLabel label="Baixar CV" />
 
     </>
   )

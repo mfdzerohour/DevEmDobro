@@ -1,9 +1,10 @@
 import "./ButtonColor.css";
+import React from 'react';
 
-function ButtonColor(){
+function ButtonColor({onClick}){
     return(
         <>
-            <button className="btn">Mudar cor texto</button>
+            <button className="btn" onClick={onClick}>Mudar cor texto</button>
         </>
     )
 }

@@ -11,7 +11,7 @@ class Panel extends Component {
 
     render(){
         return (
-            <section className="panel" onClick={() => this.setState({title: 'Titulo novo'})}>
+            <section className="panel" onClick={() => this.setState({title: 'Título novo'})}>
                 <h2>{this.state.title}</h2>
             </section>
         )

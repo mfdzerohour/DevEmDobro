@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="default:," type="image/x-icon">
+    <title>Componente Stateless vs Componente Statefull</title>
+</head>
+<body>
+    <h1>Componente Stateless vs Componente Statefull</h1>
+
+    <p>Nesta aula sobre React Avançado, você aprenderá sobre a diferença entre Componente Stateless (sem estado) e Componente Stateful (com estado).</p>
+
+    <p>Será explicado o conceito de Componente Stateless, que é um componente React que não possui um estado interno. Esses componentes são mais simples e focados na apresentação de informações, sendo úteis para renderizar dados estáticos ou receber props e exibir conteúdo na interface. </p>
+    
+    <p>Por outro lado, você também aprenderá sobre Componentes Stateful, que têm um estado interno e podem lidar com alterações dinâmicas ao longo do tempo. Esses componentes são responsáveis por gerenciar dados e responder a eventos, permitindo a interatividade na aplicação React. Serão abordados conceitos como a criação de um estado, a atualização do estado e a renderização condicional com base no estado atual.</p>
+
+    <hr>
+
+    <p>Em resumo, a principal diferença entre componentes <strong>stateless</strong> e <strong>stateful</strong> reside na sua capacidade de gerenciar e armazenar dados mutáveis ao longo do tempo.</p>
+    
+    <h2>Componentes Stateless</h2>
+
+    <ul>
+        <li>São "sem estado": não possuem memória interna e seu comportamento é inteiramente determinado pelas entradas (props) que recebem.</li>
+        <li>São previsíveis: para entradas iguais, sempre produzirão a mesma saída.</li>
+        <li>São mais simples de testar e depurar: sua lógica é mais direta e não envolve efeitos colaterais complexos.</li>
+        <li>Geralmente implementados como funções puras ou componentes funcionais.</li>
+    </ul>
+
+    <h2>Componentes Stateful</h2>
+
+    <ul>
+        <li>Possuem "estado": podem armazenar dados internos que se modificam ao longo do tempo, afetando sua renderização e comportamento.</li>
+        <li>São dinâmicos: reagem a eventos e interações do usuário, atualizando seu estado e consequentemente a interface.</li>
+        <li>Podem ser mais complexos de testar e depurar: a gestão do estado introduz nuances e possíveis efeitos colaterais.</li>
+        <li>Geralmente implementados como classes que estendem a classe Component do React.</li>
+    </ul>
+    
+    <h2>Quando usar cada um?</h2>
+    <ul>
+        <li>Stateless: Dê prioridade à renderização de conteúdo estático ou lógica simples, como títulos, texto, botões, etc.</li>
+        <li>Stateful: Usado para componentes que precisam rastrear e atualizar status, como formulários, contadores, animações, etc.</li>
+    </ul>
+
+    <h2>Observações</h2>
+
+    <ul>
+        <li>A escolha entre stateless e stateful é uma decisão de design importante no React.</li>
+        <li>Priorize componentes stateless sempre que possível, pois eles tendem a ser mais simples e eficientes.</li>
+        <li>O uso excessivo de componentes stateful pode levar a um código mais complexo e difícil de manter.</li>
+    </ul>
+</body>
+</html>

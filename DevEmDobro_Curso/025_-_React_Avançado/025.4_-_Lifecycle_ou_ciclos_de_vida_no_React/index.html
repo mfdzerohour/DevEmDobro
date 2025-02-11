@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifecycle ou ciclos de vida no React</title>
+
+    <style>
+        ul{list-style-type: disc;}
+    </style>
+</head>
+<body>
+    <h1>Lifecycle ou ciclos de vida no React</h1>
+
+    <h2>Clico de vida</h2>
+
+    <h3>O componente react vai ter 4 fases</h3>
+
+    <ol>
+        <li>
+        <strong>Inicialização:</strong>
+        </li>
+    
+
+        <ul>
+            <li>
+                na fase de inicialização, como o nome já diz, o compoentent React se prepara para sua inicialização, geralmente ele vai configurar os estados iniciais, usando o objeto state o porps padrões se houverem
+            </li>
+        </ul>
+
+        <br>
+
+        <li><Strong>Montagem:</Strong></li>
+
+        <p>Aqui ele esta pronot para ser montado no DOM do navegador. Nesta fase o componente vai seguir o seguinte fluxo de método:</p>
+    
+        <ul>
+            <li>Construtor()</li>
+            <li>getDerivedStateFromProps() *Ele chama um metodo antes do render*</li>
+            <li>render()</li>
+            <li>componentDidMount()</li>
+        </ul>
+
+        <br>
+    
+        <li><strong>Atualização:</strong></li>
+
+        <p>
+            Esta fase começa quando o component React já nasceu no navegador e cresce recebendo novas atualizações.
+
+            Os métodos que são chamados nesssa fase são:
+        </p>
+
+        <ol>
+            <li>
+                getDerivedStateFromProps()
+            </li>
+
+            <li>
+                shouldComponentUpdate()
+            </li>
+
+            <li>
+                render();
+            </li>
+
+            <li>
+                getSnapshotBeforeUpdate()
+            </li>
+
+            <li>
+                componentDidUpdate()
+            </li>
+        </ul>
+
+        <br>
+
+        <li><strong>Desmontagem:</strong></li>
+
+        <p>
+            Nessa fase, o componente não é mais necessário e vai ser desmontado/retirado do DOM. O método que se chama nesta fase é:
+        </p>
+
+        <ul>
+            <li>componentWillUnmount():</li>
+        </ul>
+    </ol>
+
+    <h2>Observações:</h2>
+    
+        <p>Nem todos os métodos do ciclo de vida são obrigatórios. Você pode usar apenas os métodos que são relevantes para o seu componente.</p>
+        <p>Os métodos do ciclo de vida são chamados automaticamente pelo React em momentos específicos.</p>
+        <p>É importante entender o ciclo de vida dos componentes React para criar aplicativos eficientes e escaláveis.</p>
+    
+</body>
+</html>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 import Form from "../../components/forms/form.jsx";
 
 async function createDeck() {
@@ -31,6 +32,10 @@ const CardsList = (props) => {
         </ul>
     )
 }
+
+CardsList.propTypes = {
+    cards: PropTypes.array.isRequired
+};
 
 const DeckOfCards = () => {
     const [deck, setDeck] = useState({

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Form from "../../components/forms/form.jsx";
 
 async function createDeck() {
     const response = await fetch(
@@ -10,7 +11,7 @@ async function createDeck() {
 
 async function getCards(deckId) {
     const response = await fetch(
-        `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=52`
+        `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`
     );
     return response.json();
 }
@@ -47,8 +48,16 @@ const DeckOfCards = () => {
         fetchData();
     }, []) //Hook de efeito precisa [] no final pode ser vazio ou colocar uma ou mais variaveis caso mude ele vai atualizar ela
 
+    const addCard = (newCard) => {
+        console.log(newCard);
+        setDeck({
+            cards: [...deck.cards, newCard]
+        })
+    }
+
     return (
         <section>
+            <Form addCard = {addCard} />
             {deck.cards.length > 0 ? <CardsList cards={deck.cards} /> : "Nenhuma carta encontrada"}
         </section>
     );

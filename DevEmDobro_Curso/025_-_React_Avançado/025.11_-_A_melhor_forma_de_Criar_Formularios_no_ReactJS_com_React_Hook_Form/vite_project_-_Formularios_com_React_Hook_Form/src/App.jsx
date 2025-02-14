@@ -10,7 +10,7 @@ function App() {
     const { register, handleSubmit, formState:{errors} } = useForm();
 
     const handleSubmitForm = (data) => {
-        console.log(data);
+        console.log(data); //{nome: 'asd', email: 'asd', telefone: 'asd', mensagem: 'asd'}
     }
 
     return (

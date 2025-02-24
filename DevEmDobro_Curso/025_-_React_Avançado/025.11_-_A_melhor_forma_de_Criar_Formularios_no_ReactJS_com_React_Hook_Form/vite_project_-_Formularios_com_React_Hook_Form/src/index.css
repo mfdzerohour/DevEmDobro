@@ -1,156 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url(./assets/img/bg-repeat.jpg);
-  background-size: contain;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  /* Opcional: define a altura do corpo como 100% da viewport */
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(assets/img/bg-repeat.jpg) center center repeat-x;
+  background-size: contain;
 }
 
 main {
-  height: 402px;
-  width: 800px;
   display: flex;
-  /* margin: auto; */
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-section {
-  margin: auto;
-}
-
-.duvida {
+.copy {
+  max-width: 320px;
   color: white;
-  height: 378px;
-  width: 305px;
+  margin: 50px;
+}
+
+.copy h1{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 500px;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.duvida h1 {
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 23.44px;
-  margin-bottom: 11px;
-}
-
-.duvida p {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 17.58px;
-  width: 300px;
-}
-
-.preenchido {
-  border: 1px solid #3CCC87;
-}
-
-.naoPreenchido {
-  border: 1px solid #F52E2E;
-}
-
-.display_none {
-  display: none;
+  padding: 15px 20px;
+  border-radius: 5px;
 }
 
 input {
-  font-family: "Roboto", sans-serif;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 7px 0;
+}
+
+input:focus, textarea:focus{
+  outline: none;
+}
+
+input::placeholder{
+  color: #A8A8A8;
   font-size: 15px;
-  font-weight: 300;
-  height: 35px;
-  width: 298px;
-  margin-top: 15px;
-  margin-left: 21.9px;
-  margin-bottom: -5px;
-  border-radius: 5px;
-  border: 1px solid #000000;
-}
-
-.nome {
-  /* background-color: red; */
-  margin-top: 20px;
-  margin-bottom: auto;
-}
-
-.email {
-  /* background-color: red; */
-  margin-bottom: auto;
-}
-
-.telefone {
-  /* background-color: red; */
-  margin-bottom: auto;
-}
-
-.mensagem {
-  /* height: 100px; */
-  width: 298px;
-  margin-top: 15px;
-  margin-left: 21.9px;
-  margin-bottom: auto;
-  border-radius: 5px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 textarea {
-  border: 1px solid #000000;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 5px;
+  border: 1px solid black;
   resize: none;
 }
 
-.formulario {
-  background-color: white;
-  height: 398px;
-  width: 340px;
-  position: relative;
-  border-radius: 10px;
+/* BORDINHA MÓVEL DO TEXTAREA */
+
+.instrucao {
+  margin-top: 10px;
+  margin-bottom: -14px;
 }
+
+.enviar {
+  background-color: #3ccc87;
+  padding: 15px;
+  margin-top: 25px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.enviar:hover{
+  background-color: #3ccc87;
+  opacity: 0.8;
+}
+
+/* CLASSES PARA MANIPULAÇÃO COM JS */
+
 
 .campo-obrigatorio {
-  display: none;
-  margin-top: 3px;
-  margin-left: 23px;
-  margin-bottom: -10px;
+  border: 2px solid red;
+}
+
+.campo-preenchido {
+  border: 2px solid green;
+}
+
+.mensagem-alerta {
+  color: red;
   font-size: 9px;
-  color: #F52E2E;
-  /* visibility: hidden; */
+  margin-top: -7px;
+  visibility: hidden;
 }
 
-.observacao-campo-obrigatorio {
-  margin-left: 14px;
-  margin-top: 3px;
-}
-
-.campo-obrigatorio.mostrar {
-  display: block;
-}
-
-::placeholder{
-  text-align: left;
-  font-weight: 900;
-}
-
-#btn {
-  cursor: pointer;
-  height: 42px;
-  width: 298px;
-  margin-top: 15px;
-  margin-left: 20px;
-  background-color: #3CCC87;
-  border-color: #3CCC87;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 17.58px;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-}
-
-#btn:hover {
-  background-color: #33b174;
+.mostrar-erro {
+  visibility: visible;
 }

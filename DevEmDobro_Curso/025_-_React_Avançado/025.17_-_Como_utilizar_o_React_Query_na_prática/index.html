@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+</title>
+</head>
+<body>
+    <h1>
+</h1>
+
+    <p>O React Query lida com o gerenciamento de estado de consultas automaticamente, reduzindo a necessidade dos desenvolvedores escreverem e manterem lógicas complexas de gerenciamento de estado. Ele fornece recursos integrados de tratamento de erros, permitindo que os desenvolvedores lidem com erros de API normalmente.</p>
+
+    <h1>Principais recursos:</h1>
+    <ul>
+        <li>Queries => Recuperação de dados</li>
+        <li>Mutations => Atualização e criação de dados</li>
+        <li>Invalidation: Invalidação de cache</li>
+    </ul>
+
+    <h1>Caracteristicas do React Query</h1>
+    <ul>
+        <li>Caching</li>
+        <li>Refetching ao focar a janela</li>
+        <li>Capacidade de diminuir o número de tentativas de requisições</li>
+        <li>Prefetching</li>
+        <li>Atualizações otimistas</li>
+    </ul>
+
+    <h1>Principais benefíciosy</h1>
+    <ul>
+        <li>Gerenciar o estado da requisição</li>
+        <li>Colocar dados recebidos de forma mais facil</li>
+        <li>Atuailização constante com os dados do servidor</li>
+        <li>Abstrações para evitar a repetição de lógica</li>
+    </ul>
+
+    <h1>Instalação</h1>
+    <p><strong>npm install @tanstack/react-query</strong> no seu projeto React</p>
+    p
+    
+
+
+    <h1>Configuração Inicial</h1>
+    <ul>
+        <li>Após a sua instação, devemos fazer as configurações iniciar no arquivo App.jsx</li>
+        
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <code>
+            //Exemplo: Importanto React Query <br>
+            import { QueryClient, QueryClientProvider } from 'react-query';<br><br>
+
+            const queryClient = new QueryClient();<br>
+
+            function App() {<br>
+                return (<br>
+                    //Incluindo o QueryCliente Provider para toda a aplicação<br>
+                    <QueryClientProvider client={queryClient}>
+                        {/* Restante do código da aplicação */}
+                    </QueryClientProvider><br>
+                );
+        </code>
+        <br>
+        <br>
+        <hr>
+    </ul>
+    
+
+    <h1>Hook UseQuery</h1>
+    <ul>
+        <li>uSeQuery para realizar consultas</li>
+        <li>Sintaxe básica: useQuery('chave', funçãoAssíncrona)</li>
+    </ul>
+
+    <h1>Principais propriedades do useQuery</h1>
+    <ul>
+        <li>data: Os dados resultantes da consulta, se ela for bem-sucedida</li>
+        <li>isLoading: Indica se a consulta esta atualmente em andamento</li>
+        <li>isError: Indica se ocorreu um erro durante a execução da consulta</li>
+        <li>error: Fornece informações detalhadas sobre o erro, se houver.</li>
+        <li>refetch: Função que permite refazer manualmente a consulta</li>
+        <li>isFetching: Indica se a consulta está atualmente sendo "rebuscada" em segundo plano para atualizar o dados em cache.</li>
+    </ul>
+
+    <h1>Hook useMutation</h1>
+    <ul>
+        <li>useMutation para realizar operações de mutação, como atualizar ou criar dados.</li>
+        <li>Sintaxe básica: useMutation (funçãoAssíncrona)</li>
+    </ul>
+
+    <h1>Principais propriedades do useMutation</h1>
+    <ul>
+        <li>onSuccess, onError: Tratamento de sucesso ou erro</li>
+        <li>onSettled: Executa após a mutação independente do resultado</li>
+    </ul>
+
+    <a href="https://tanstack.com/query/v3/docs/react/installation">Installation | TanStack Query Docs</a>
+</body>
+</html>

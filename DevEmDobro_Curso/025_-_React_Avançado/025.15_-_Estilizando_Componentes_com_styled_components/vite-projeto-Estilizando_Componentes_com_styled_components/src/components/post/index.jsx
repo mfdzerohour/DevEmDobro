@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 
 async function getPost(id) {
     const response = await fetch(`http://localhost:3000/json/post-${id}.json`)
@@ -22,7 +22,7 @@ const PostDetails = () => {
     }, [])
 
     return (
-        <Section>
+        <Section red>
             <Link to='/'>Voltar para os posts</Link>
                 <div>  
                     <Img src={post.image} alt={post.title} />
@@ -34,6 +34,10 @@ const PostDetails = () => {
 }
 
 const Section = styled.section `
+    background-color: blue; //Propriedade Padrão
+    ${props => props.red && css `
+        background-color: red;
+    `}
     padding: 50px;
 `
 

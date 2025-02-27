@@ -1,0 +1,9 @@
+Solucionei o problema no topico:
+
+https://discord.com/channels/867930080637247568/1344656690628268042
+
+ao declarar 
+
+import React, { useContext } from 'react';
+
+o React fica subilinhado em vermelho tipo não usado.

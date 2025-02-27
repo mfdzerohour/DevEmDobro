@@ -1,23 +1,25 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import PropTypes from 'prop-types';
 
 export const themes = {
     light: {
         color: '#000000',
-        background: '#eeeeee'
+        backgroundColor: '#eeeeee'
     },
 
     dark: {
         color: '#ffffff',
-        background: '#000000'
+        backgroundColor: '#000000'
     }
 }
 
 export const ThemeContext = createContext({})
 
 export const ThemeProvider = (props) => {
+
+    const [ theme, setTheme ] = useState ( themes.light );
     return (
-        <ThemeContext.Provider value={{themes}}>
+        <ThemeContext.Provider value={{ theme, setTheme}}>
             {props.children}
         </ThemeContext.Provider>
     )

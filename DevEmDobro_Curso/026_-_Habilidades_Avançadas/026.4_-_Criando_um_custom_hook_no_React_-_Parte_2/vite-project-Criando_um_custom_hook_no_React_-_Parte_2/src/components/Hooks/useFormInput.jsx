@@ -8,7 +8,7 @@ export function useFormInput(initialValue){
     }
     const inputProps = {
         value: value,
-        onchange: handleChange
+        onChange: handleChange
     }
 
     return inputProps;

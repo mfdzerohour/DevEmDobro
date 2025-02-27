@@ -1,10 +1,6 @@
 import { createContext } from "react";
 import PropTypes from 'prop-types';
 
-ThemeProvider.propTypes = {
-    children: PropTypes.node.isRequired,
-};
-
 export const themes = {
     light: {
         color: '#000000',
@@ -26,3 +22,7 @@ export const ThemeProvider = (props) => {
         </ThemeContext.Provider>
     )
 }
+
+ThemeProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};

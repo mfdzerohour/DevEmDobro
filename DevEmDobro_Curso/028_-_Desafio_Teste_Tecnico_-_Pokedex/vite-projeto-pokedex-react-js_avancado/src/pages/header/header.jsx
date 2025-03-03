@@ -24,6 +24,7 @@ import water from '../../images/typePokemon/water.webp';
 // import findPokemonIcon from '../../images/find_pokemon.png';
 
 const pokemonTypes = [
+    { value: 'all', label: 'All', icon: '' },   
     { value: 'bug', label: 'Bug', icon: bug },
     { value: 'dark', label: 'Dark', icon: dark },
     { value: 'dragon', label: 'Dragon', icon: dragon },

@@ -2,20 +2,39 @@
     height: 20vh;
     border-top: 1px solid orange;
     background-color: rgb(255, 202, 103);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    flex: 0 0 20%; /* Ocupa 30% do espaço */
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imgLogo {
-    max-width: 20%;
+    max-width: 100%;
     max-height: 20vh;
-    width: 100%;
+    width: auto;
     height: auto;
     object-fit: contain;
     /* contain ou cover, dependendo do seu caso */
 }
 
+.menu {
+    flex: 1; /* Ocupa o restante do espaço (70%) */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1%;
+}
+
 .header .dropdown {
     position: relative;
     display: inline-block;
+    min-width: 180px;
 }
 
 .header .dropbtn {
@@ -26,15 +45,21 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    min-width: 180px;
 }
 
 .header .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f98c;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #f9f9f988;
+    min-width: 180px;
+    max-height: 70vh; /* Define a altura máxima do menu suspenso como 70% da altura da janela */
+    width: 180px;
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
     z-index: 1;
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura e altura total */
 }
 
 .header .dropdown-content div {
@@ -50,7 +75,7 @@
 }
 
 .header .dropdown-content div:hover {
-    background-color: #81b8e6;
+    background-color: #81b9e6d2;
 }
 
 .header .dropdown:hover .dropdown-content {
@@ -58,6 +83,6 @@
 }
 
 .header .dropdown:hover .dropbtn {
-    background-color: #3e8e418e;
+    background-color: #3e8e417a;
     border-color: #8e753e;
 }

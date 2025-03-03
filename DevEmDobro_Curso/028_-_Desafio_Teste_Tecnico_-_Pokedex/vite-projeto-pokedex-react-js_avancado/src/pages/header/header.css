@@ -5,10 +5,38 @@
 }
 
 .imgLogo {
-    max-width: 50%;
+    max-width: 20%;
     max-height: 20vh;
     width: 100%;
     height: auto;
     object-fit: contain;
-    /* ou cover, dependendo do seu caso */
+    /* contain ou cover, dependendo do seu caso */
+}
+
+.switch {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+
+.switch-button {
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.switch-button:hover {
+    background-color: #ccc;
+}
+
+.switch-button.active {
+    background-color: #333;
+    color: #fff;
 }

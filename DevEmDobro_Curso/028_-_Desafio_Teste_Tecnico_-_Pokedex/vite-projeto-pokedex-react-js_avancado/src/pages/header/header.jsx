@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import logoTipo from '../../images/pokemonLogo.png';
 //Types of Pokemons
@@ -21,9 +21,36 @@ import rock from '../../images/typePokemon/rock.webp';
 import steel from '../../images/typePokemon/steel.webp';
 import water from '../../images/typePokemon/water.webp';
 //Find pokemon icon
-import findPokemonIcon from '../../images/find_pokemon.png';
+// import findPokemonIcon from '../../images/find_pokemon.png';
+
+const pokemonTypes = [
+    { value: 'bug', label: 'Bug', icon: bug },
+    { value: 'dark', label: 'Dark', icon: dark },
+    { value: 'dragon', label: 'Dragon', icon: dragon },
+    { value: 'eletric', label: 'Electric', icon: eletric },
+    { value: 'fairy', label: 'Fairy', icon: fairy },
+    { value: 'fighting', label: 'Fighting', icon: fighting },
+    { value: 'fire', label: 'Fire', icon: fire },
+    { value: 'flying', label: 'Flying', icon: flying },
+    { value: 'ghost', label: 'Ghost', icon: ghost },
+    { value: 'grass', label: 'Grass', icon: grass },
+    { value: 'ground', label: 'Ground', icon: ground },
+    { value: 'ice', label: 'Ice', icon: ice },
+    { value: 'normal', label: 'Normal', icon: normal },
+    { value: 'poison', label: 'Poison', icon: poison },
+    { value: 'psychic', label: 'Psychic', icon: psychic },
+    { value: 'rock', label: 'Rock', icon: rock },
+    { value: 'steel', label: 'Steel', icon: steel },
+    { value: 'water', label: 'Water', icon: water },
+];
 
 export const Header = () => {
+    const [selectedType, setSelectedType] = useState('');
+
+    const handleSelect = (type) => {
+        setSelectedType(type);
+    };
+
     return (
         <div className="header">
             <div className="logo">
@@ -32,88 +59,19 @@ export const Header = () => {
 
             <div className="menu">
                 <div className="selectPokemon">
-                    <select>
-                        <option></option>
-                        <option value="bug"> 
-                            <img src={`${bug}`} alt="Bug"/>
-                            Bug
-                        </option>
-                        <option value="dark">
-                            <img src={`${dark}`} alt="Dark" />
-                            Dark
-                        </option>
-                        <option value="dragon">
-                            <img src={`${dragon}`} alt="Dragon" />
-                            Dragon
-                        </option>
-                        <option value="eletric">
-                            <img src={`${eletric}`} alt="Eletric" />
-                            Electric
-                        </option>
-                        <option value="Fairy">
-                            <img src={`${fairy}`} alt="Fairy" />    
-                            Fairy
-                        </option>
-                        <option value="Fighting">
-                            <img src={`${fighting}`} alt="Fighting" />
-                            Fighting
-                        </option>
-                        <option value="Fire">
-                            <img src={`${fire}`} alt="Fire" />
-                            Fire
-                        </option>
-                        <option value="Flying">
-                            <img src={`${flying}`} alt="Flying" />
-                            Flying
-                        </option>
-                        <option value="Ghost">
-                            <img src={`${ghost}`} alt="Ghost" />
-                            Ghost
-                        </option>
-                        <option value="Grass">
-                            <img src={`${grass}`} alt="Grass" />
-                            Grass
-                        </option>
-                        <option value="Ground">
-                            <img src={`${ground}`} alt="Ground" />
-                            Ground
-                        </option>
-                        <option value="Ice">
-                            <img src={`${ice}`} alt="Ice" />
-                            Ice
-                        </option>
-                        <option value="Normal">
-                            <img src={`${normal}`} alt="Normal" />
-                            Normal
-                        </option>
-                        <option value="Poison">
-                            <img src={`${poison}`} alt="Poison" />
-                            Poison
-                        </option>
-                        <option value="Psychic">
-                            <img src={`${psychic}`} alt="Psychic" />
-                            Psychic
-                        </option>
-                        <option value="Rock">
-                            <img src={`${rock}`} alt="Rock" />
-                            Rock
-                        </option>
-                        <option value="Steel">
-                            <img src={`${steel}`} alt="Steel" />
-                            Steel
-                        </option>
-                        <option value="Water">
-                            <img src={`${water}`} alt="Water" />
-                            Water
-                        </option>
-                    </select>
-                    <button typeof="submit">
-                        <img src={findPokemonIcon} alt="find pokemon" height={14} />
-                    </button>
-                </div>
-                <div className="switch">
+                    <div className="dropdown">
+                        <button className="dropbtn">{selectedType ? selectedType.label : 'Select Pokemon Type'}</button>
+                        <div className="dropdown-content">
+                            {pokemonTypes.map((type) => (
+                                <div key={type.value} onClick={() => handleSelect(type)}>
+                                    <img src={type.icon} alt={type.label} />
+                                    {type.label}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

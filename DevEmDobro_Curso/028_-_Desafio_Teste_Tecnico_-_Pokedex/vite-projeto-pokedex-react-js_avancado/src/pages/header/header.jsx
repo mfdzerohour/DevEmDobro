@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.css";
 import logoTipo from '../../images/pokemonLogo.png';
 //Types of Pokemons

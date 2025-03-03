@@ -2,5 +2,9 @@
     height: 5%;
     border-top: 1px solid green;
     background-color: greenyellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
     text-align: center;
 }

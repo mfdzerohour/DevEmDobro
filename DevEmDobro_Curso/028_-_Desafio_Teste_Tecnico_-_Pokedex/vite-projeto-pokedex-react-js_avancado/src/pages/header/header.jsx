@@ -60,12 +60,20 @@ export const Header = () => {
 
             <div className="menu">
                 <div className="selectPokemon">
+                    {selectedType && <span className="label">Selected:</span>}
                     <div className="dropdown">
-                        <button className="dropbtn">{selectedType ? selectedType.label : 'Select Pokemon Type'}</button>
+                        <button className="dropbtn">
+                            {selectedType ? (
+                                <>
+                                    {selectedType.icon && <img src={selectedType.icon} alt={selectedType.label} style={{ marginRight: '10px' }} />}
+                                    {selectedType.label}
+                                </>
+                            ) : 'Select Pokemon Type'}
+                        </button>
                         <div className="dropdown-content">
                             {pokemonTypes.map((type) => (
                                 <div key={type.value} onClick={() => handleSelect(type)}>
-                                    <img src={type.icon} alt={type.label} />
+                                    {type.icon && <img src={type.icon} alt={type.label} />}
                                     {type.label}
                                 </div>
                             ))}

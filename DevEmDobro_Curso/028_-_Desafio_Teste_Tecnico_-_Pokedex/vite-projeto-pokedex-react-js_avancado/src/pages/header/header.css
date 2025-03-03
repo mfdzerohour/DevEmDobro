@@ -31,6 +31,17 @@
     margin-right: 1%;
 }
 
+.header .selectPokemon {
+    display: flex;
+    align-items: center;
+}
+
+.header .label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 .header .dropdown {
     position: relative;
     display: inline-block;
@@ -46,20 +57,24 @@
     cursor: pointer;
     border-radius: 5px;
     min-width: 180px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
 }
 
 .header .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f988;
-    min-width: 180px;
+    width: 180px; /* Define uma largura fixa */
+    min-width: 180px; /* Garante que a largura mínima seja a mesma que a largura fixa */
     max-height: 70vh; /* Define a altura máxima do menu suspenso como 70% da altura da janela */
-    width: 180px;
     overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.466);
     z-index: 1;
     border-radius: 5px; /* Adiciona bordas arredondadas */
     box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura e altura total */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
 }
 
 .header .dropdown-content div {
@@ -67,7 +82,7 @@
     padding: 12px 16px;
     text-decoration: none;
     display: flex;
-    align-items: center;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
 }
 
 .header .dropdown-content div img {

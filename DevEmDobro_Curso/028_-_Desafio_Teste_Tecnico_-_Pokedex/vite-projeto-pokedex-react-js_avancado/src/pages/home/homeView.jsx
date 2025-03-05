@@ -10,6 +10,7 @@ import { Skeletons } from "../../components/Skeletons/Skeletons.jsx";
 export const HomeView = () => {
     const [pokemons, setPokemons] = useState([]);
     const [allPokemons, setAllPokemons] = useState([]); // Estado para manter todos os Pokémons
+    const [loading, setLoading] = useState(true); // Estado de carregamento
 
     useEffect(() => {
         getPokemons();
@@ -18,7 +19,7 @@ export const HomeView = () => {
     const getPokemons = () => {
         var endpoints = [];
 
-        for (var i = 1; i < 11; i++) {
+        for (var i = 1; i < 500; i++) {
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}`);
         }
 
@@ -31,8 +32,12 @@ export const HomeView = () => {
                 }));
                 setPokemons(pokemonData);
                 setAllPokemons(pokemonData); // Salve todos os Pokémons
+                setLoading(false); // Defina o estado de carregamento como falso após carregar os dados
             })
-            .catch((err) => console.log(err));
+            .catch((err) => {
+                console.log(err);
+                setLoading(false); // Defina o estado de carregamento como falso em caso de erro
+            });
     };
 
     const pokemonFilter = (name) => {
@@ -51,8 +56,8 @@ export const HomeView = () => {
             <NavBar pokemonFilter={pokemonFilter} />
             <Container maxWidth='false'>
                 <Grid container spacing={3}>
-                    {pokemons.length === 0 ? (
-                        <Skeletons />
+                    {loading ? (
+                        <Skeletons /> // Exiba o componente Skeletons enquanto os dados estão sendo carregados
                     ) : (
                         pokemons.map((pokemon, key) => (
                             <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={key}>

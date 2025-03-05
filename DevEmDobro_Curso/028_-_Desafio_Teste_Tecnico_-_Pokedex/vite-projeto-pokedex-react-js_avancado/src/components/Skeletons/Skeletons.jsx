@@ -4,9 +4,16 @@ import React from 'react';
 export const Skeletons = () => {
     return (
         <>
-            <Skeleton variant='rounded' witdh={210} heigh={60}/>
-            <Skeleton variant='rounded' witdh={210} heigh={60}/>
-            <Skeleton variant='rounded' witdh={210} heigh={60}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
+            <Skeleton variant='rounded' witdh={345} heigh={200}/>
         </>
     )
 }

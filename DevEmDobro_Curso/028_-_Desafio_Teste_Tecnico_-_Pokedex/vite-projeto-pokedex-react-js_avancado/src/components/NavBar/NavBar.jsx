@@ -52,18 +52,12 @@ export default function NavBar({ pokemonFilter }) {
     };
 
     return (
-        <Box sx={{ flexGrow: 1, marginBottom: '2em' }}>
-            <AppBar position="static" sx={{ backgroundColor: '#373737' }}>
+        <Box sx={{ flexGrow: 1 }}>
+            {/* Alterado position para "fixed" */}
+            <AppBar position="fixed" sx={{ backgroundColor: '#373737' }}>
                 <Toolbar>
-                    {/* <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1 }}
-                    >
-                        Pokemon
-                    </Typography> */}
-                    <Box component='img' src={pokemonLogo} height='3em'/>
-                    <Search>
+                    <Box component='img' src={pokemonLogo} height='3em' />
+                    <Search sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', width: '20%' }}>
                         <SearchIconWrapper>
                             <SearchIcon />
                         </SearchIconWrapper>
@@ -75,6 +69,8 @@ export default function NavBar({ pokemonFilter }) {
                     </Search>
                 </Toolbar>
             </AppBar>
+            {/* Adicione um espaçamento maior para evitar sobreposição do conteúdo */}
+            <Toolbar sx={{ marginBottom: '2em' }} />
         </Box>
     );
 }

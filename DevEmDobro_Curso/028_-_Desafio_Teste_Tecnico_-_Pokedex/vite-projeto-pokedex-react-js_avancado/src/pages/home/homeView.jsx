@@ -1,11 +1,11 @@
 import "./home.css";
-import { Grid, Button } from "@mui/material";
-import { Container } from "@mui/system";
+import { Grid, Button, Container, Box } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import NavBar from "../../components/NavBar/NavBar.jsx";
 import PokemonCard from "../../components/pokemonCard/pokemonCard.jsx";
 import { Skeletons } from "../../components/Skeletons/Skeletons.jsx";
+import ThemeToggler from "../../components/ThemeToggler/ThemeToggler.jsx"; // Importa o ThemeToggler
 
 export const HomeView = () => {
     const [pokemons, setPokemons] = useState([]);
@@ -64,6 +64,7 @@ export const HomeView = () => {
                     image: response.data.sprites.front_default, // Adicione a URL da imagem
                     types: response.data.types, // Adicione os tipos
                     moves: response.data.moves, // Adicione os movimentos
+                    abilities: response.data.abilities, // Adicione as habilidades
                 }));
 
                 // Filtra Pokémons duplicados
@@ -105,11 +106,22 @@ export const HomeView = () => {
 
     return (
         <>
-            <NavBar pokemonFilter={pokemonFilter} />
+            {/* Alinha NavBar e ThemeToggler horizontalmente */}
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "1em",
+                }}
+            >
+                <NavBar pokemonFilter={pokemonFilter} />
+                <ThemeToggler />
+            </Box>
             <Container maxWidth="false">
-                <Grid container spacing={3}>
+                <Grid container spacing={3} alignItems="stretch">
                     {loading && pokemons.length === 0 ? (
-                        <Skeletons /> // Exiba o componente Skeletons enquanto os dados estão sendo carregados
+                        <Skeletons />
                     ) : (
                         pokemons.map((pokemon, key) => (
                             <Grid
@@ -125,8 +137,8 @@ export const HomeView = () => {
                                     name={pokemon.name}
                                     image={pokemon.image}
                                     types={pokemon.types}
-                                    moves={pokemon.moves} // Passe os movimentos para o componente
-                                    abilities={pokemon.abilities} // Passe as habilidades para o componente
+                                    moves={pokemon.moves}
+                                    abilities={pokemon.abilities}
                                 />
                             </Grid>
                         ))
@@ -141,6 +153,7 @@ export const HomeView = () => {
                     disabled={loading} // Desativa o botão enquanto está carregando
                     sx={{
                         marginTop: "1em",
+                        marginBottom: "10px", // Adiciona o espaço inferior
                         display: "block",
                         marginLeft: "auto",
                         marginRight: "auto",

@@ -21,9 +21,10 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
             const abilityPromises = abilities.map((ability) =>
                 axios.get(ability.ability.url).then((res) => ({
                     name: ability.ability.name,
-                    description: res.data.effect_entries.find(
-                        (entry) => entry.language.name === "en"
-                    )?.effect || "No description available",
+                    description:
+                        res.data.effect_entries.find(
+                            (entry) => entry.language.name === "en"
+                        )?.effect || "No description available",
                 }))
             );
 
@@ -57,13 +58,19 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
     };
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                height: "100%", // Garante que o cartão ocupe toda a altura disponível
+            }}
+        >
             <CardMedia
                 sx={{ height: 200, objectFit: "contain", width: "100%" }}
                 image={image}
                 title={name}
             />
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
                 <Box
                     display="flex"
                     justifyContent="space-between"
@@ -94,7 +101,8 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
                             color="text.secondary"
                             sx={{ mb: 1 }}
                         >
-                            <strong>{ability.name}:</strong> {ability.description}
+                            <strong>{ability.name}:</strong>{" "}
+                            {ability.description}
                         </Typography>
                     ))
                 ) : (

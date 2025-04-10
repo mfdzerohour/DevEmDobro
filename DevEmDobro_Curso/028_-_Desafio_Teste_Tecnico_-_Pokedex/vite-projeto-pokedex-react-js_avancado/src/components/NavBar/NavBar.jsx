@@ -5,44 +5,38 @@ import Toolbar from "@mui/material/Toolbar";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
-import pokemonLogo from '../../images/pokemonLogo.png'; // Importe a imagem diretamente
+import pokemonLogo from "../../images/pokemonLogo.png"; // Importe a imagem diretamente
+import ThemeToggler from "../ThemeToggler/ThemeToggler.jsx"; // Importa o ThemeToggler
 
-const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
+const Search = styled("div")(({ theme }) => ({
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
+    "&:hover": {
         backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
-        width: 'auto',
-    },
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    width: "100%",
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled("div")(({ theme }) => ({
     padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
+    color: "inherit",
+    width: "100%",
+    "& .MuiInputBase-input": {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: '20ch',
-        },
+        transition: theme.transitions.create("width"),
     },
 }));
 
@@ -53,24 +47,45 @@ export default function NavBar({ pokemonFilter }) {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            {/* Alterado position para "fixed" */}
-            <AppBar position="fixed" sx={{ backgroundColor: '#373737' }}>
-                <Toolbar>
-                    <Box component='img' src={pokemonLogo} height='3em' />
-                    <Search sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', width: '20%' }}>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Buscar Pokemon..."
-                            inputProps={{ 'aria-label': 'search' }}
-                            onChange={handleSearchChange} // Adicione o manipulador de eventos
-                        />
-                    </Search>
+            <AppBar position="fixed" sx={{ backgroundColor: "#373737" }}>
+                <Toolbar
+                    sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                    }}
+                >
+                    {/* Logo */}
+                    <Box component="img" src={pokemonLogo} height="3em" />
+
+                    {/* Campo de busca */}
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: "flex",
+                            alignItems: "center",
+                            marginLeft: "1em",
+                            marginRight: "1em",
+                        }}
+                    >
+                        <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Buscar Pokémon..."
+                                inputProps={{ "aria-label": "search" }}
+                                onChange={handleSearchChange}
+                            />
+                        </Search>
+                    </Box>
+
+                    {/* Botão de alternância de tema */}
+                    <ThemeToggler />
                 </Toolbar>
             </AppBar>
             {/* Adicione um espaçamento maior para evitar sobreposição do conteúdo */}
-            <Toolbar sx={{ marginBottom: '2em' }} />
+            <Toolbar sx={{ marginBottom: "2em" }} />
         </Box>
     );
 }

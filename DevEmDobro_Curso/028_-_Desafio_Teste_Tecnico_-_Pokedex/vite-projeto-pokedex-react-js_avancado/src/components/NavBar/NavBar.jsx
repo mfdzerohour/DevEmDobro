@@ -4,9 +4,9 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { styled, alpha } from "@mui/material/styles";
-import pokemonLogo from "../../images/pokemonLogo.png"; // Importe a imagem diretamente
-import ThemeToggler from "../ThemeToggler/ThemeToggler.jsx"; // Importa o ThemeToggler
+import { styled, alpha, useTheme } from "@mui/material/styles";
+import pokemonLogo from "../../images/pokemonLogo.png";
+import ThemeToggler from "../ThemeToggler/ThemeToggler.jsx";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -41,13 +41,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar({ pokemonFilter }) {
+    const theme = useTheme(); // Acessa o tema atual
+
     const handleSearchChange = (event) => {
         pokemonFilter(event.target.value);
     };
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="fixed" sx={{ backgroundColor: "#373737" }}>
+            <AppBar
+                position="fixed"
+                sx={{
+                    backgroundColor: theme.palette.primary.main, // Usa a cor dinâmica do tema
+                }}
+            >
                 <Toolbar
                     sx={{
                         display: "flex",

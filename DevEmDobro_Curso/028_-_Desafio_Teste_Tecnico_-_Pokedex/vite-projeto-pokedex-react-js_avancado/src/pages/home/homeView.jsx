@@ -2,16 +2,23 @@ import "./home.css";
 import { Grid, Button, Container, Box } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useTheme } from "@mui/material/styles"; // Importa o hook useTheme
 import NavBar from "../../components/NavBar/NavBar.jsx";
 import PokemonCard from "../../components/pokemonCard/pokemonCard.jsx";
 import { Skeletons } from "../../components/Skeletons/Skeletons.jsx";
-import ThemeToggler from "../../components/ThemeToggler/ThemeToggler.jsx"; // Importa o ThemeToggler
 
 export const HomeView = () => {
     const [pokemons, setPokemons] = useState([]);
     const [allPokemons, setAllPokemons] = useState([]); // Estado para manter todos os Pokémons
     const [loading, setLoading] = useState(true); // Estado de carregamento
     const [offset, setOffset] = useState(0); // Estado para controlar o deslocamento (quantos Pokémons já foram carregados)
+
+    const theme = useTheme(); // Acessa o tema atual
+
+    useEffect(() => {
+        // Aplica a cor de fundo dinamicamente ao body
+        document.body.style.backgroundColor = theme.palette.background.default;
+    }, [theme]);
 
     useEffect(() => {
         // Carrega os primeiros 10 Pokémons ao montar o componente
@@ -106,7 +113,7 @@ export const HomeView = () => {
 
     return (
         <>
-            {/* Alinha NavBar e ThemeToggler horizontalmente */}
+            {/* Alinha NavBar horizontalmente */}
             <Box
                 sx={{
                     display: "flex",
@@ -116,7 +123,6 @@ export const HomeView = () => {
                 }}
             >
                 <NavBar pokemonFilter={pokemonFilter} />
-                <ThemeToggler />
             </Box>
             <Container maxWidth="false">
                 <Grid container spacing={3} alignItems="stretch">
@@ -148,12 +154,12 @@ export const HomeView = () => {
                 {/* Exibe Skeletons enquanto carrega mais Pokémons */}
                 <Button
                     variant="contained"
-                    color="primary"
+                    color="secondary" // Usa a cor definida no tema
                     onClick={loadMorePokemons}
-                    disabled={loading} // Desativa o botão enquanto está carregando
+                    disabled={loading}
                     sx={{
                         marginTop: "1em",
-                        marginBottom: "10px", // Adiciona o espaço inferior
+                        marginBottom: "10px",
                         display: "block",
                         marginLeft: "auto",
                         marginRight: "auto",

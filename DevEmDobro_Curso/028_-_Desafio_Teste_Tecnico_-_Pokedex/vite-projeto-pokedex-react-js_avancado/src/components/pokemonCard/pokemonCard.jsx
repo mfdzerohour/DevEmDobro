@@ -4,10 +4,12 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
+import { useTheme } from "@mui/material/styles"; // Importa o hook useTheme
 import axios from "axios";
 
 export default function PokemonCard({ name, image, types, moves, abilities }) {
     const [abilityDetails, setAbilityDetails] = React.useState([]);
+    const theme = useTheme(); // Acessa o tema atual
 
     React.useEffect(() => {
         const fetchAbilityDetails = async () => {
@@ -15,8 +17,6 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
                 console.log("No abilities found for this Pokémon.");
                 return;
             }
-
-            console.log("Abilities received:", abilities);
 
             const abilityPromises = abilities.map((ability) =>
                 axios.get(ability.ability.url).then((res) => ({
@@ -30,7 +30,6 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
 
             try {
                 const resolvedAbilities = await Promise.all(abilityPromises);
-                console.log("Resolved abilities:", resolvedAbilities);
                 setAbilityDetails(resolvedAbilities);
             } catch (error) {
                 console.error("Error fetching ability details:", error);
@@ -63,10 +62,28 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
                 display: "flex",
                 flexDirection: "column",
                 height: "100%", // Garante que o cartão ocupe toda a altura disponível
+                backgroundColor: "#ffffff", // Cor fixa para o fundo do card
+                color: "#000000", // Cor fixa para o texto
+                border: "1px solid #e0e0e0", // Borda fixa
+                borderRadius: "8px", // Bordas arredondadas
+                boxShadow: theme.palette.mode === "dark"
+                    ? "0px 4px 8px rgba(255, 255, 255, 0.2)" // Sombra clara no tema escuro
+                    : "0px 4px 8px rgba(0, 0, 0, 0.2)", // Sombra escura no tema claro
+                transition: "box-shadow 0.3s ease-in-out", // Transição suave para hover
+                "&:hover": {
+                    boxShadow: theme.palette.mode === "dark"
+                        ? "0px 8px 16px rgba(27, 221, 227, 0.493)" // Sombra clara mais forte no tema escuro
+                        : "0px 8px 16px rgba(0, 0, 0, 0.3)", // Sombra escura mais forte no tema claro
+                },
             }}
         >
             <CardMedia
-                sx={{ height: 200, objectFit: "contain", width: "100%" }}
+                sx={{
+                    height: 200,
+                    objectFit: "contain",
+                    width: "100%",
+                    backgroundColor: "#f5f5f5", // Fundo fixo para a imagem
+                }}
                 image={image}
                 title={name}
             />
@@ -85,12 +102,11 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
                 </Box>
                 <Typography
                     variant="body2"
-                    color="text.secondary"
-                    sx={{ mb: 1 }}
+                    sx={{ mb: 1, color: "#757575" }} // Cor fixa para o texto secundário
                 >
                     <strong>Moves:</strong> {moveHandler(moves)}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{ color: "#757575" }}>
                     <strong>Abilities:</strong>
                 </Typography>
                 {abilityDetails.length > 0 ? (
@@ -98,15 +114,14 @@ export default function PokemonCard({ name, image, types, moves, abilities }) {
                         <Typography
                             key={index}
                             variant="body2"
-                            color="text.secondary"
-                            sx={{ mb: 1 }}
+                            sx={{ mb: 1, color: "#757575" }}
                         >
                             <strong>{ability.name}:</strong>{" "}
                             {ability.description}
                         </Typography>
                     ))
                 ) : (
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" sx={{ color: "#757575" }}>
                         No abilities available.
                     </Typography>
                 )}

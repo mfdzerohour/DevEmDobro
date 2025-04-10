@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../ThemeContext/ThemeContext.jsx"; // Ajuste o caminho se necessário
-import Button from "@mui/material/Button";
+import { Button } from "@mui/material";
+import { ThemeContext } from "../ThemeContext/ThemeContext";
 
 const ThemeToggler = () => {
     const { darkMode, toggleTheme } = useContext(ThemeContext);
@@ -8,8 +8,8 @@ const ThemeToggler = () => {
     return (
         <Button
             variant="contained"
+            color="secondary" // Usa a cor definida no tema
             onClick={toggleTheme}
-            sx={{ marginLeft: "1em" }}
         >
             {darkMode ? "Tema Claro" : "Tema Escuro"}
         </Button>

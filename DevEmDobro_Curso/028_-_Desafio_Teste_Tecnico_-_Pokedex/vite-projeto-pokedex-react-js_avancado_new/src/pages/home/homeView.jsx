@@ -34,6 +34,7 @@ export const HomeView = () => {
                     image: response.data.sprites.front_default, // Adicione a URL da imagem
                     types: response.data.types, // Adicione os tipos
                     moves: response.data.moves, // Adicione os movimentos
+                    abilities: response.data.abilities, // Adicione as habilidades
                 }));
 
                 setPokemons(initialPokemonData); // Define os primeiros 10 Pokémons
@@ -125,6 +126,7 @@ export const HomeView = () => {
                                     image={pokemon.image}
                                     types={pokemon.types}
                                     moves={pokemon.moves} // Passe os movimentos para o componente
+                                    abilities={pokemon.abilities} // Passe as habilidades para o componente
                                 />
                             </Grid>
                         ))

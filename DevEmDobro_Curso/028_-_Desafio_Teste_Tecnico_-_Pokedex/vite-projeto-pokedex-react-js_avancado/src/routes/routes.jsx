@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomeView from "./pages/home/homeView";
-import PokemonDetails from "./pages/pokemonDetails/pokemonDetails";
+import HomeView from "../pages/home/homeView";
+import PokemonDetails from "../pages/pokemonDetails/pokemonDetails.jsx";
 
 function App() {
     return (

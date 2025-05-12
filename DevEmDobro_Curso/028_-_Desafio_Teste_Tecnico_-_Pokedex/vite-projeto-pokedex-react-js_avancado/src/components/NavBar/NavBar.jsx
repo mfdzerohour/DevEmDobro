@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha, useTheme } from "@mui/material/styles";
 import pokemonLogo from "../../images/pokemonLogo.png";
 import ThemeToggler from "../ThemeToggler/ThemeToggler.jsx";
+import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -40,11 +41,36 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function NavBar({ pokemonFilter }) {
+export default function NavBar({
+    pokemonFilter,
+    searchMode = "name", // valor padrão para searchMode
+    setSearchMode,
+    availableTypes,
+}) {
     const theme = useTheme(); // Acessa o tema atual
+    const [searchValue, setSearchValue] = React.useState("");
+
+    React.useEffect(() => {
+        // Garante que o valor inicial do combobox seja sempre 'name' ao montar
+        if (!searchMode) {
+            setSearchMode("name");
+        }
+    }, [searchMode, setSearchMode]);
 
     const handleSearchChange = (event) => {
-        pokemonFilter(event.target.value);
+        setSearchValue(event.target.value);
+        pokemonFilter(event.target.value, searchMode);
+    };
+
+    const handleModeChange = (event) => {
+        setSearchMode(event.target.value);
+        setSearchValue("");
+        pokemonFilter("", event.target.value);
+    };
+
+    const handleTypeChange = (event) => {
+        setSearchValue(event.target.value);
+        pokemonFilter(event.target.value, "type");
     };
 
     return (
@@ -65,7 +91,7 @@ export default function NavBar({ pokemonFilter }) {
                     {/* Logo */}
                     <Box component="img" src={pokemonLogo} height="3em" />
 
-                    {/* Campo de busca */}
+                    {/* Campo de busca e seletor de modo */}
                     <Box
                         sx={{
                             flexGrow: 1,
@@ -75,24 +101,294 @@ export default function NavBar({ pokemonFilter }) {
                             marginRight: "1em",
                         }}
                     >
-                        <Search>
-                            <SearchIconWrapper>
-                                <SearchIcon />
-                            </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Buscar Pokémon..."
-                                inputProps={{ "aria-label": "search" }}
-                                onChange={handleSearchChange}
-                            />
-                        </Search>
+                        <FormControl
+                            sx={{ minWidth: 120, marginRight: 2 }}
+                            size="small"
+                        >
+                            <InputLabel
+                                id="search-mode-label"
+                                sx={{
+                                    color: "#fff",
+                                    "&.Mui-focused": {
+                                        color: "#fff",
+                                    },
+                                }}
+                            >
+                                Buscar por
+                            </InputLabel>
+                            <Select
+                                labelId="search-mode-label"
+                                id="search-mode"
+                                value={searchMode}
+                                label="Buscar por"
+                                onChange={handleModeChange}
+                                sx={{
+                                    backgroundColor: alpha(
+                                        theme.palette.common.white,
+                                        0.15
+                                    ),
+                                    color: "#fff",
+                                    borderRadius: 1,
+                                    "& .MuiOutlinedInput-notchedOutline": {
+                                        borderColor: "#fff",
+                                    },
+                                    "&.Mui-focused .MuiOutlinedInput-notchedOutline":
+                                        {
+                                            borderColor: "#fff",
+                                        },
+                                    "&.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
+                                        {
+                                            borderColor: "#fff",
+                                        },
+                                    "&:hover .MuiOutlinedInput-notchedOutline":
+                                        {
+                                            borderColor: "#fff",
+                                        },
+                                    "&.MuiOutlinedInput-root:hover": {
+                                        borderColor: "#fff",
+                                    },
+                                }}
+                                displayEmpty
+                                MenuProps={{
+                                    PaperProps: {
+                                        sx: {
+                                            backgroundColor: alpha(
+                                                theme.palette.common.white,
+                                                0.15
+                                            ),
+                                            "& .MuiMenuItem-root": {
+                                                backgroundColor: "#fff",
+                                                color: "#000",
+                                                "&.Mui-selected, &.Mui-selected:hover":
+                                                    {
+                                                        backgroundColor: `${theme.palette.secondary.main} !important`,
+                                                        color: "#fff !important",
+                                                    },
+                                                "&:hover": {
+                                                    backgroundColor:
+                                                        theme.palette.secondary
+                                                            .main,
+                                                    color: "#fff",
+                                                },
+                                            },
+                                        },
+                                    },
+                                }}
+                            >
+                                <MenuItem
+                                    value="name"
+                                    sx={{
+                                        background:
+                                            searchMode === "name"
+                                                ? theme.palette.secondary.main
+                                                : "#fff",
+                                        color:
+                                            searchMode === "name"
+                                                ? "#fff"
+                                                : "#000",
+                                        fontWeight:
+                                            searchMode === "name" ? 600 : 400,
+                                        opacity: 1,
+                                        "&.Mui-selected": {
+                                            backgroundColor:
+                                                theme.palette.secondary.main,
+                                            color: "#fff",
+                                        },
+                                        "&.Mui-selected:hover": {
+                                            backgroundColor:
+                                                theme.palette.secondary.main,
+                                            color: "#fff",
+                                        },
+                                        "&:hover": {
+                                            backgroundColor:
+                                                theme.palette.secondary.main,
+                                            color: "#fff",
+                                        },
+                                    }}
+                                >
+                                    Nome
+                                </MenuItem>
+                                <MenuItem
+                                    value="type"
+                                    sx={{
+                                        background:
+                                            searchMode === "type"
+                                                ? theme.palette.secondary.main
+                                                : "#fff",
+                                        color:
+                                            searchMode === "type"
+                                                ? "#fff"
+                                                : "#000",
+                                        fontWeight:
+                                            searchMode === "type" ? 600 : 400,
+                                        opacity: 1,
+                                        "&.Mui-selected": {
+                                            backgroundColor:
+                                                theme.palette.secondary.main,
+                                            color: "#fff",
+                                        },
+                                        "&.Mui-selected:hover": {
+                                            backgroundColor:
+                                                theme.palette.secondary.main,
+                                            color: "#fff",
+                                        },
+                                        "&:hover": {
+                                            backgroundColor:
+                                                theme.palette.secondary.main,
+                                            color: "#fff",
+                                        },
+                                    }}
+                                >
+                                    Tipo
+                                </MenuItem>
+                            </Select>
+                        </FormControl>
+
+                        {searchMode === "name" && (
+                            <Search>
+                                <SearchIconWrapper>
+                                    <SearchIcon />
+                                </SearchIconWrapper>
+                                <StyledInputBase
+                                    placeholder="Buscar…"
+                                    inputProps={{ "aria-label": "search" }}
+                                    value={searchValue}
+                                    onChange={handleSearchChange}
+                                />
+                            </Search>
+                        )}
+
+                        {searchMode === "type" && (
+                            <FormControl
+                                sx={{
+                                    minWidth: 120,
+                                    marginLeft: 2,
+                                    transition: "width 0.2s, margin 0.2s",
+                                }}
+                                size="small"
+                            >
+                                <InputLabel
+                                    id="type-select-label"
+                                    sx={{
+                                        color: "#fff",
+                                        "&.Mui-focused": {
+                                            color: "#fff",
+                                        },
+                                    }}
+                                    shrink={true} // Força o label a ficar sempre acima
+                                >
+                                    Tipo
+                                </InputLabel>
+                                <Select
+                                    labelId="type-select-label"
+                                    id="type-select"
+                                    value={searchValue}
+                                    label="Tipo"
+                                    onChange={handleTypeChange}
+                                    sx={{
+                                        backgroundColor: alpha(
+                                            theme.palette.common.white,
+                                            0.15
+                                        ),
+                                        color: "#fff",
+                                        borderRadius: 1,
+                                        "& .MuiOutlinedInput-notchedOutline": {
+                                            borderColor: "#fff",
+                                        },
+                                        "&.Mui-focused .MuiOutlinedInput-notchedOutline":
+                                            {
+                                                borderColor: "#fff",
+                                            },
+                                        "&.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
+                                            {
+                                                borderColor: "#fff",
+                                            },
+                                        "&:hover .MuiOutlinedInput-notchedOutline":
+                                            {
+                                                borderColor: "#fff",
+                                            },
+                                        "&.MuiOutlinedInput-root:hover": {
+                                            borderColor: "#fff",
+                                        },
+                                    }}
+                                    displayEmpty
+                                    MenuProps={{
+                                        PaperProps: {
+                                            sx: {
+                                                backgroundColor: alpha(
+                                                    theme.palette.common.white,
+                                                    0.15
+                                                ),
+                                                "& .MuiMenuItem-root": {
+                                                    backgroundColor: "#fff",
+                                                    color: "#000",
+                                                    "&.Mui-selected": {
+                                                        backgroundColor:
+                                                            theme.palette
+                                                                .secondary.main,
+                                                        color: "#fff",
+                                                    },
+                                                    "&.Mui-selected:hover": {
+                                                        backgroundColor:
+                                                            theme.palette
+                                                                .secondary.main,
+                                                        color: "#fff",
+                                                    },
+                                                    "&:hover": {
+                                                        backgroundColor:
+                                                            theme.palette
+                                                                .secondary.main,
+                                                        color: "#fff",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    }}
+                                >
+                                    <MenuItem value="">
+                                        <em>Todos</em>
+                                    </MenuItem>
+                                    {availableTypes.map((type) => (
+                                        <MenuItem
+                                            key={type}
+                                            value={type}
+                                            sx={{
+                                                background: "#fff",
+                                                color: "#000",
+                                                "&:hover": {
+                                                    backgroundColor:
+                                                        theme.palette.secondary
+                                                            .main,
+                                                    color: "#fff",
+                                                },
+                                                "&.Mui-selected": {
+                                                    backgroundColor:
+                                                        theme.palette.secondary
+                                                            .main,
+                                                    color: "#fff",
+                                                },
+                                                "&.Mui-selected:hover": {
+                                                    backgroundColor:
+                                                        theme.palette.secondary
+                                                            .main,
+                                                    color: "#fff",
+                                                },
+                                            }}
+                                        >
+                                            {type}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+                        )}
                     </Box>
 
-                    {/* Botão de alternância de tema */}
+                    {/* Alternador de tema */}
                     <ThemeToggler />
                 </Toolbar>
             </AppBar>
-            {/* Adicione um espaçamento maior para evitar sobreposição do conteúdo */}
-            <Toolbar sx={{ marginBottom: "2em" }} />
+            {/* Espaço para evitar sobreposição da AppBar */}
+            <Toolbar />
         </Box>
     );
 }

@@ -1,103 +1,145 @@
+## Sumário
 
-# Desafio Pokemon API - React
+- [Pokedex React Avançado](#pokedex-react-avançado)
+  - [Visão Geral](#visão-geral)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Funcionalidades Principais](#funcionalidades-principais)
+  - [Como Usar](#como-usar)
+    - [1. Clone o repositório](#1-clone-o-repositório)
+    - [2. Instale as dependências](#2-instale-as-dependências)
+    - [3. Inicie o servidor de desenvolvimento](#3-inicie-o-servidor-de-desenvolvimento)
+    - [4. Execute os testes automatizados](#4-execute-os-testes-automatizados)
+  - [Dicas e Solução de Problemas](#dicas-e-solução-de-problemas)
+  - [Como Testar](#como-testar)
+    - [Executar todos os testes](#executar-todos-os-testes)
+    - [Executar apenas o teste da HomeView](#executar-apenas-o-teste-da-homeview)
+  - [Screenshots](#screenshots)
+  - [Observações Finais](#observações-finais)
 
-Revisão: 0.9.0
+# Pokedex React Avançado
 
-Breve descrição do propósito da aplicação;
-R: Projeto final do modulo React do curso DevEmDobro, mostrar o uso do conhecimento adquirido, colocando API para funcionar no React, usar o mesmo de forma de components.
+## Visão Geral
 
-Breve descrição das funcionalidades da
-aplicação entregue;
-Pesquisa do nome do Pokemon acima (topo), só funciona para os pokemons exibidos (em tela), no futuro poderia ser implementada a pesquisa do norme da biblilhoteca do pokemon mesmo que ele não esteja exibido em tela;
-exibe um botão para colocar ele mais claro ou escuro (dois themas);
-Abaixo ele exibe inicialmente 10 pokemons e ao clicar no botão Carregar + 10 pokemons exibe outros 10 e assim por adiante;
-Mostra o nome, o tipo (no futuro com o simbolo em figura), movimentos e habilidades.
+Aplicação Pokedex desenvolvida em **React** com Vite, consumindo a **PokeAPI**. O projeto traz busca dinâmica por nome ou tipo, alternância de tema claro/escuro, carregamento incremental, modal de detalhes, visual consistente e testes automatizados.
 
-Ferramentas utilizadas, e o por que estas foram
-escolhidas para a realização do desafio;
-1. React
-Descrição: Biblioteca principal para construção da interface do usuário, criação de componentes como HomeView, NavBar, PokemonCard, etc.
-2. React Router DOM
-Descrição: Biblioteca para gerenciamento de rotas no React.
-R: Neste eu não consegui utilizar o mesmo, não sei o motivo, mas vou entregar assim mesmo.
-3. Axios
-Descrição: Biblioteca para realizar requisições HTTP.
-Uso: Busca de dados da API PokeAPI para carregar informações dos Pokémons.
-Documentação: Axios
-4. Material-UI (MUI)
-R: Componentes como Grid, Button, Container, Box, e o tema dinâmico com useTheme.
-5. PokeAPI
-R: API pública para obter informações sobre Pokémons, para carregar detalhes como nome, imagem, tipos, movimentos e habilidades dos Pokémons.
-6. Vite
-R: Ferramenta que auxlia no uso do react.
-7. CSS
-R: Usado para estilização personalizada da pagina HTML, Arquivo home.css para estilizar a página inicial.
-8. HTML
-R: Components HTML inicial.
-9. Skeleton Loading
-R: Componente para exibir placeholders enquanto os dados estão sendo carregados, exibido durante o carregamento inicial ou ao carregar mais Pokémons.
-10. Tema dinâmico com Material-UI
-R: Uso do ThemeProvider e useTheme para alternar entre temas claro e escuro, alteração de cores de fundo, botões e outros elementos com base no tema.
-11. Componentização
-R: Uso de componentes reutilizáveis como NavBar, PokemonCard e Skeletons, organização do código em componentes modulares para facilitar a manutenção.
+---
 
-Decisões adotadas durante o planejamento e execução do desafio, justificando-as;
-Tentei seguir a ordem inicial de como fazer o site, já que havia imaginado ter botões ao estilo de pesquisar o pokemon pelo tipo inicialmente, mas se mostrou uma grande demão e demoraria muito e não seria muito pratico sendo um projeto real, alinhei minhas expectativas para que fosse feita como um projeto real, fazer melhorias para entregar ele o mais rapido possivel e não perfeito (não feio também), mas que podera ter futuras mudanças. Andei olhando material-ui e achei interessante a forma de como ele trabalha então resolvi implementar e me desafiar também, já que não havia utilizado ele antes.
-A unica coisa que me deixar chateado no momento seria com as rotas que não consegui fazer funcionar da forma que queria, a ideia inicial era exibir ele e depois que funciona-se alterar para poder clicar no pokemon e exibir mais opções dele com uma "janela"/popup com as informações com sinal de fechar, isto sem mudar a página deixando ele com SinglePage, acho que assim cumpriria o desafio a contento, mas isto ficou sem fazer.
+## Tecnologias Utilizadas
 
-Passo a passo dos comandos para que possamos rodar o seu projeto no nosso computador.
-R:
-Passo a passo para baixar as dependências e rodar o projeto em outra máquina:
-1. Clone o repositório
-No terminal, execute o comando para clonar o repositório do projeto:
-git clone https://github.com/mfdzerohour/Desafio_DevEmDobro
+- **React**: Biblioteca principal para construção da interface.
+- **Vite**: Ferramenta de build e servidor de desenvolvimento rápido.
+- **Material UI (MUI)**: Componentes visuais modernos e responsivos.
+- **PokeAPI**: API pública para dados dos Pokémon.
+- **Jest** + **React Testing Library**: Testes automatizados de interface e lógica.
+- **Styled Components**: Estilização dinâmica dos componentes.
+- **Axios**: Requisições HTTP para a API.
 
-2. Acesse o diretório do projeto
-Navegue até o diretório do projeto clonado:
-cd \Desafio_DevEmDobro\vite-projeto-pokedex-react-js_avancado
+---
 
-3. Instale as dependências
-Certifique-se de que você tem o Node.js instalado na máquina. Para instalar as dependências do projeto, execute:
+## Funcionalidades Principais
+
+- **Busca por Nome ou Tipo**
+  - Seletor "Buscar por" alterna entre busca por nome (campo de texto) ou por tipo (combo box dinâmica).
+  - Combo de tipos exibe apenas tipos disponíveis dos Pokémon já carregados.
+  - Busca global: se o Pokémon não estiver carregado, é buscado na API e adicionado à lista.
+
+- **Tema Claro/Escuro**
+  - Alternância instantânea entre temas, afetando toda a interface.
+  - Ícone de alternância no topo da página.
+
+- **Carregamento Incremental**
+  - Inicialmente exibe 10 Pokémon, com botão para carregar mais 10 por vez.
+
+- **Detalhes em Modal**
+  - Clique em um card abre um modal com detalhes completos do Pokémon (nome, tipos, habilidades, peso, altura, movimentos, etc.), tudo em português.
+
+- **Skeleton Loading**
+  - Placeholders animados enquanto os dados são carregados.
+
+- **Visual Consistente**
+  - Campos de seleção ("Buscar por" e "Tipo") com fundo, texto e borda sempre visíveis e contrastantes em ambos os temas.
+
+- **Testes Automatizados**
+  - Testes com Jest e React Testing Library cobrindo renderização, busca, abertura de modal. Ainda falta a busca global.
+
+---
+
+## Como Usar
+
+### 1. Clone o repositório
+
+```sh
+git clone https://github.com/mfdzerohour/Desafio_DevEmDobro.git
+cd Desafio_DevEmDobro/vite-projeto-pokedex-react-js_avancado
+```
+
+### 2. Instale as dependências
+
+```sh
 npm install
+```
 
-4. Verifique o arquivo vite.config.js
-Certifique-se de que o arquivo vite.config.js está configurado corretamente para lidar com rotas SPA. Ele deve conter algo assim:
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+### 3. Inicie o servidor de desenvolvimento
 
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    historyApiFallback: true, // Garante que o roteamento SPA funcione corretamente
-  },
-});
-
-5. Inicie o servidor de desenvolvimento
-Para rodar o projeto em modo de desenvolvimento, execute:
+```sh
 npm run dev
+```
 
-O terminal exibirá o endereço local onde o projeto está rodando, geralmente algo como:
-http://localhost:5173
+Acesse: [http://localhost:5173](http://localhost:5173)
 
-6. Abra o projeto no navegador
-Abra o navegador e acesse o endereço exibido no terminal, como http://localhost:5173.
+### 4. Execute os testes automatizados
 
-7. Dependências utilizadas no projeto
-Certifique-se de que as seguintes dependências estão listadas no arquivo package.json e instaladas corretamente:
+```sh
+npm test
+```
 
-React: Biblioteca principal para construção da interface.
-React Router DOM: Para gerenciamento de rotas.
-Axios: Para realizar requisições HTTP.
-Material-UI (MUI): Para componentes de interface e tema dinâmico.
-Vite: Para build e servidor de desenvolvimento.
-Se alguma dependência estiver faltando, instale-a manualmente. Por exemplo:
-npm install react-router-dom axios @mui/material @emotion/react @emotion/styled
+---
 
-8. Teste o projeto
-Acesse a página inicial (/) para verificar se os Pokémons estão sendo carregados.
-Clique em um Pokémon para navegar para a página de detalhes (/pokemon/:name).
+## Dicas e Solução de Problemas
 
-9. Problemas comuns
-Erro de dependências: Certifique-se de que todas as dependências estão instaladas corretamente.
-Erro de roteamento: Verifique se o vite.config.js está configurado para rotas SPA.
-Porta em uso: Se a porta padrão (5173) estiver em uso, o Vite usará outra porta. Verifique o terminal para o endereço correto.
+- Se a porta 5173 estiver ocupada, o Vite usará outra porta (verifique o terminal).
+- Certifique-se de que todas as dependências estão instaladas corretamente.
+- Para problemas de roteamento, confira a configuração do `vite.config.js` para SPA.
+
+---
+
+## Como Testar
+
+### Executar todos os testes
+
+```sh
+npm test
+```
+
+### Executar apenas o teste da HomeView
+
+```sh
+npx jest src/pages/home/homeView.test.jsx
+```
+
+Se preferir, também pode rodar:
+
+```sh
+npm test -- src/pages/home/homeView.test.jsx
+```
+
+> Certifique-se de que as dependências estão instaladas com `npm install` antes de rodar os testes.
+
+---
+
+## Screenshots
+
+![Busca por nome](./src/images/find_pokemon.png)
+![Tema escuro](./src/images/desktop-screenshot.png)
+
+---
+
+## Observações Finais
+
+Demorei um pouco para finalizar, pois busquei entregar uma experiência visual e de uso consistente, além de cobrir os principais fluxos com testes automatizados. Ainda não está 100%: o teste do Jest para busca de Pokémon "inexistente" (ex: Raichu) não está passando, embora a funcionalidade real funcione — ao digitar o nome de um Pokémon não exibido inicialmente, ele é buscado na API e adicionado à lista normalmente. Os demais testes (busca, renderização, modal, etc.) passam corretamente.
+
+A pesquisa por tipo, alternância de tema, carregamento incremental e exibição de detalhes funcionam conforme esperado. Sobre rotas, entendi que ao clicar em um card, abre-se um modal com mais informações do Pokémon, centralizando a experiência sem navegação de página.
+
+O projeto está pronto para uso e melhorias futuras. Qualquer dúvida ou sugestão, fique à vontade para abrir uma issue ou contribuir!
+
+---

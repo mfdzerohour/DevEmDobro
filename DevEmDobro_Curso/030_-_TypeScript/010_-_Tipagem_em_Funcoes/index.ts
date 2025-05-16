@@ -3,3 +3,10 @@ function greet(name: string) {
 }
 
 greet("Terraqueos");
+
+function doubleNumber(number:number):number {
+    return number * 2;
+}
+
+const resultado = doubleNumber(5);
+console.log(resultado);

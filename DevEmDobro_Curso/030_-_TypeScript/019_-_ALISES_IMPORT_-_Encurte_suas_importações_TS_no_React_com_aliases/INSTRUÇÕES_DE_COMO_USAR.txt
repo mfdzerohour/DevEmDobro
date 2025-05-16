@@ -1,0 +1,21 @@
+Para usar Alias Import com TypeScript, siga estes passos:
+
+Configure o tsconfig.json
+No bloco "compilerOptions", defina:
+
+"baseUrl": geralmente como "./src" (ou a raiz do seu código).
+"paths": crie os aliases desejados, por exemplo:
+Use os aliases nos imports
+Agora, em vez de:
+
+Use:
+
+Ajuste o bundler (caso use Webpack, Vite, etc.)
+Ferramentas como Webpack ou Vite também precisam saber dos aliases.
+Exemplo para Webpack:
+
+Reinicie o servidor de desenvolvimento
+Após alterar o tsconfig.json, reinicie o servidor para aplicar as mudanças.
+
+Resumo:
+Com o Alias Import, seus imports ficam mais organizados e fáceis de manter, evitando caminhos relativos complexos.

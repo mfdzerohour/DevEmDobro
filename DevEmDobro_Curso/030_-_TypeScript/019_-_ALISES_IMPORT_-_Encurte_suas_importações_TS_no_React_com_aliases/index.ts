@@ -1,0 +1,1 @@
+//PRECISA COLOCAR UM BASE_URL no tsconfig.json
